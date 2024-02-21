@@ -12,6 +12,11 @@ import { images } from "../../public/Images/images";
 import { BrandSlider } from "./_components/features/brandSlider";
 import { Box, Button, Container, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import theme from "./theme";
+import TrustedAIIcon from "./_components/svg/trustedAI";
+import ControlOver from "./_components/svg/controlOver";
+import TechIntegrationIcon from "./_components/svg/techIntegration";
+import RedifiningIcon from "./_components/svg/redifiningIcon";
+import TransparentSecureIcon from "./_components/svg/tranparentSecure";
 
 export default function Home() {
   const defaultOptionsHP_Top = {
@@ -132,20 +137,31 @@ export default function Home() {
             Our technology services deliver cutting-edge solutions tailored to drive efficiency, enhance performance, and fuel growth in today's digital landscape.
           </Text>
         </HStack>
-        <Container>
+        <Container display={'flex'} justifyContent={'space-between'} gap={'2rem'}>
           <Box>
              <VStack>
-              
+                <TrustedAIIcon/>
              </VStack>
           </Box>
           <Box>
-
+             <VStack>
+                <TechIntegrationIcon/>
+             </VStack>
           </Box>
           <Box>
-
+             <VStack>
+                <ControlOver/>
+             </VStack>
           </Box>
           <Box>
-
+          <VStack>
+                <RedifiningIcon/>
+             </VStack>
+          </Box>
+          <Box>
+          <VStack>
+                <TransparentSecureIcon/>
+             </VStack>
           </Box>
         </Container>
 
