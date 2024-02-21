@@ -3,6 +3,7 @@ import { Navbar } from './_components/Navbar'
 import { Footer } from './_components/Footer'
 import { mulish } from './_utilities/fonts'
 import HomebannerBG from './_components/svg/images/homeBannerBg'
+import Header from './_components/header'
 
 export const metadata = {
   title: 'HUSHH',
@@ -12,15 +13,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     
+
       <body className={`${mulish.variable} font-sans`} >
         <header className='h-full absolute z-50'>
-        {/* <div style={{ position: 'absolute', zIndex: 999, width:'100%',overflow: 'hidden' }}>
+          {/* <div style={{ position: 'absolute', zIndex: 999, width:'100%',overflow: 'hidden' }}>
            <HomebannerBG />
         </div> */}
-          <Navbar />
+          {/* <Navbar /> */}
+          <Header />
         </header>
-        <div className="mt-[85px] z-1 bg-lightGreen">
+        <div className="mt-[130px] z-1 bg-lightGreen">
           {children}
         </div>
         <footer>
