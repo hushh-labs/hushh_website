@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trust-text {
+  position: relative;
+  font-weight: 700;
+}
+
+.gradient {
+  background: linear-gradient(to right, #7A7A7E, #FFFFFF);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+
+.trust-text::after {
+  content: '';
+  position: absolute;
+  bottom: -0.2px; /* Adjust this value as needed */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Adjust this value as needed */
+  background: linear-gradient(to right, #E54D60, #A342FF); /* Your gradient colors */
+  pointer-events: none;
+}
+
+.gradient-bg {
+  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+}
+
+.border-gradient {
+  background: linear-gradient(to right, white 0%, purple 20%, white 100%);
+}
+
+.border-gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0.1rem;
+  background: linear-gradient(to bottom, #FBF7FF 0%, #3a3a3a 50%, #FBF7FF 100%);
+}
+
+
+
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
