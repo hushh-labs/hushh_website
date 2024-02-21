@@ -10,7 +10,16 @@ import DataSecurity_Data from "../../public/Animations/DataSecurity_Data.json";
 import ZeroParty_Data from "../../public/Animations/ZeroParty_Data.json";
 import { images } from "../../public/Images/images";
 import { BrandSlider } from "./_components/features/brandSlider";
-import { Box, Button, Container, HStack, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  Container,
+  Grid,
+  GridItem,
+  HStack,
+  Heading,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import theme from "./theme";
 import TrustedAIIcon from "./_components/svg/trustedAI";
 import ControlOver from "./_components/svg/controlOver";
@@ -129,40 +138,66 @@ export default function Home() {
         </HStack>
         <BrandSlider />
 
-        <HStack mt={'15rem'} w={'full'} display={'flex'} flexDirection={'column'}  textAlign={'center'}  >
-          <Heading as={'h1'} className="gradient" fontSize={'3.75rem'} display={'flex'}>
+        <HStack
+          mt={"15rem"}
+          w={"full"}
+          display={"flex"}
+          flexDirection={"column"}
+          textAlign={"center"}
+        >
+          <Heading
+            as={"h1"}
+            className="gradient"
+            fontSize={"3.75rem"}
+            display={"flex"}
+          >
             Our Technology Services
           </Heading>
-          <Text color={theme.colors.secondary} fontWeight={'500'} fontSize={'1rem'} lineHeight={'2.25rem'} px={'20rem'}>
-            Our technology services deliver cutting-edge solutions tailored to drive efficiency, enhance performance, and fuel growth in today's digital landscape.
+          <Text
+            color={theme.colors.secondary}
+            fontWeight={"500"}
+            fontSize={"1rem"}
+            lineHeight={"2.25rem"}
+            px={"20rem"}
+          >
+            Our technology services deliver cutting-edge solutions tailored to
+            drive efficiency, enhance performance, and fuel growth in today's
+            digital landscape.
           </Text>
         </HStack>
-        <Container display={'flex'} justifyContent={'space-between'} gap={'2rem'}>
-          <Box>
-             <VStack>
-                <TrustedAIIcon/>
-             </VStack>
-          </Box>
-          <Box>
-             <VStack>
-                <TechIntegrationIcon/>
-             </VStack>
-          </Box>
-          <Box>
-             <VStack>
-                <ControlOver/>
-             </VStack>
-          </Box>
-          <Box>
-          <VStack>
-                <RedifiningIcon/>
-             </VStack>
-          </Box>
-          <Box>
-          <VStack>
-                <TransparentSecureIcon/>
-             </VStack>
-          </Box>
+        <Container>
+          <Grid
+            templateColumns="repeat(3, 1fr)"
+            gap={40}
+            flexWrap="wrap"
+            justifyContent="space-between"
+          >
+            <GridItem width={{ base: "100%", md: "48%" }}>
+              <VStack>
+                <TrustedAIIcon />
+              </VStack>
+            </GridItem>
+            <GridItem width={{ base: "100%", md: "48%" }}>
+              <VStack>
+                <TechIntegrationIcon />
+              </VStack>
+            </GridItem>
+            <GridItem width={{ base: "100%", md: "48%" }}>
+              <VStack>
+                <ControlOver />
+              </VStack>
+            </GridItem>
+            <GridItem width={{ base: "100%", md: "48%" }}>
+              <VStack>
+                <RedifiningIcon />
+              </VStack>
+            </GridItem>
+            <GridItem width={{ base: "100%", md: "48%" }}>
+              <VStack>
+                <TransparentSecureIcon />
+              </VStack>
+            </GridItem>
+          </Grid>
         </Container>
 
         <div className="">
