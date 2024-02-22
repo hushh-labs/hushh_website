@@ -1,7 +1,8 @@
 ![Screenshot 2024-02-22 143311](https://github.com/hushh-labs/hushh_website/assets/66689602/fcd88d6f-5bb8-41e1-9d85-8a3ee2ed95fe)
 
-***HUSHH Website***
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HUSHH Website
+## "Your" Data "Your" Business
+
 
 ## Getting Started
 
