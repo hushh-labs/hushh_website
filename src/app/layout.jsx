@@ -3,7 +3,7 @@ import { Navbar } from './_components/Navbar'
 import { Footer } from './_components/Footer'
 import { mulish } from './_utilities/fonts'
 import HomebannerBG from './_components/svg/images/homeBannerBg'
-
+import { Providers } from './provider'
 export const metadata = {
   title: 'HUSHH',
   description: 'Your data Your Business',
@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
         </div> */}
           <Navbar />
         </header>
-        <div className="mt-[85px] z-1 bg-lightGreen">
-          {children}
-        </div>
+          <Providers>
+              {children}
+           </Providers>
         <footer>
           <Footer />
         </footer>
