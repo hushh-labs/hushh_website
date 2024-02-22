@@ -26,6 +26,7 @@ import ControlOver from "./_components/svg/controlOver";
 import TechIntegrationIcon from "./_components/svg/techIntegration";
 import RedifiningIcon from "./_components/svg/redifiningIcon";
 import TransparentSecureIcon from "./_components/svg/tranparentSecure";
+import TechnologySection from "./_components/features/technologySection";
 
 export default function Home() {
   const defaultOptionsHP_Top = {
@@ -136,69 +137,10 @@ export default function Home() {
             to unlock the potential of their data.
           </Text>
         </HStack>
+
         <BrandSlider />
 
-        <HStack
-          mt={"15rem"}
-          w={"full"}
-          display={"flex"}
-          flexDirection={"column"}
-          textAlign={"center"}
-        >
-          <Heading
-            as={"h1"}
-            className="gradient"
-            fontSize={"3.75rem"}
-            display={"flex"}
-          >
-            Our Technology Services
-          </Heading>
-          <Text
-            color={theme.colors.secondary}
-            fontWeight={"500"}
-            fontSize={"1rem"}
-            lineHeight={"2.25rem"}
-            px={"20rem"}
-          >
-            Our technology services deliver cutting-edge solutions tailored to
-            drive efficiency, enhance performance, and fuel growth in today's
-            digital landscape.
-          </Text>
-        </HStack>
-        <Container>
-          <Grid
-            templateColumns="repeat(3, 1fr)"
-            gap={40}
-            flexWrap="wrap"
-            justifyContent="space-between"
-          >
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <TrustedAIIcon />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <TechIntegrationIcon />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <ControlOver />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <RedifiningIcon />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <TransparentSecureIcon />
-              </VStack>
-            </GridItem>
-          </Grid>
-        </Container>
+        <TechnologySection/>
 
         <div className="">
           <HP_Scrolling />
