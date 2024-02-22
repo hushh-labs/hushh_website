@@ -38,7 +38,7 @@ const TechnologySection = () => {
           digital landscape.
         </Text>
       </HStack>
-      <Container >
+      <Container display={'flex'} justifyContent={"center"}>
         <Grid
           templateColumns="repeat(3, 1fr)"
           gap={40}
@@ -48,30 +48,35 @@ const TechnologySection = () => {
             <VStack display={'flex'} alignItems={'flex-start'}>
               <TrustedAIIcon />
               <Heading fontSize='1.5rem' fontWeight={700} color={theme.colors.white}>Trusted AI Assistants​</Heading>
+              <Text color={'#ABABAB'}>Hushh your data away into your secure private on-device cloud and let it work for you quietly in the background as you go about your day by handing all your preferences.​</Text>
             </VStack>
           </GridItem>
           <GridItem width={{ base: "100%", md: "48%" }}>
             <VStack display={'flex'} alignItems={'flex-start'}>
               <TechIntegrationIcon />
               <Heading fontSize='1.5rem' color={theme.colors.white}>Tech Integration​​​</Heading>
+              <Text color={'#ABABAB'}>Provides products, tools, and services for effortless data organization, management, and monetization across all your ecosystems.​​</Text>
             </VStack>
           </GridItem>
           <GridItem width={{ base: "100%", md: "48%" }}>
             <VStack display={'flex'} alignItems={'flex-start'}>
               <ControlOver />
-              <Heading fontSize='1.5rem'   color={theme.colors.white}>Control Over Your Data​</Heading>
+              <Heading fontSize='1.5rem'   color={theme.colors.white}>Control Over Your Data.​</Heading>
+              <Text color={'#ABABAB'}>Our platform provides products, tools, and services for effortless data organization, management, and monetization.</Text>
             </VStack>
           </GridItem>
           <GridItem width={{ base: "100%", md: "48%" }}>
             <VStack display={'flex'} alignItems={'flex-start'}>
               <RedifiningIcon />
               <Heading fontSize='1.5rem' color={theme.colors.white}>Redefining Personal Data Assistance​</Heading>
+              <Text color={'#ABABAB'}>Hushh revolutionize data privacy and giving user control and offering an alternative.</Text>
             </VStack>
           </GridItem>
           <GridItem width={{ base: "100%", md: "48%" }}>
             <VStack display={'flex'} alignItems={'flex-start'}>
               <TransparentSecureIcon />
               <Heading fontSize='1.5rem' color={theme.colors.white}>Transparent & Secure​</Heading>
+              <Text color={'#ABABAB'}>Unlock values from your personal data with Secure platform for sharing data with trusted partners.</Text>
             </VStack>
           </GridItem>
         </Grid>
