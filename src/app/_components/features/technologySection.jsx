@@ -43,7 +43,7 @@ const TechnologySection = () => {
       <Container display={'flex'} pt={{md:'2rem'}} px={{md:'10rem'}} justifyContent={"center"} minW={{ md:'100%', base:'100%' }}>
         <Grid
           templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
-          gap={{ md:40 , base:10}}
+          gap={{ md:10 , base:10}}
           flexWrap="wrap"
         >
           <ServiceCard
