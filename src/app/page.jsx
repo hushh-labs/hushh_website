@@ -1,84 +1,82 @@
 "use client";
-import Image from "next/image";
 import HP_TopData from "../../public/Animations/HP_TopData.json";
-// import Lottie from 'lottie-react';
 import "../app/globals.css";
-import Lottie from "react-lottie";
-import { HP_Scrolling } from "./_components/HP_Scrolling";
-import DataConsent_Data from "../../public/Animations/DataConsent_Data.json";
-import DataSecurity_Data from "../../public/Animations/DataSecurity_Data.json";
-import ZeroParty_Data from "../../public/Animations/ZeroParty_Data.json";
-import { images } from "../../public/Images/images";
+// import { HP_Scrolling } from "./_components/features/HP_Scrolling";
+// import DataConsent_Data from "../../public/Animations/DataConsent_Data.json";
+// import DataSecurity_Data from "../../public/Animations/DataSecurity_Data.json";
+// import ZeroParty_Data from "../../public/Animations/ZeroParty_Data.json";
+// import { images } from "../../public/Images/images";
 import { BrandSlider } from "./_components/features/brandSlider";
-import {
-  Button,
-  Container,
-  Grid,
-  GridItem,
-  HStack,
-  Heading,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Container, Grid, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import theme from "./theme";
-import TrustedAIIcon from "./_components/svg/trustedAI";
-import ControlOver from "./_components/svg/controlOver";
-import TechIntegrationIcon from "./_components/svg/techIntegration";
-import RedifiningIcon from "./_components/svg/redifiningIcon";
+
+import TechnologySection from "./_components/features/technologySection";
+import React from "react";
+import { ServiceCard } from "./_components/primitives/serviceCard";
 import TransparentSecureIcon from "./_components/svg/tranparentSecure";
+import HushhWalletIcon from "./_components/svg/hushhWalletIcon";
+import HushhButtonIcon from "./_components/svg/hushhButton";
+import VibeSearchIcon from "./_components/svg/vibeSearch";
+import ChromeExtentionLogo from "./_components/svg/ChromeExtensionLogo";
 
 export default function Home() {
-  const defaultOptionsHP_Top = {
-    loop: true,
-    autoplay: true,
-    animationData: HP_TopData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptionsDataSecurity = {
-    loop: true,
-    autoplay: true,
-    animationData: DataSecurity_Data,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptionsDataConsent = {
-    loop: true,
-    autoplay: true,
-    animationData: DataConsent_Data,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptionsZeroParty = {
-    loop: true,
-    autoplay: true,
-    animationData: ZeroParty_Data,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptionsHP_Top = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: HP_TopData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptionsDataSecurity = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: DataSecurity_Data,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptionsDataConsent = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: DataConsent_Data,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptionsZeroParty = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: ZeroParty_Data,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
 
   return (
-    <main className="bg-myBG px-32 font-sans">
+    <main className="bg-myBG  font-Figtree">
       <div className="pb-32">
-        <div className="pt-20 flex gap-20">
+        <Box pt={20} display={'flex'} px={{ base: '0.5rem', md: '32px' }}>
           <VStack
             align={"flex-start"}
             w={"full"}
-            mr={"50%"}
+            mr={{ md: "50%", base:'10%' }}
             display={"flex"}
             gap={"1.5rem"}
+            mt={{ md:'5rem', base:'4rem' }}
+            ml={{ base:'1rem', md:'5.5rem' }}
           >
             <HStack>
-              <Heading className="font-500 text-7xl text-headText">
+              <Heading
+                fontSize={{ md: "5rem", base:'2rem' }}
+                className="text-headText"
+                lineHeight={{ md: "5.5rem", base:'2.5rem' }}
+                fontWeight={"400"}
+              >
                 Intelligence as a service powered by your{" "}
                 <span
                   // className="gradient-text"
                   className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text"
-                  // color={'linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)'}
                 >
                   Data
                 </span>{" "}
@@ -97,6 +95,7 @@ export default function Home() {
               w={"16rem"}
               color={theme.colors._white}
               lineHeight={"28px"}
+              background={"transparent"}
               letterSpacing={"0.5rem"}
               _hover={{
                 background:
@@ -106,7 +105,7 @@ export default function Home() {
               LEARN MORE
             </Button>
           </VStack>
-        </div>
+        </Box>
 
         <HStack
           pt={"8rem"}
@@ -117,17 +116,20 @@ export default function Home() {
           <Heading
             as={"h2"}
             className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text"
+            fontWeight={600}
+            letterSpacing={'0.25rem'}
+            fontSize={'1rem'}
           >
             BRANDS WE WORK WITH
           </Heading>
           <Text
             align={"center"}
-            lineHeight={"4rem"}
-            pl={"8rem"}
-            pr={"8rem"}
+            lineHeight={{ md: "4rem" }}
+            pl={{ md: "16rem" }}
+            pr={{ md: "16rem" }}
             color={theme.colors.secondary}
             fontWeight={"300"}
-            fontSize={"3.75rem"}
+            fontSize={{ md: "3.75rem", base: "1.5rem" }}
           >
             Discover the brands that {"  "}
             <span className="trust-text bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text">
@@ -136,71 +138,79 @@ export default function Home() {
             to unlock the potential of their data.
           </Text>
         </HStack>
+
         <BrandSlider />
 
+        <TechnologySection />
+
         <HStack
-          mt={"15rem"}
-          w={"full"}
-          display={"flex"}
-          flexDirection={"column"}
-          textAlign={"center"}
-        >
-          <Heading
-            as={"h1"}
-            className="gradient"
-            fontSize={"3.75rem"}
-            display={"flex"}
+        pt={"8rem"}
+        justify={"center"}
+        display={"flex"}
+        flexDirection={"column"}>
+         <Heading
+            as={"h2"}
+            className="color-gradient"
+            fontWeight={600}
+            letterSpacing={'0.25rem'}
+            fontSize={'1rem'}
           >
-            Our Technology Services
+            PRODUCT SHOWCASE
           </Heading>
           <Text
-            color={theme.colors.secondary}
-            fontWeight={"500"}
-            fontSize={"1rem"}
-            lineHeight={"2.25rem"}
-            px={"20rem"}
+            align={"center"}
+            lineHeight={{ md: "6rem" }}
+            pl={{ md: "16rem" }}
+            pr={{ md: "16rem" }}
+            className="gradient"
+            fontWeight={"300"}
+            fontSize={{ md: "3.75rem", base: "1.5rem" }}
           >
-            Our technology services deliver cutting-edge solutions tailored to
-            drive efficiency, enhance performance, and fuel growth in today's
-            digital landscape.
+           Technology For Everyone!
           </Text>
+          <Text
+            className="description"
+            textAlign={'center'}
+            px={{md:'24rem'}}
+            color={theme.colors.secondary}>
+              We have seamless data capturing capabilities, robust security with trust measures in place and in-depth insights and transparency around the value of your data.
+          </Text>
+          <Container display={'flex'} pt={{md:'2rem'}} px={{md:'10rem'}} justifyContent={"center"} textAlign={'center'} minW={{ md:'100%', base:'100%' }}>
+        <Grid
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          gap={{ md:20 , base:5}}
+          flexWrap="wrap"
+        >
+          <ServiceCard
+            icon={<HushhWalletIcon />}
+            title="Hushh Wallet App​"
+            alignItems={'center'}
+            description="Customer User Flow + Client Advisor User Flow​"
+          />
+          <ServiceCard
+            icon={<HushhButtonIcon />}
+            title="Hushh Button​​​"
+            alignItems={'center'}
+            description="Seamless Data Sharing for Personalized Experiences and recommendations​​"
+          />
+          <ServiceCard
+            icon={<VibeSearchIcon />}
+            title="Vibe Search​"
+            alignItems={'center'}
+            description="Find perfect items to express your individuality in just one click"
+          />
+          <ServiceCard
+            icon={<VibeSearchIcon />}
+            title="Chrome Extension​"
+            alignItems={'center'}
+            description="Improved product recommendations & effective marketing campaigns"
+          />
+        </Grid>
+      </Container>
         </HStack>
-        <Container>
-          <Grid
-            templateColumns="repeat(3, 1fr)"
-            gap={40}
-            flexWrap="wrap"
-            justifyContent="space-between"
-          >
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <TrustedAIIcon />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <TechIntegrationIcon />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <ControlOver />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <RedifiningIcon />
-              </VStack>
-            </GridItem>
-            <GridItem width={{ base: "100%", md: "48%" }}>
-              <VStack>
-                <TransparentSecureIcon />
-              </VStack>
-            </GridItem>
-          </Grid>
-        </Container>
 
-        <div className="">
+
+        {/* <div className="pt-5">
           <HP_Scrolling />
         </div>
         <hr className=" h-0.5 bg-gradient-to-r from-myBG via-myBorder to-myBG" />
@@ -270,35 +280,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <hr className=" h-0.5 bg-gradient-to-r from-myBG via-myBorder to-myBG" />
+        <hr className=" h-0.5 bg-gradient-to-r from-myBG via-myBorder to-myBG" /> */}
 
-        <div className="mt-20 pt-20 flex flex-col items-center gap-12 pb-5 shadow-2xl shadow-gray-500 bg-myBorder rounded-xl">
-          <div className="">
-            <h1 className="text-5xl font-semibold text-myBG">
-              Make <span className="text-myBG">HUSHH</span> your new Data
-              Channel
-            </h1>
-          </div>
-          <div className="flex gap-10 w-full">
-            <div className="flex w-full gap-4 px-96 h-16">
-              <div className="w-1/2 h-full">
-                <button className="w-full h-full bg-myBG hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg text-myBorder font-bold">
-                  Try FREE for 7 Days
-                </button>
-              </div>
-              <div className="w-1/2 h-full">
-                <button className="w-full h-full border-2 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-myBG rounded-lg text-myBG font-bold">
-                  Talk With Us
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full justify-center">
-            <div className="w-full flex justify-center">
-              <Image src={images.CTA} alt="cta1" className="w-2/3" />
-            </div>
-          </div>
-        </div>
       </div>
     </main>
   );

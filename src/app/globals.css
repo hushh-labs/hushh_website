@@ -17,6 +17,12 @@
   color: transparent;
 }
 
+.color-gradient {
+  background: linear-gradient(to right, #E54D60, #A342FF); 
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 
 
 .trust-text::after {
@@ -74,3 +80,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+/* Our technology Section  - HOME PAGE */
+.heading2 {
+  
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 1.8rem;
+}

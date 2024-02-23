@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react';
 
 const PRIMARY_COLOR = 'linear-gradient(90deg, #7A7A7E 0.7%, #FFFFFF 100%)'
 const SECONDARY_COLOR = '#FCEEE9'
@@ -52,13 +52,13 @@ const theme = {
     },
   },
   breakpoints: {
-    md: '62em',
+    md: '62em', 
   },
   shadows: {
     outline: `0 0 0 2px ${SECONDARY_COLOR}`,
   },
 }
 
-export { theme }
+const extendedTheme = extendTheme(theme);
 
-export default extendTheme(theme)
+export default extendedTheme;
