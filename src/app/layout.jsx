@@ -5,6 +5,7 @@ import { mulish } from './_utilities/fonts'
 import HomebannerBG from './_components/svg/images/homeBannerBg'
 import { Providers } from './provider'
 import Header from './_components/header'
+import React from 'react'
 export const metadata = {
   title: 'HUSHH',
   description: 'Your data Your Business',
@@ -21,9 +22,9 @@ export default function RootLayout({ children }) {
           <Providers>
               {children}
            </Providers>
-        <footer>
+        {/* <footer>
           <Footer />
-        </footer>
+        </footer> */}
       </body>
     </html>
   );

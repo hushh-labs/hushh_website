@@ -13,8 +13,8 @@ const TechnologySection = () => {
   return (
     <>
       <HStack
-        mt={"15rem"}
-        w={"full"}
+        mt={{md:"15rem", base:"5rem"}}
+        w={"100%"}
         display={"flex"}
         flexDirection={"column"}
         textAlign={"center"}
@@ -40,9 +40,9 @@ const TechnologySection = () => {
         </Text>
       </HStack>
 
-      <Container display={'flex'} justifyContent={"center"} minW={'80rem'}>
+      <Container display={'flex'} pt={{md:'2rem'}} px={{md:'10rem'}} justifyContent={"center"} minW={{ md:'100%', base:'100%' }}>
         <Grid
-          templateColumns="repeat(3, 1fr)"
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
           gap={{ md:40 , base:10}}
           flexWrap="wrap"
         >

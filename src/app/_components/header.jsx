@@ -29,10 +29,11 @@ const Header = () => {
                         className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text"
                         lineHeight={"50px"}
                         letterSpacing={"0.5rem"}
-                    // _hover={{
-                    //     background:
-                    //         "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-                    // }}
+                        _hover={{
+                            background:
+                              "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                            color:"white"
+                        }}
                     >
                         LOGIN
                     </Button>
