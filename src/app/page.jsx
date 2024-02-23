@@ -59,6 +59,7 @@ export default function Home() {
             mr={{ md: "50%" }}
             display={"flex"}
             gap={"1.5rem"}
+            mt={{ md:'5rem' }}
           >
             <HStack>
               <Heading
