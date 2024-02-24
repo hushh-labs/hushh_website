@@ -1,25 +1,31 @@
-import { useState } from 'react';
-import { Input } from '@chakra-ui/react';
+import { useState } from "react";
+import { Input } from "@chakra-ui/react";
 
 const SearchBar = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = () => {
-    const searchWords = searchQuery.trim().toLowerCase().split(' ');
-    const encodedQuery = encodeURIComponent(searchQuery.trim());
-    const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, div, input, button, textarea, a, [role="button"], [role="link"], [role="heading"], [role="textbox"], [role="textbox"], [role="textbox"], [role="presentation"], [role="textbox"], [role="textbox"], [role="list"], [role="listitem"], [role="option"], [role="menuitem"], [role="menuitemcheckbox"], [role="menuitemradio"], [aria-label]'); // Add more elements if needed    let found = false;
+    const searchWords = searchQuery.trim().toLowerCase().split(" ");
+    const elements = document.querySelectorAll(
+      'h1, h2, h3, h4, h5, h6, p, span, div, input, button, textarea, a, [role="button"], [role="link"], [role="heading"], [role="textbox"], [role="textbox"], [role="textbox"], [role="presentation"], [role="textbox"], [role="textbox"], [role="list"], [role="listitem"], [role="option"], [role="menuitem"], [role="menuitemcheckbox"], [role="menuitemradio"], [aria-label]'
+    );
+
     let found = false;
     elements.forEach((element) => {
-        const elementText = element.innerText.toLowerCase();
-    if (searchWords.every(word => elementText.includes(word))) {
-    found = true;
-        const yOffset = -220; // Adjust this value as needed to properly position the element
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+      const elementText = element.innerText.toLowerCase();
+      if (searchWords.every((word) => elementText.includes(word))) {
+        found = true;
+        const yOffset = -220;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        element.style.color = 'yellow'
+        element.parentElement.style.color='red'
+        element.classList.add("search-highlight");
         return;
       }
     });
-  
+
     if (!found) {
       alert(`"${searchQuery}" not found on this page.`);
     }
@@ -31,16 +37,20 @@ const SearchBar = () => {
       value={searchQuery}
       onChange={(e) => setSearchQuery(e.target.value)}
       variant="filled"
-      borderRadius="full"
+      borderRadius="none"
+      width={'50%'}
       size="md"
-      bg="white"
-      color="gray.800"
-      _focus={{ bg: 'white', color: 'gray.800' }}
-      _placeholder={{ color: 'gray.400' }}
+      bg="black"
+      _hover={{
+        background:'none'
+      }}
+      border={"3px solid #606060"}
+      _focus={{ color: "#FFFFFF",border:'1px solid #FFFFFF' }}
+      _placeholder={{ color: "gray.400" }}
       px="4"
       py="2"
       onKeyPress={(e) => {
-        if (e.key === 'Enter') {
+        if (e.key === "Enter") {
           handleSearch();
         }
       }}
@@ -49,5 +59,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-
-
