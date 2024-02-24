@@ -18,6 +18,7 @@ import HushhWalletIcon from "./_components/svg/hushhWalletIcon";
 import HushhButtonIcon from "./_components/svg/hushhButton";
 import VibeSearchIcon from "./_components/svg/vibeSearch";
 import ChromeExtentionLogo from "./_components/svg/ChromeExtensionLogo";
+import SearchBar from "./_components/features/searchBar";
 
 export default function Home() {
   // const defaultOptionsHP_Top = {
@@ -68,6 +69,7 @@ export default function Home() {
           >
             <HStack>
               <Heading
+                as={'h1'}
                 fontSize={{ md: "5rem", base:'2rem' }}
                 className="text-headText"
                 lineHeight={{ md: "5.5rem", base:'2.5rem' }}
@@ -104,6 +106,7 @@ export default function Home() {
             >
               LEARN MORE
             </Button>
+            <SearchBar/>
           </VStack>
         </Box>
 
