@@ -4,7 +4,7 @@ import React from "react";
 
 const Microsoft = () => (
 <svg width="70" height="70" viewBox="0 0 159 159" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_817_4185)">
+<g clipPath="url(#clip0_817_4185)">
 <path d="M0 0H159V159H0V0Z" fill="#F3F3F3"/>
 <path d="M6.91309 6.91309H76.0435V76.0435H6.91309V6.91309Z" fill="#F35325"/>
 <path d="M82.9565 6.91309H152.087V76.0435H82.9565V6.91309Z" fill="#81BC06"/>

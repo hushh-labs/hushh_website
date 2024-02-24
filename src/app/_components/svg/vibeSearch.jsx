@@ -6,10 +6,10 @@ const VibeSearchIcon = () => (
 <path d="M36.0734 35.6675L29.8578 46.791L14.6344 19.291L13.2938 16.8691H25.6688L26.0172 17.4941L36.0734 35.6675ZM66.7063 16.866L65.3656 19.2878L41.4063 63.3253H38.75L33.775 53.8738L40 42.7519V42.7628L41.1625 40.6628L43.2031 36.9785L53.9844 17.4957L54.3328 16.8707L66.7063 16.866Z" fill="white"/>
 <defs>
 <linearGradient id="paint0_linear_1212_973" x1="1.00781" y1="1.10352" x2="80.4141" y2="80.5098" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D20AEF"/>
-<stop offset="0.37" stop-color="#890FD1"/>
-<stop offset="0.8" stop-color="#3715B0"/>
-<stop offset="1" stop-color="#1717A3"/>
+<stop stopColor="#D20AEF"/>
+<stop offset="0.37" stopColor="#890FD1"/>
+<stop offset="0.8" stopColor="#3715B0"/>
+<stop offset="1" stopColor="#1717A3"/>
 </linearGradient>
 </defs>
 </svg>

@@ -1,9 +1,5 @@
 import React from "react";
 
-const ChromeExtentionLogo = () => (
-<></>
-);
+const ChromeExtentionLogo = () => <></>;
 
 export default ChromeExtentionLogo;
-
-
