@@ -5,11 +5,24 @@ const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = () => {
-    const searchWords = searchQuery.trim().toLowerCase().split(" ");
+    const searchQueryTrimmed = searchQuery.trim().toLowerCase();
+  
+    // Clear previous highlighted text when the search query is cleared
+    if (searchQueryTrimmed === "") {
+      const elements = document.querySelectorAll(
+        'h1, h2, h3, h4, h5, h6, p, span, div, input, button, textarea, a, [role="button"], [role="link"], [role="heading"], [role="textbox"], [role="textbox"], [role="textbox"], [role="presentation"], [role="textbox"], [role="textbox"], [role="list"], [role="listitem"], [role="option"], [role="menuitem"], [role="menuitemcheckbox"], [role="menuitemradio"], [aria-label]'
+      );
+      elements.forEach((element) => {
+        element.style.color = ""; // Reset color
+      });
+      return;
+    }
+  
+    const searchWords = searchQueryTrimmed.split(" ");
     const elements = document.querySelectorAll(
       'h1, h2, h3, h4, h5, h6, p, span, div, input, button, textarea, a, [role="button"], [role="link"], [role="heading"], [role="textbox"], [role="textbox"], [role="textbox"], [role="presentation"], [role="textbox"], [role="textbox"], [role="list"], [role="listitem"], [role="option"], [role="menuitem"], [role="menuitemcheckbox"], [role="menuitemradio"], [aria-label]'
     );
-
+  
     let found = false;
     elements.forEach((element) => {
       const elementText = element.innerText.toLowerCase();
@@ -19,17 +32,19 @@ const SearchBar = () => {
         const y =
           element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
-        element.style.color = 'yellow'
-        element.parentElement.style.color='red'
-        element.classList.add("search-highlight");
+        element.style.color = "yellow";
         return;
       }
-    });
-
+      element.style.color = ""; // Reset color
+    }
+    );
+  
     if (!found) {
       alert(`"${searchQuery}" not found on this page.`);
     }
   };
+  
+  
 
   return (
     <Input
