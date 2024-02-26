@@ -7,13 +7,12 @@ const SearchBar = () => {
   const handleSearch = () => {
     const searchQueryTrimmed = searchQuery.trim().toLowerCase();
   
-    // Clear previous highlighted text when the search query is cleared
     if (searchQueryTrimmed === "") {
       const elements = document.querySelectorAll(
         'h1, h2, h3, h4, h5, h6, p, span, div, input, button, textarea, a, [role="button"], [role="link"], [role="heading"], [role="textbox"], [role="textbox"], [role="textbox"], [role="presentation"], [role="textbox"], [role="textbox"], [role="list"], [role="listitem"], [role="option"], [role="menuitem"], [role="menuitemcheckbox"], [role="menuitemradio"], [aria-label]'
       );
       elements.forEach((element) => {
-        element.style.color = ""; // Reset color
+        element.style.color = "";
       });
       return;
     }
@@ -35,7 +34,7 @@ const SearchBar = () => {
         element.style.color = "yellow";
         return;
       }
-      element.style.color = ""; // Reset color
+      element.style.color = "";
     }
     );
   
