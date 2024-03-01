@@ -88,3 +88,10 @@ body {
   font-weight: 700;
   line-height: 1.8rem;
 }
+
+/* Search Bar CSS */
+/* .search-highlight {
+  background: linear-gradient(to right, #E54D60, #A342FF); 
+  -webkit-background-clip: text;
+  color: transparent;
+} */
