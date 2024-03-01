@@ -1,23 +1,29 @@
+'use client'
 import React from 'react'
 import HushhHeaderLogo from './svg/hushhHeaderLogo'
 import Link from 'next/link'
 import { Button } from '@chakra-ui/react'
 import theme from '../theme'
+import { useResponsiveSizes } from '../context/responsive'
 
 const Header = () => {
+    const { isMobile } = useResponsiveSizes()
+
     return (
         <div className='fixed top-0 z-50'>
-            <div className=' bg-myBG w-screen flex justify-between items-center px-32 py-10'>
+            <div className=' bg-myBG w-screen flex justify-between items-center px-4 py-2 md:px-32 md:py-10'>
 
                 <div className="">
                     <HushhHeaderLogo />
                 </div>
+                {!isMobile && (
                 <div className="text-white flex gap-20">
                     <Link href='#'>HOME</Link>
                     <Link href='#'>ABOUT US</Link>
                     <Link href='#'>INVESTORS</Link>
                     <Link href='#'>WORK WITH US</Link>
                 </div>
+                )}
 
                 <div className="">
                     <Button

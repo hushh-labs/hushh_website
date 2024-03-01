@@ -64,7 +64,7 @@ export default function Home() {
             mr={{ md: "50%", base:'10%' }}
             display={"flex"}
             gap={"1.5rem"}
-            mt={{ md:'5rem', base:'4rem' }}
+            mt={{ md:'5rem', base:'1rem' }}
             ml={{ base:'1rem', md:'5.5rem' }}
           >
             <HStack>
@@ -191,7 +191,7 @@ export default function Home() {
             description="Customer User Flow + Client Advisor User Flow​"
           />
           <ServiceCard
-            icon={<HushhButtonIcon />}
+            icon={<HushhButtonIcon/>}
             title="Hushh Button​​​"
             alignItems={'center'}
             description="Seamless Data Sharing for Personalized Experiences and recommendations​​"
