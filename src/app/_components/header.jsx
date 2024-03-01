@@ -19,7 +19,7 @@ const Header = () => {
                 {!isMobile && (
                 <div className="text-white flex gap-20">
                     <Link href='#'>HOME</Link>
-                    <Link href='#'>ABOUT US</Link>
+                    <Link href='/about'>ABOUT US</Link>
                     <Link href='#'>INVESTORS</Link>
                     <Link href='#'>WORK WITH US</Link>
                 </div>
