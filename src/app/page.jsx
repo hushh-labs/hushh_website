@@ -234,7 +234,7 @@ export default function Home() {
                 description="Find perfect items to express your individuality in just one click"
               />
               <ServiceCard
-                icon={<VibeSearchIcon />}
+                icon={<ChromeExtentionLogo />}
                 title="Chrome Extension​"
                 alignItems={"center"}
                 textAlign={'center'}
