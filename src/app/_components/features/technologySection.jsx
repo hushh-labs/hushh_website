@@ -49,26 +49,31 @@ const TechnologySection = () => {
           <ServiceCard
             icon={<TrustedAIIcon />}
             title="Trusted AI Assistants​"
+            textAlign={'left'}
             description="Hushh your data away into your secure private on-device cloud and let it work for you quietly in the background as you go about your day by handing all your preferences.​"
           />
           <ServiceCard
             icon={<TechIntegrationIcon />}
             title="Tech Integration​​​"
+            textAlign={'left'}
             description="Provides products, tools, and services for effortless data organization, management, and monetization across all your ecosystems.​​"
           />
           <ServiceCard
             icon={<ControlOver />}
             title="Control Over Your Data.​"
+            textAlign={'left'}
             description="Our platform provides products, tools, and services for effortless data organization, management, and monetization."
           />
           <ServiceCard
             icon={<RedifiningIcon />}
             title="Redefining Personal Data Assistance​"
+            textAlign={'left'}
             description="Hushh revolutionize data privacy and giving user control and offering an alternative."
           />
           <ServiceCard
             icon={<TransparentSecureIcon />}
             title="Transparent & Secure​"
+            textAlign={'left'}
             description="Unlock values from your personal data with Secure platform for sharing data with trusted partners."
           />
         </Grid>

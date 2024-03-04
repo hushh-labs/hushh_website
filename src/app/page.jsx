@@ -6,10 +6,21 @@ import "../app/globals.css";
 // import DataSecurity_Data from "../../public/Animations/DataSecurity_Data.json";
 // import ZeroParty_Data from "../../public/Animations/ZeroParty_Data.json";
 // import { images } from "../../public/Images/images";
+import NextImage from "next/image";
 import { BrandSlider } from "./_components/features/brandSlider";
-import { Box, Button, Container, Grid, HStack, Heading, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Grid,
+  HStack,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import theme from "./theme";
-
 import TechnologySection from "./_components/features/technologySection";
 import React from "react";
 import { ServiceCard } from "./_components/primitives/serviceCard";
@@ -19,6 +30,12 @@ import HushhButtonIcon from "./_components/svg/hushhButton";
 import VibeSearchIcon from "./_components/svg/vibeSearch";
 import ChromeExtentionLogo from "./_components/svg/ChromeExtensionLogo";
 import SearchBar from "./_components/features/searchBar";
+import SephoraCard from "../../public/Images/Sephora.png";
+import LouisVuitton from "../../public/Images/LouisVuitton.png";
+import FendiCard from "../../public/Images/Fendi.png";
+import extendedTheme from "./theme";
+import ShieldIcon from "./_components/svg/ShieldIcon";
+import KeyIcon from "./_components/svg/keyIcon";
 
 export default function Home() {
   // const defaultOptionsHP_Top = {
@@ -57,22 +74,22 @@ export default function Home() {
   return (
     <main className="bg-myBG  font-Figtree">
       <div className="pb-32">
-        <Box pt={20} display={'flex'} px={{ base: '0.5rem', md: '32px' }}>
+        <Box pt={20} display={"flex"} px={{ base: "0.5rem", md: "32px" }}>
           <VStack
             align={"flex-start"}
             w={"full"}
-            mr={{ md: "50%", base:'10%' }}
+            mr={{ md: "50%", base: "10%" }}
             display={"flex"}
             gap={"1.5rem"}
-            mt={{ md:'5rem', base:'1rem' }}
-            ml={{ base:'1rem', md:'5.5rem' }}
+            mt={{ md: "5rem", base: "1rem" }}
+            ml={{ base: "1rem", md: "5.5rem" }}
           >
             <HStack>
               <Heading
-                as={'h1'}
-                fontSize={{ md: "5rem", base:'2rem' }}
+                as={"h1"}
+                fontSize={{ md: "5rem", base: "2rem" }}
                 className="text-headText"
-                lineHeight={{ md: "5.5rem", base:'2.5rem' }}
+                lineHeight={{ md: "5.5rem", base: "2.5rem" }}
                 fontWeight={"400"}
               >
                 Intelligence as a service powered by your{" "}
@@ -106,7 +123,7 @@ export default function Home() {
             >
               LEARN MORE
             </Button>
-            <SearchBar/>
+            <SearchBar />
           </VStack>
         </Box>
 
@@ -120,8 +137,8 @@ export default function Home() {
             as={"h2"}
             className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text"
             fontWeight={600}
-            letterSpacing={'0.25rem'}
-            fontSize={'1rem'}
+            letterSpacing={"0.25rem"}
+            fontSize={"1rem"}
           >
             BRANDS WE WORK WITH
           </Heading>
@@ -147,16 +164,17 @@ export default function Home() {
         <TechnologySection />
 
         <HStack
-        pt={"8rem"}
-        justify={"center"}
-        display={"flex"}
-        flexDirection={"column"}>
-         <Heading
+          pt={"8rem"}
+          justify={"center"}
+          display={"flex"}
+          flexDirection={"column"}
+        >
+          <Heading
             as={"h2"}
             className="color-gradient"
             fontWeight={600}
-            letterSpacing={'0.25rem'}
-            fontSize={'1rem'}
+            letterSpacing={"0.25rem"}
+            fontSize={"1rem"}
           >
             PRODUCT SHOWCASE
           </Heading>
@@ -169,49 +187,165 @@ export default function Home() {
             fontWeight={"300"}
             fontSize={{ md: "3.75rem", base: "1.5rem" }}
           >
-           Technology For Everyone!
+            Technology For Everyone!
           </Text>
           <Text
             className="description"
-            textAlign={'center'}
-            px={{md:'24rem'}}
-            color={theme.colors.secondary}>
-              We have seamless data capturing capabilities, robust security with trust measures in place and in-depth insights and transparency around the value of your data.
+            textAlign={"center"}
+            px={{ md: "24rem" }}
+            color={theme.colors.secondary}
+          >
+            We have seamless data capturing capabilities, robust security with
+            trust measures in place and in-depth insights and transparency
+            around the value of your data.
           </Text>
-          <Container display={'flex'} pt={{md:'2rem'}} px={{md:'10rem'}} justifyContent={"center"} textAlign={'center'} minW={{ md:'100%', base:'100%' }}>
-        <Grid
-          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
-          gap={{ md:20 , base:5}}
-          flexWrap="wrap"
-        >
-          <ServiceCard
-            icon={<HushhWalletIcon />}
-            title="Hushh Wallet App​"
-            alignItems={'center'}
-            description="Customer User Flow + Client Advisor User Flow​"
-          />
-          <ServiceCard
-            icon={<HushhButtonIcon/>}
-            title="Hushh Button​​​"
-            alignItems={'center'}
-            description="Seamless Data Sharing for Personalized Experiences and recommendations​​"
-          />
-          <ServiceCard
-            icon={<VibeSearchIcon />}
-            title="Vibe Search​"
-            alignItems={'center'}
-            description="Find perfect items to express your individuality in just one click"
-          />
-          <ServiceCard
-            icon={<VibeSearchIcon />}
-            title="Chrome Extension​"
-            alignItems={'center'}
-            description="Improved product recommendations & effective marketing campaigns"
-          />
-        </Grid>
-      </Container>
+          <Container
+            display={"flex"}
+            pt={{ md: "2rem" }}
+            px={{ md: "10rem" }}
+            justifyContent={"center"}
+            textAlign={"center"}
+            minW={{ md: "100%", base: "100%" }}
+          >
+            <Grid
+              templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+              gap={{ md: 20, base: 5 }}
+              flexWrap="wrap"
+            >
+              <ServiceCard
+                icon={<HushhWalletIcon />}
+                title="Hushh Wallet App​"
+                alignItems={"center"}
+                textAlign={'center'}
+                description="Customer User Flow + Client Advisor User Flow​"
+              />
+              <ServiceCard
+                icon={<HushhButtonIcon />}
+                title="Hushh Button​​​"
+                textAlign={'center'}
+                alignItems={"center"}
+                description="Seamless Data Sharing for Personalized Experiences and recommendations​​"
+              />
+              <ServiceCard
+                icon={<VibeSearchIcon />}
+                title="Vibe Search​"
+                textAlign={'center'}
+                alignItems={"center"}
+                description="Find perfect items to express your individuality in just one click"
+              />
+              <ServiceCard
+                icon={<VibeSearchIcon />}
+                title="Chrome Extension​"
+                alignItems={"center"}
+                textAlign={'center'}
+                description="Improved product recommendations & effective marketing campaigns"
+              />
+            </Grid>
+          </Container>
         </HStack>
 
+        <Box
+          display="flex"
+          h={"full"}
+          pt={"12rem"}
+          justifyContent="space-between"
+          gap="5rem"
+        >
+          {/* Left side box */}
+          <Box flex="1" bg={extendedTheme.colors._black}>
+            <NextImage
+              src={LouisVuitton}
+              alt="Louis Vuitton"
+              width={300.62}
+              height={313.19}
+              style={{
+                zIndex: "1",
+                position: "absolute",
+                top: "2702px",
+                left: "100px",
+              }}
+            />
+            <NextImage
+              style={{
+                position: "absolute",
+                top: "2789.67px",
+                left: "319px",
+                zIndex: "2",
+              }}
+              src={SephoraCard}
+              alt="Sephora Card"
+              width={380.62}
+              height={313.19}
+            />
+            <NextImage
+              style={{
+                position: "relative",
+                top: "120.75px",
+                left: "40px",
+                zIndex: "1",
+                rotate: "10.02",
+              }}
+              src={FendiCard}
+              alt="Fendi Card"
+              width={520.62}
+              height={313.19}
+            />
+          </Box>
+          {/* Right side box */}
+          <VStack alignItems={"left"} textAlign="left" flex="1">
+            <Text
+              className="color-gradient"
+              fontWeight={600}
+              letterSpacing={"0.25rem"}
+              fontSize={"1rem"}
+            >
+              OUR ADVANTAGES
+            </Text>
+
+            <Heading>
+              <Text
+                className="gradient"
+                lineHeight={"63px"}
+                fontWeight={"400"}
+                fontSize={"3.75rem"}
+              >
+                Why Us?
+              </Text>
+            </Heading>
+            <Text pt={"2rem"} color={extendedTheme.colors.secondary}>
+              Empower individuals with data control. Today, we're a cutting-edge
+              platform fostering trust, transparency, and personalized
+              experiences.
+            </Text>
+
+            <Box pt={'40px'} display={"flex"} gap={"10rem"}>
+              <VStack>
+                <HStack gap={"2rem"}>
+                  <ShieldIcon />
+                  <Text
+                    fontWeight={"500"}
+                    fontSize={"1rem"}
+                    color={extendedTheme.colors.secondary}
+                  >
+                    Data <br></br> Autonomy
+                  </Text>
+                </HStack>
+                <Divider border="1px solid" className="divider"/>
+              </VStack>
+              <HStack gap={"2rem"}>
+                <KeyIcon />
+                <Text
+                  fontWeight={"500"}
+                  fontSize={"1rem"}
+                  color={extendedTheme.colors.secondary}
+                >
+                  Promoting <br></br> Data Equity
+                </Text>
+              </HStack>
+              {/* <Divider className="divider"/> */}
+            </Box>
+          </VStack>
+        </Box>
 
         {/* <div className="pt-5">
           <HP_Scrolling />
@@ -284,7 +418,6 @@ export default function Home() {
           </div>
         </div>
         <hr className=" h-0.5 bg-gradient-to-r from-myBG via-myBorder to-myBG" /> */}
-
       </div>
     </main>
   );
