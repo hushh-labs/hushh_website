@@ -95,3 +95,60 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 } */
+
+
+/* Divider Gradient Color */
+.divider {
+  border: 2px solid;
+  color: linear-gradient(270deg, #262626 100%, #ADA785 100%);
+
+}
+
+
+/* Slide Up text animation - home banner */
+.wrapper{
+    box-sizing: content-box;
+    display: flex;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+}
+.words{
+  overflow: hidden;
+  width: max-content;
+  height: 6rem;
+}
+.slideText {
+  display: block;
+  -webkit-background-clip: text;
+  color: transparent;
+    animation: spin_words 6s infinite;
+}
+@keyframes spin_words{
+  0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-100%);
+    }
+    45% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    70% {
+        transform: translateY(-200%);
+    }
+    75% {
+        transform: translateY(-300%);
+    }
+    95% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(-400%);
+    }
+}
+

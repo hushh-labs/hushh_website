@@ -6,6 +6,8 @@ import HomebannerBG from './_components/svg/images/homeBannerBg'
 import { Providers } from './provider'
 import Header from './_components/header'
 import React from 'react'
+import ResponsiveSizeProvider from './context/responsive'
+
 export const metadata = {
   title: 'HUSHH',
   description: 'Your data Your Business',
@@ -16,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={`${mulish.variable} font-sans`} >
+        <ResponsiveSizeProvider>
         <header className='h-full absolute z-50'>
           <Header />
         </header>
@@ -25,6 +28,7 @@ export default function RootLayout({ children }) {
         {/* <footer>
           <Footer />
         </footer> */}
+        </ResponsiveSizeProvider>
       </body>
     </html>
   );
