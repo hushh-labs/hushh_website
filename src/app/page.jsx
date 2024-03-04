@@ -330,8 +330,9 @@ export default function Home() {
                     Data <br></br> Autonomy
                   </Text>
                 </HStack>
-                <Divider border="1px solid" className="divider"/>
+                <Divider mt={'1rem'} className="divider"/>
               </VStack>
+              <VStack mt={'-0.5rem'}>
               <HStack gap={"2rem"}>
                 <KeyIcon />
                 <Text
@@ -342,7 +343,8 @@ export default function Home() {
                   Promoting <br></br> Data Equity
                 </Text>
               </HStack>
-              {/* <Divider className="divider"/> */}
+              <Divider mt={'1rem'} className="divider"/>
+              </VStack>
             </Box>
           </VStack>
         </Box>

@@ -99,9 +99,7 @@ body {
 
 /* Divider Gradient Color */
 .divider {
-  border: 4px solid;
-  border-color: linear-gradient(270deg, #262626 0%, #ADA785 87.01%, #262626 100%);
-  /* color: linear-gradient(270deg, #262626 0%, #ADA785 87.01%, #262626 100%); */
-  /* -webkit-background-clip: text; */
+  border: 2px solid;
+  color: linear-gradient(270deg, #262626 100%, #ADA785 100%);
 
 }
