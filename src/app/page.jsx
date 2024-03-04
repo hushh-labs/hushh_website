@@ -36,6 +36,7 @@ import FendiCard from "../../public/Images/Fendi.png";
 import extendedTheme from "./theme";
 import ShieldIcon from "./_components/svg/ShieldIcon";
 import KeyIcon from "./_components/svg/keyIcon";
+import LockIcon from "./_components/svg/LockIcon";
 
 export default function Home() {
   // const defaultOptionsHP_Top = {
@@ -252,43 +253,43 @@ export default function Home() {
           gap="5rem"
         >
           {/* Left side box */}
-          <Box flex="1" bg={extendedTheme.colors._black}>
+          <Box flex="1" mt={'5rem'} bg={extendedTheme.colors._black}>
             <NextImage
               src={LouisVuitton}
               alt="Louis Vuitton"
-              width={300.62}
-              height={313.19}
+              width={350.62}
+              height={363.19}
               style={{
                 zIndex: "1",
                 position: "absolute",
-                top: "2702px",
+                top: "2752px",
                 left: "100px",
               }}
             />
             <NextImage
               style={{
                 position: "absolute",
-                top: "2789.67px",
+                top: "2879.67px",
                 left: "319px",
                 zIndex: "2",
               }}
               src={SephoraCard}
               alt="Sephora Card"
-              width={380.62}
-              height={313.19}
+              width={420.62}
+              height={363.19}
             />
             <NextImage
               style={{
                 position: "relative",
-                top: "120.75px",
+                top: "140.75px",
                 left: "40px",
                 zIndex: "1",
                 rotate: "10.02",
               }}
               src={FendiCard}
               alt="Fendi Card"
-              width={520.62}
-              height={313.19}
+              width={570.62}
+              height={363.19}
             />
           </Box>
           {/* Right side box */}
@@ -312,7 +313,7 @@ export default function Home() {
                 Why Us?
               </Text>
             </Heading>
-            <Text pt={"2rem"} color={extendedTheme.colors.secondary}>
+            <Text pt={"2rem"} fontWeight={'500'} color={extendedTheme.colors.secondary}>
               Empower individuals with data control. Today, we're a cutting-edge
               platform fostering trust, transparency, and personalized
               experiences.
@@ -331,7 +332,7 @@ export default function Home() {
                   </Text>
                 </HStack>
                 <Divider mt={'1rem'} className="divider" width={'12rem'}/>
-                <Text mt={'20px'} color={extendedTheme.colors.secondary}>
+                <Text fontWeight={'500'} lineHeight={'36px'} mt={'20px'} color={extendedTheme.colors.secondary}>
                 Empower your customers with full control over their personal data
                 </Text>
               </VStack>
@@ -348,11 +349,27 @@ export default function Home() {
                 </Text>
               </HStack>
               <Divider mt={'1rem'} className="divider" width={'12rem'}/>
-              <Text mt={'20px'} color={extendedTheme.colors.secondary}>
+              <Text fontWeight={'500'} lineHeight={'36px'} mt={'20px'} color={extendedTheme.colors.secondary}>
               Creating a fair and equitable environment for data sharing.​
               </Text>
               </VStack>
             </Box>
+            <VStack mt={'1.5rem'} textAlign={'left'} alignItems={'left'}>
+              <HStack gap={"2rem"}>
+                <LockIcon />
+                <Text
+                  fontWeight={"500"}
+                  fontSize={"1rem"}
+                  color={extendedTheme.colors.secondary}
+                >
+                  Consent-Driven <br></br> Excellence
+                </Text>
+              </HStack>
+              <Divider mt={'1rem'} className="divider" width={'22rem'}/>
+              <Text fontWeight={'500'} lineHeight={'36px'} mt={'20px'} color={extendedTheme.colors.secondary}>
+              Creating a fair and equitable environment for data sharing.​
+              </Text>
+              </VStack>
           </VStack>
         </Box>
 
