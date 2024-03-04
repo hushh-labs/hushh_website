@@ -94,13 +94,29 @@ export default function Home() {
                 fontWeight={"400"}
               >
                 Intelligence as a service powered by your{" "}
-                <span
+                <span className="wrapper">
+                  <div className="words">
+                    <span className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
+                      Data
+                    </span>
+                    <span className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
+                      Social Media
+                    </span>
+                    <span className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
+                      Phone Data
+                    </span>
+                    <span className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
+                      Shopping History
+                    </span>
+                  </div>
+                </span>
+              </Heading>
+              {/* <span
                   // className="gradient-text"
                   className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text"
-                >
-                  Data
-                </span>{" "}
-              </Heading>
+                > */}
+
+              {/* </span>{" "} */}
             </HStack>
             <Text color={"#656565"} fontSize={"18px"}>
               Unlock the value of{" "}
@@ -153,7 +169,7 @@ export default function Home() {
             fontSize={{ md: "3.75rem", base: "1.5rem" }}
           >
             Discover the brands that {"  "}
-            <span className="trust-text bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text">
+            <span className="trust-text bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
               trust us
             </span>{" "}
             to unlock the potential of their data.
