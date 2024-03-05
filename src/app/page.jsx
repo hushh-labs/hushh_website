@@ -37,6 +37,7 @@ import extendedTheme from "./theme";
 import ShieldIcon from "./_components/svg/ShieldIcon";
 import KeyIcon from "./_components/svg/keyIcon";
 import LockIcon from "./_components/svg/LockIcon";
+import BrandWalletSection from "./_components/features/brandWalletSection";
 
 export default function Home() {
   // const defaultOptionsHP_Top = {
@@ -389,7 +390,7 @@ export default function Home() {
 
        
 
-        
+        <BrandWalletSection/>
 
         {/* <div className="pt-5">
           <HP_Scrolling />
