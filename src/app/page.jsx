@@ -1,13 +1,7 @@
 "use client";
-import HP_TopData from "../../public/Animations/HP_TopData.json";
+
 import "../app/globals.css";
-// import { HP_Scrolling } from "./_components/features/HP_Scrolling";
-// import DataConsent_Data from "../../public/Animations/DataConsent_Data.json";
-// import DataSecurity_Data from "../../public/Animations/DataSecurity_Data.json";
-// import ZeroParty_Data from "../../public/Animations/ZeroParty_Data.json";
-// import { images } from "../../public/Images/images";
-import NextImage from "next/image";
-import { BrandSlider } from "./_components/features/brandSlider";
+
 import {
   Box,
   Button,
@@ -16,62 +10,31 @@ import {
   Grid,
   HStack,
   Heading,
-  Image,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import theme from "./theme";
-import TechnologySection from "./_components/features/technologySection";
-import React from "react";
-import { ServiceCard } from "./_components/primitives/serviceCard";
-import TransparentSecureIcon from "./_components/svg/tranparentSecure";
-import HushhWalletIcon from "./_components/svg/hushhWalletIcon";
-import HushhButtonIcon from "./_components/svg/hushhButton";
-import VibeSearchIcon from "./_components/svg/vibeSearch";
+
+import { BrandSlider } from "./_components/features/brandSlider";
+import BrandWalletSection from "./_components/features/brandWalletSection";
 import ChromeExtentionLogo from "./_components/svg/ChromeExtensionLogo";
-import SearchBar from "./_components/features/searchBar";
-import SephoraCard from "../../public/Images/Sephora.png";
-import LouisVuitton from "../../public/Images/LouisVuitton.png";
 import FendiCard from "../../public/Images/Fendi.png";
-import extendedTheme from "./theme";
-import ShieldIcon from "./_components/svg/ShieldIcon";
+import HushhButtonIcon from "./_components/svg/hushhButton";
+import HushhWalletIcon from "./_components/svg/hushhWalletIcon";
 import KeyIcon from "./_components/svg/keyIcon";
 import LockIcon from "./_components/svg/LockIcon";
-import BrandWalletSection from "./_components/features/brandWalletSection";
+import LouisVuitton from "../../public/Images/LouisVuitton.png";
+import NextImage from "next/image";
+import React from "react";
+import SearchBar from "./_components/features/searchBar";
+import SephoraCard from "../../public/Images/Sephora.png";
+import { ServiceCard } from "./_components/primitives/serviceCard";
+import ShieldIcon from "./_components/svg/ShieldIcon";
+import TechnologySection from "./_components/features/technologySection";
+import VibeSearchIcon from "./_components/svg/vibeSearch";
+import extendedTheme from "./theme";
+import theme from "./theme";
 
 export default function Home() {
-  // const defaultOptionsHP_Top = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: HP_TopData,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-  // const defaultOptionsDataSecurity = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: DataSecurity_Data,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-  // const defaultOptionsDataConsent = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: DataConsent_Data,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-  // const defaultOptionsZeroParty = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: ZeroParty_Data,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
 
   return (
     <main className="bg-myBG  font-Figtree">
