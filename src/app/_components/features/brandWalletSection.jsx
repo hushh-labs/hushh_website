@@ -4,6 +4,10 @@ import BrandWalletMobile from "../../../../public/Images/BrandWalletMobile.png";
 import NextImage from "next/image";
 import React from "react";
 import SendReceiveIcon from "../svg/icons/sendReceive";
+import ChartIcon from "../svg/icons/chartIcon";
+import RefreshIcon from "../svg/icons/refreshIcon";
+import WalletIcon from "../svg/icons/walletIcon";
+
 import extendedTheme from "@/app/theme";
 
 const BrandWalletSection = () => {
@@ -24,20 +28,21 @@ const BrandWalletSection = () => {
       </Text>
       <Grid
         templateColumns={{ md: "1fr 2fr 1fr", base: "1fr" }}
-        gap={{ md: "2rem", base: "1rem" }}
+        gap={{ md: "1rem", base: "1rem" }}
         mt={{ md: "2rem", base: "1rem" }}
+        px={{md:"10rem"}}
       >
         {/* Left column */}
         <VStack display={{ md: "flex", base: "none" }} gap="2rem">
-          <HStack flexDirection="column" bg="#1C1C1C" p="1rem">
+          <HStack  flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
             <SendReceiveIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
               Send & Receive
             </Heading>
             <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
-          <HStack flexDirection="column" bg="#1C1C1C" p="1rem">
-            <SendReceiveIcon />
+          <HStack flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
+            <WalletIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
                100% Secure Wallet
             </Heading>
@@ -46,21 +51,24 @@ const BrandWalletSection = () => {
         </VStack>
 
         {/* Center column */}
-        <Box gridColumn={{ md: "2 / span 1", base: "1 / span 1" }}>
-          <NextImage src={BrandWalletMobile} />
+        <Box borderRadius={'2.5rem'} w={'full'} gridColumn={{ md: "2", base: "1 / span 1" }} className="gradient-bg">
+            <VStack>
+                <Heading fontSize={'20px'} color={extendedTheme.colors._white}>iOS & Android App</Heading>
+               <NextImage src={BrandWalletMobile} />
+            </VStack>
         </Box>
 
         {/* Right column */}
         <VStack display={{ md: "flex", base: "none" }} gap="2rem">
-          <HStack flexDirection="column" bg="#1C1C1C" p="1rem">
-            <SendReceiveIcon />
+          <HStack flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
+            <ChartIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
                Trading Charts
             </Heading>
             <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
-          <HStack flexDirection="column" bg="#1C1C1C" p="1rem">
-            <SendReceiveIcon />
+          <HStack flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
+            <RefreshIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
                Real Time Trading
             </Heading>

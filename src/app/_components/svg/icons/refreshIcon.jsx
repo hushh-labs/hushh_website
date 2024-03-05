@@ -1,6 +1,6 @@
 import React from "react";
 
-const ChartIcon = () => (
+const RefreshIcon = () => (
   <>
 <svg width="69" height="68" viewBox="0 0 69 68" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.5" width="68" height="68" rx="20" fill="#2B2B2B"/>
@@ -15,7 +15,7 @@ const ChartIcon = () => (
   </>
 );
 
-export default ChartIcon;
+export default RefreshIcon;
 
 
 
