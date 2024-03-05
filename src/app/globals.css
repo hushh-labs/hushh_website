@@ -114,13 +114,16 @@ body {
 .words{
   overflow: hidden;
   width: max-content;
-  height: 6rem;
+  height: 6.6rem;
+
 }
 .slideText {
   display: block;
   -webkit-background-clip: text;
   color: transparent;
     animation: spin_words 6s infinite;
+    font-size: 5rem;
+
 }
 @keyframes spin_words{
   0% {
