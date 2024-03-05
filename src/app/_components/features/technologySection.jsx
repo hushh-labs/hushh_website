@@ -13,7 +13,7 @@ const TechnologySection = () => {
   return (
     <>
       <HStack
-        mt={{md:"15rem", base:"5rem"}}
+        mt={{md:"8rem", base:"5rem"}}
         w={"100%"}
         display={"flex"}
         flexDirection={"column"}

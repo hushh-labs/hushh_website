@@ -79,7 +79,7 @@ export default function Home() {
           <VStack
             align={"flex-start"}
             w={"full"}
-            mr={{ md: "50%", base: "10%" }}
+            mr={{ md: "60%", base: "10%" }}
             display={"flex"}
             gap={"1.5rem"}
             mt={{ md: "5rem", base: "1rem" }}
@@ -92,6 +92,8 @@ export default function Home() {
                 className="text-headText"
                 lineHeight={{ md: "5.5rem", base: "2.5rem" }}
                 fontWeight={"400"}
+                display={'flex'}
+                flexDirection={'column'}
               >
                 Intelligence as a service powered by your{" "}
                 <span className="wrapper">
@@ -111,13 +113,8 @@ export default function Home() {
                   </div>
                 </span>
               </Heading>
-              {/* <span
-                  // className="gradient-text"
-                  className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text"
-                > */}
-
-              {/* </span>{" "} */}
             </HStack>
+
             <Text color={"#656565"} fontSize={"18px"}>
               Unlock the value of{" "}
               <span className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text">
@@ -125,6 +122,7 @@ export default function Home() {
               </span>{" "}
               data with rich insights!
             </Text>
+            
             <Button
               border={"3px solid #606060"}
               borderRadius={"2px"}
@@ -178,98 +176,15 @@ export default function Home() {
 
         <BrandSlider />
 
-        <TechnologySection />
-
-        <HStack
-          pt={"8rem"}
-          justify={"center"}
-          display={"flex"}
-          flexDirection={"column"}
-        >
-          <Heading
-            as={"h2"}
-            className="color-gradient"
-            fontWeight={600}
-            letterSpacing={"0.25rem"}
-            fontSize={"1rem"}
-          >
-            PRODUCT SHOWCASE
-          </Heading>
-          <Text
-            align={"center"}
-            lineHeight={{ md: "6rem" }}
-            pl={{ md: "16rem" }}
-            pr={{ md: "16rem" }}
-            className="gradient"
-            fontWeight={"300"}
-            fontSize={{ md: "3.75rem", base: "1.5rem" }}
-          >
-            Technology For Everyone!
-          </Text>
-          <Text
-            className="description"
-            textAlign={"center"}
-            px={{ md: "24rem" }}
-            color={theme.colors.secondary}
-          >
-            We have seamless data capturing capabilities, robust security with
-            trust measures in place and in-depth insights and transparency
-            around the value of your data.
-          </Text>
-          <Container
-            display={"flex"}
-            pt={{ md: "2rem" }}
-            px={{ md: "10rem" }}
-            justifyContent={"center"}
-            textAlign={"center"}
-            minW={{ md: "100%", base: "100%" }}
-          >
-            <Grid
-              templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
-              gap={{ md: 20, base: 5 }}
-              flexWrap="wrap"
-            >
-              <ServiceCard
-                icon={<HushhWalletIcon />}
-                title="Hushh Wallet App​"
-                alignItems={"center"}
-                textAlign={'center'}
-                description="Customer User Flow + Client Advisor User Flow​"
-              />
-              <ServiceCard
-                icon={<HushhButtonIcon />}
-                title="Hushh Button​​​"
-                textAlign={'center'}
-                alignItems={"center"}
-                description="Seamless Data Sharing for Personalized Experiences and recommendations​​"
-              />
-              <ServiceCard
-                icon={<VibeSearchIcon />}
-                title="Vibe Search​"
-                textAlign={'center'}
-                alignItems={"center"}
-                description="Find perfect items to express your individuality in just one click"
-              />
-              <ServiceCard
-                icon={<ChromeExtentionLogo />}
-                title="Chrome Extension​"
-                alignItems={"center"}
-                textAlign={'center'}
-                description="Improved product recommendations & effective marketing campaigns"
-              />
-            </Grid>
-          </Container>
-        </HStack>
-
         <Box
           display="flex"
           h={"full"}
-          pt={"12rem"}
+          pt={"10rem"}
           justifyContent="space-between"
           gap="5rem"
         >
           {/* Left side box */}
-          <Box flex="1" mt={'5rem'} bg={extendedTheme.colors._black}>
+          <Box flex="1" bg={extendedTheme.colors._black}>
             <NextImage
               src={LouisVuitton}
               alt="Louis Vuitton"
@@ -277,15 +192,15 @@ export default function Home() {
               height={363.19}
               style={{
                 zIndex: "1",
-                position: "absolute",
-                top: "2752px",
+                position: "relative",
+                top: "25px",
                 left: "100px",
               }}
             />
             <NextImage
               style={{
-                position: "absolute",
-                top: "2879.67px",
+                position: "relative",
+                top: "-90.67px",
                 left: "319px",
                 zIndex: "2",
               }}
@@ -296,8 +211,8 @@ export default function Home() {
             />
             <NextImage
               style={{
-                position: "relative",
-                top: "140.75px",
+                position: "absolute",
+                top: "1490.75px",
                 left: "40px",
                 zIndex: "1",
                 rotate: "10.02",
@@ -388,6 +303,93 @@ export default function Home() {
               </VStack>
           </VStack>
         </Box>
+
+        <HStack
+          pt={"8rem"}
+          justify={"center"}
+          display={"flex"}
+          flexDirection={"column"}
+        >
+          <Heading
+            as={"h2"}
+            className="color-gradient"
+            fontWeight={600}
+            letterSpacing={"0.25rem"}
+            fontSize={"1rem"}
+          >
+            PRODUCT SHOWCASE
+          </Heading>
+          <Text
+            align={"center"}
+            lineHeight={{ md: "6rem" }}
+            pl={{ md: "16rem" }}
+            pr={{ md: "16rem" }}
+            className="gradient"
+            fontWeight={"300"}
+            fontSize={{ md: "3.75rem", base: "1.5rem" }}
+          >
+            Technology For Everyone!
+          </Text>
+          <Text
+            className="description"
+            textAlign={"center"}
+            px={{ md: "24rem" }}
+            color={theme.colors.secondary}
+          >
+            We have seamless data capturing capabilities, robust security with
+            trust measures in place and in-depth insights and transparency
+            around the value of your data.
+          </Text>
+          <Container
+            display={"flex"}
+            pt={{ md: "2rem" }}
+            px={{ md: "10rem" }}
+            justifyContent={"center"}
+            textAlign={"center"}
+            minW={{ md: "100%", base: "100%" }}
+          >
+            <Grid
+              templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+              gap={{ md: 20, base: 5 }}
+              flexWrap="wrap"
+            >
+              <ServiceCard
+                icon={<HushhWalletIcon />}
+                title="Hushh Wallet App​"
+                alignItems={"center"}
+                textAlign={'center'}
+                description="Customer User Flow + Client Advisor User Flow​"
+              />
+              <ServiceCard
+                icon={<HushhButtonIcon />}
+                title="Hushh Button​​​"
+                textAlign={'center'}
+                alignItems={"center"}
+                description="Seamless Data Sharing for Personalized Experiences and recommendations​​"
+              />
+              <ServiceCard
+                icon={<VibeSearchIcon />}
+                title="Vibe Search​"
+                textAlign={'center'}
+                alignItems={"center"}
+                description="Find perfect items to express your individuality in just one click"
+              />
+              <ServiceCard
+                icon={<ChromeExtentionLogo />}
+                title="Chrome Extension​"
+                alignItems={"center"}
+                textAlign={'center'}
+                description="Improved product recommendations & effective marketing campaigns"
+              />
+            </Grid>
+          </Container>
+        </HStack>
+
+        <TechnologySection />
+
+       
+
+        
 
         {/* <div className="pt-5">
           <HP_Scrolling />
