@@ -3,7 +3,7 @@ import { Box, Grid, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import BrandWalletMobile from "../../../../public/Images/BrandWalletMobile.png";
 import NextImage from "next/image";
 import React from "react";
-import SendReceiveIcon from "../svg/sendReceive";
+import SendReceiveIcon from "../svg/icons/sendReceive";
 import extendedTheme from "@/app/theme";
 
 const BrandWalletSection = () => {
@@ -34,12 +34,14 @@ const BrandWalletSection = () => {
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
               Send & Receive
             </Heading>
+            <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
           <HStack flexDirection="column" bg="#1C1C1C" p="1rem">
             <SendReceiveIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
-              Send & Receive
+               100% Secure Wallet
             </Heading>
+            <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
         </VStack>
 
@@ -53,14 +55,16 @@ const BrandWalletSection = () => {
           <HStack flexDirection="column" bg="#1C1C1C" p="1rem">
             <SendReceiveIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
-              Send & Receive
+               Trading Charts
             </Heading>
+            <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
           <HStack flexDirection="column" bg="#1C1C1C" p="1rem">
             <SendReceiveIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
-              Send & Receive
+               Real Time Trading
             </Heading>
+            <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
         </VStack>
       </Grid>
