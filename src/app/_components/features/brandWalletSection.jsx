@@ -34,14 +34,14 @@ const BrandWalletSection = () => {
       >
         {/* Left column */}
         <VStack w={'20rem'} display={{ md: "flex", base: "none" }} gap="2rem">
-          <HStack  align={'left'}  flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
+          <HStack  align={'left'}  flexDirection="column" bg="#1C1C1C" px="2rem" py="3rem" gap={'1rem'} borderRadius={'2.5rem'}>
             <SendReceiveIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
               Send & Receive
             </Heading>
             <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
-          <HStack align={'left'}  flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
+          <HStack align={'left'}  flexDirection="column" bg="#1C1C1C" px="2rem" py="3rem" gap={'1rem'} borderRadius={'2.5rem'}>
             <WalletIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
                100% Secure Wallet
@@ -52,10 +52,10 @@ const BrandWalletSection = () => {
 
         {/* Center column */}
         <Box borderRadius={'2.5rem'} w={'full'} gridColumn={{ md: "2", base: "1 / span 1" }} className="gradient-bg">
-            <VStack align={'left'} p={'2rem'} gap={'1.5rem'}>
+            <VStack align={'left'} px={'2rem'} pt={'2rem'} gap={'1.6rem'}>
                 <Heading fontSize={'20px'} color={extendedTheme.colors._white}>iOS & Android App</Heading>
                 <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In amet, morbi non at sed neque.</Text>
-                <Box align={'center'}>
+                <Box align={'center'} mt={'1.40rem'}>
                    <NextImage src={BrandWalletMobile} />
                 </Box>
             </VStack>
@@ -63,14 +63,14 @@ const BrandWalletSection = () => {
 
         {/* Right column */}
         <VStack w={'20rem'} display={{ md: "flex", base: "none" }} gap="2rem">
-          <HStack align={'left'}  flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
+          <HStack align={'left'}  flexDirection="column" bg="#1C1C1C" px="2rem" py="3rem" gap={'1rem'} borderRadius={'2.5rem'}>
             <ChartIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
                Trading Charts
             </Heading>
             <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse tortor aene.</Text>
           </HStack>
-          <HStack align={'left'}  flexDirection="column" bg="#1C1C1C" p="2rem" gap={'1rem'} borderRadius={'2.5rem'}>
+          <HStack align={'left'}  flexDirection="column" bg="#1C1C1C" px="2rem" py="3rem" gap={'1rem'} borderRadius={'2.5rem'}>
             <RefreshIcon />
             <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
                Real Time Trading
