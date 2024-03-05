@@ -80,11 +80,7 @@ export default function Home() {
             </HStack>
 
             <Text color={"#656565"} fontSize={"18px"}>
-              Unlock the value of{" "}
-              <span className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text">
-                "Your"
-              </span>{" "}
-              data with rich insights!
+            We're a data API business helping users manage and monetize their data, turning it into a financial asset.
             </Text>
             
             <Button
@@ -134,7 +130,7 @@ export default function Home() {
             <span className="trust-text bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
               trust us
             </span>{" "}
-            to unlock the potential of their data.
+            to unlock the potential of their customer data.
           </Text>
         </HStack>
 
