@@ -33,8 +33,10 @@ import TechnologySection from "./_components/features/technologySection";
 import VibeSearchIcon from "./_components/svg/vibeSearch";
 import extendedTheme from "./theme";
 import theme from "./theme";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
 
   return (
     <main className="bg-myBG  font-Figtree">
@@ -95,6 +97,9 @@ export default function Home() {
                 background:
                   "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
               }}
+              onClick={() =>
+                router.push("https://sites.google.com/hush1one.com/drops/home/journey")
+              }
             >
               LEARN MORE
             </Button>
@@ -130,7 +135,7 @@ export default function Home() {
             <span className="trust-text bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
               trust us
             </span>{" "}
-            to unlock the potential of their customer data.
+            to unlock the potential of their clearn more customer data.
           </Text>
         </HStack>
 

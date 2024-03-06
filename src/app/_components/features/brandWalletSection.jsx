@@ -1,4 +1,4 @@
-import { Box, Grid, HStack, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Grid, HStack, Heading, Text, VStack, Button } from "@chakra-ui/react";
 
 import BrandWalletMobile from "../../../../public/Images/BrandWalletMobile.png";
 import NextImage from "next/image";
@@ -22,6 +22,8 @@ const BrandWalletSection = () => {
         pl={{ md: "30rem" }}
         pr={{ md: "30rem" }}
         color={extendedTheme.colors.secondary}
+        lineHeight={'36px'}
+        mb={'1rem'}
       >
         "Experience elegance and durability with our brand wallet - a statement
         of luxury and utility."
@@ -53,7 +55,7 @@ const BrandWalletSection = () => {
         {/* Center column */}
         <Box borderRadius={'2.5rem'} w={'full'} gridColumn={{ md: "2", base: "1 / span 1" }} className="gradient-bg">
             <VStack align={'left'} px={'2rem'} pt={'2rem'} gap={'1.6rem'}>
-                <Heading fontSize={'20px'} color={extendedTheme.colors._white}>iOS & Android App</Heading>
+                <Heading fontSize={'20px'} color={extendedTheme.colors._white}>iOS & ANDROID APP</Heading>
                 <Text color={extendedTheme.colors._white}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In amet, morbi non at sed neque.</Text>
                 <Box align={'center'} mt={'1.40rem'}>
                    <NextImage src={BrandWalletMobile} />
@@ -79,6 +81,23 @@ const BrandWalletSection = () => {
           </HStack>
         </VStack>
       </Grid>
+      <Button
+              mt={'4rem'}
+              border={"1px solid #606060"}
+              borderRadius={"2px"}
+              w={"16rem"}
+              className='color-gradient'
+              lineHeight={"28px"}
+              background={"transparent"}
+              letterSpacing={"0.5rem"}
+              _hover={{
+                background:
+                  "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                  color: "white"            
+              }}
+            >
+              DOWNLOAD APP
+      </Button>
     </VStack>
   );
 };
