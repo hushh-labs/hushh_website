@@ -1,13 +1,7 @@
 "use client";
-import HP_TopData from "../../public/Animations/HP_TopData.json";
+
 import "../app/globals.css";
-// import { HP_Scrolling } from "./_components/features/HP_Scrolling";
-// import DataConsent_Data from "../../public/Animations/DataConsent_Data.json";
-// import DataSecurity_Data from "../../public/Animations/DataSecurity_Data.json";
-// import ZeroParty_Data from "../../public/Animations/ZeroParty_Data.json";
-// import { images } from "../../public/Images/images";
-import NextImage from "next/image";
-import { BrandSlider } from "./_components/features/brandSlider";
+
 import {
   Box,
   Button,
@@ -16,61 +10,33 @@ import {
   Grid,
   HStack,
   Heading,
-  Image,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import theme from "./theme";
-import TechnologySection from "./_components/features/technologySection";
-import React from "react";
-import { ServiceCard } from "./_components/primitives/serviceCard";
-import TransparentSecureIcon from "./_components/svg/tranparentSecure";
-import HushhWalletIcon from "./_components/svg/hushhWalletIcon";
-import HushhButtonIcon from "./_components/svg/hushhButton";
-import VibeSearchIcon from "./_components/svg/vibeSearch";
+
+import { BrandSlider } from "./_components/features/brandSlider";
+import BrandWalletSection from "./_components/features/brandWalletSection";
 import ChromeExtentionLogo from "./_components/svg/ChromeExtensionLogo";
-import SearchBar from "./_components/features/searchBar";
-import SephoraCard from "../../public/Images/Sephora.png";
-import LouisVuitton from "../../public/Images/LouisVuitton.png";
 import FendiCard from "../../public/Images/Fendi.png";
-import extendedTheme from "./theme";
-import ShieldIcon from "./_components/svg/ShieldIcon";
+import HushhButtonIcon from "./_components/svg/hushhButton";
+import HushhWalletIcon from "./_components/svg/hushhWalletIcon";
 import KeyIcon from "./_components/svg/keyIcon";
 import LockIcon from "./_components/svg/LockIcon";
+import LouisVuitton from "../../public/Images/LouisVuitton.png";
+import NextImage from "next/image";
+import React from "react";
+import SearchBar from "./_components/features/searchBar";
+import SephoraCard from "../../public/Images/Sephora.png";
+import { ServiceCard } from "./_components/primitives/serviceCard";
+import ShieldIcon from "./_components/svg/ShieldIcon";
+import TechnologySection from "./_components/features/technologySection";
+import VibeSearchIcon from "./_components/svg/vibeSearch";
+import extendedTheme from "./theme";
+import theme from "./theme";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  // const defaultOptionsHP_Top = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: HP_TopData,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-  // const defaultOptionsDataSecurity = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: DataSecurity_Data,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-  // const defaultOptionsDataConsent = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: DataConsent_Data,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
-  // const defaultOptionsZeroParty = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: ZeroParty_Data,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
+  const router = useRouter();
 
   return (
     <main className="bg-myBG  font-Figtree">
@@ -116,11 +82,7 @@ export default function Home() {
             </HStack>
 
             <Text color={"#656565"} fontSize={"18px"}>
-              Unlock the value of{" "}
-              <span className="bg-gradient-to-r from-red-600 to-purple-600 text-transparent bg-clip-text">
-                "Your"
-              </span>{" "}
-              data with rich insights!
+            We're a data API business helping users manage and monetize their data, turning it into a financial asset.
             </Text>
             
             <Button
@@ -135,6 +97,9 @@ export default function Home() {
                 background:
                   "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
               }}
+              onClick={() =>
+                router.push("https://sites.google.com/hush1one.com/drops/home/journey")
+              }
             >
               LEARN MORE
             </Button>
@@ -170,7 +135,7 @@ export default function Home() {
             <span className="trust-text bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
               trust us
             </span>{" "}
-            to unlock the potential of their data.
+            to unlock the potential of their clearn more customer data.
           </Text>
         </HStack>
 
@@ -389,7 +354,7 @@ export default function Home() {
 
        
 
-        
+        <BrandWalletSection/>
 
         {/* <div className="pt-5">
           <HP_Scrolling />
