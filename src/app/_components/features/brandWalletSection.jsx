@@ -15,10 +15,14 @@ import SendReceiveIcon from "../svg/icons/sendReceive";
 import ChartIcon from "../svg/icons/chartIcon";
 import RefreshIcon from "../svg/icons/refreshIcon";
 import WalletIcon from "../svg/icons/walletIcon";
+import { useRouter } from "next/navigation";
 
 import extendedTheme from "@/app/theme";
 
 const BrandWalletSection = () => {
+  const router = useRouter();
+
+
   return (
     <VStack mt={{ md: "8rem", base: "5rem" }}>
       <Heading
@@ -156,6 +160,10 @@ const BrandWalletSection = () => {
             "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
           color: "white",
         }}
+        cursor={'pointer'}
+        onClick={() =>
+          router.push("https://sites.google.com/hush1one.com/drops/products/test-builds")
+        }
       >
         DOWNLOAD APP
       </Box>
