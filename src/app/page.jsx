@@ -324,6 +324,9 @@ export default function Home() {
                 alignItems={"center"}
                 textAlign={'center'}
                 description="Customer User Flow + Client Advisor User Flow​"
+                onClick={() =>
+                  router.push("https://hushhwallet.framer.ai/")
+                }
               />
               <ServiceCard
                 icon={<HushhButtonIcon />}
@@ -331,6 +334,9 @@ export default function Home() {
                 textAlign={'center'}
                 alignItems={"center"}
                 description="Seamless Data Sharing for Personalized Experiences and recommendations​​"
+                onClick={() =>
+                  router.push("https://hushhbutton.framer.ai/")
+                }
               />
               <ServiceCard
                 icon={<VibeSearchIcon />}
@@ -338,6 +344,9 @@ export default function Home() {
                 textAlign={'center'}
                 alignItems={"center"}
                 description="Find perfect items to express your individuality in just one click"
+                onClick={() =>
+                  router.push("https://hushhvibesearch.framer.ai/")
+                }
               />
               <ServiceCard
                 icon={<ChromeExtentionLogo />}
@@ -345,6 +354,9 @@ export default function Home() {
                 alignItems={"center"}
                 textAlign={'center'}
                 description="Improved product recommendations & effective marketing campaigns"
+                onClick={() =>
+                  router.push("https://sites.google.com/hush1one.com/drops/products/chrome-extension")
+                }
               />
             </Grid>
           </Container>
