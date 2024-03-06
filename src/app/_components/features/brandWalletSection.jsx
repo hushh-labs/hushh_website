@@ -81,23 +81,23 @@ const BrandWalletSection = () => {
           </HStack>
         </VStack>
       </Grid>
-      <Button
+      <Box
               mt={'4rem'}
+              p={'0.75rem'}
+              align={'center'}
               border={"1px solid #606060"}
-              borderRadius={"2px"}
+              borderRadius={"5px"}
               w={"16rem"}
               className='color-gradient'
               lineHeight={"28px"}
-              background={"transparent"}
               letterSpacing={"0.5rem"}
               _hover={{
-                background:
-                  "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-                  color: "white"            
-              }}
+                background: "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                color:'white',
+              }}       
             >
               DOWNLOAD APP
-      </Button>
+      </Box>
     </VStack>
   );
 };
