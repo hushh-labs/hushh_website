@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Grid, HStack, Text } from "@chakra-ui/react";
-import theme from "@/app/theme";
 import { Heading } from "@chakra-ui/react";
 import { ServiceCard } from "../primitives/serviceCard";
 import TrustedAIIcon from "../svg/trustedAI";
@@ -8,6 +7,7 @@ import ControlOver from "../svg/controlOver";
 import TechIntegrationIcon from "../svg/techIntegration";
 import RedifiningIcon from "../svg/redifiningIcon";
 import TransparentSecureIcon from "../svg/tranparentSecure";
+import extendedTheme from "../../theme";
 
 const TechnologySection = () => {
   return (
@@ -20,19 +20,18 @@ const TechnologySection = () => {
         textAlign={"center"}
       >
         <Heading
-          as={"h1"}
           className="gradient"
-          fontSize={"3.75rem"}
+          fontSize={{ md:"3.75rem", base:'1.5rem'}}
           display={"flex"}
         >
           Our Technology Services
         </Heading>
         <Text
-          color={theme.colors.secondary}
+          color={extendedTheme.colors.secondary}
           fontWeight={"500"}
           fontSize={"1rem"}
-          lineHeight={"2.25rem"}
-          px={{ md:"20rem" }}
+          lineHeight={{ md:"2.25rem", base:'1.5rem'}}
+          px={{ md:"20rem", base:'1rem' }}
         >
           Our technology services deliver cutting-edge solutions tailored to
           drive efficiency, enhance performance, and fuel growth in today's
@@ -48,23 +47,23 @@ const TechnologySection = () => {
         >
           <ServiceCard
             icon={<TrustedAIIcon />}
-            title="Trusted AI Assistants​"
+            title="Redefining Personal Data Assistance​"
             textAlign={'left'}
-            description="Hushh your data away into your secure private on-device cloud and let it work for you quietly in the background as you go about your day by handing all your preferences.​"
+            description="Leverage AI assistants that understand your data and provide personalized support – for information retrieval, streamline work, and more​"
           />
           <ServiceCard
             icon={<TechIntegrationIcon />}
-            title="Tech Integration​​​"
+            title="Seamless Tech Integrationn​​​"
             textAlign={'left'}
-            description="Provides products, tools, and services for effortless data organization, management, and monetization across all your ecosystems.​​"
+            description="Our platform seamlessly integrates with your existing tools to streamline your operations​​"
           />
           <ServiceCard
             icon={<ControlOver />}
-            title="Control Over Your Data.​"
+            title="Control & Security​"
             textAlign={'left'}
-            description="Our platform provides products, tools, and services for effortless data organization, management, and monetization."
+            description="Built with trust in mind, our platform is SOC 2 and GDPR compliant, ensuring the security and privacy of your data"
           />
-          <ServiceCard
+          {/* <ServiceCard
             icon={<RedifiningIcon />}
             title="Redefining Personal Data Assistance​"
             textAlign={'left'}
@@ -75,7 +74,7 @@ const TechnologySection = () => {
             title="Transparent & Secure​"
             textAlign={'left'}
             description="Unlock values from your personal data with Secure platform for sharing data with trusted partners."
-          />
+          /> */}
         </Grid>
       </Container>
     </>

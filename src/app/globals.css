@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Figtree' !important;
+}
+
+/* Header CSS */
+.login {
+  display: flex;
+  gap: 0.5rem !important;
+}
+
+.search-icon {
+  width: 32;
+  height: 32;
+}
+
+/*  */
+
 .scrolled {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -21,27 +38,33 @@
 }
 
 .color-gradient {
-  background: linear-gradient(to right, #E54D60, #A342FF); 
+  background: linear-gradient(to right, #E54D60, #A342FF);
   -webkit-background-clip: text;
   color: transparent;
 }
 
+.hushh-gradient {
+  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-color: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+}
 
-
-.trust-text::after {
-  content: '';
-  position: absolute;
-  bottom: -0.2px; /* Adjust this value as needed */
-  left: 0;
-  width: 100%;
-  height: 1px; /* Adjust this value as needed */
-  background: linear-gradient(to right, #E54D60, #A342FF); /* Your gradient colors */
-  pointer-events: none;
+.default-gradient {
+  background: linear-gradient(#E54D60 8.81%, #A342FF 94.26%);
+  -webkit-background-clip: text;
+  color: transparent;
+  border-color: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
 }
 
 .gradient-bg {
   background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
 }
+
+.new-gradient-bg {
+  background: linear-gradient(256.5deg, #E0055F 6.97%, #2020ED 92.26%);
+}
+
 
 .border-gradient {
   background: linear-gradient(to right, white 0%, purple 20%, white 100%);
@@ -55,6 +78,22 @@
   right: 0;
   width: 0.1rem;
   background: linear-gradient(to bottom, #FBF7FF 0%, #3a3a3a 50%, #FBF7FF 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .hideDesktopSVG {
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .mobile-view {
+    display: none;
+  }
 }
 
 
@@ -86,7 +125,7 @@ body {
 
 /* Our technology Section  - HOME PAGE */
 .heading2 {
-  
+
   color: #FFFFFF;
   font-weight: 700;
   line-height: 1.8rem;
@@ -109,52 +148,183 @@ body {
 
 
 /* Slide Up text animation - home banner */
-.wrapper{
-    box-sizing: content-box;
-    display: flex;
-    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
-}
-.words{
+.wrapper {
+  box-sizing: content-box;
+  display: flex;
   overflow: hidden;
-  width: max-content;
-  height: 6.6rem;
+  max-width: 100%;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+.words {
+  flex-shrink: 0;
+  white-space: nowrap;
+  height: 5.6rem;
 
 }
+
 .slideText {
   display: block;
   -webkit-background-clip: text;
   color: transparent;
-    animation: spin_words 6s infinite;
-    font-size: 5rem;
+  animation: spin_words 6s infinite;
+  font-size: 5rem;
 
 }
-@keyframes spin_words{
+
+@keyframes spin_words {
   0% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-100%);
-    }
-    45% {
-        transform: translateY(-100%);
-    }
-    50% {
-        transform: translateY(-200%);
-    }
-    70% {
-        transform: translateY(-200%);
-    }
-    75% {
-        transform: translateY(-300%);
-    }
-    95% {
-        transform: translateY(-300%);
-    }
-    100% {
-        transform: translateY(-400%);
-    }
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-100%);
+  }
+
+  45% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(-200%);
+  }
+
+  70% {
+    transform: translateY(-200%);
+  }
+
+  75% {
+    transform: translateY(-300%);
+  }
+
+  95% {
+    transform: translateY(-300%);
+  }
+
+  100% {
+    transform: translateY(-400%);
+  }
 }
 
+@media screen and (max-width: 768px) {
+  .slideText {
+    font-size: 2rem;
+    /* Adjust font size for smaller screens */
+  }
+
+  .words {
+    height: 2.6rem;
+  }
+}
+
+
+
+/* Chatbot Popup Notification CSS */
+.popup {
+  margin-bottom: 1rem;
+  position: fixed;
+  bottom: 80px;
+  /* Adjust based on the chatbot icon's positioning */
+  right: 80px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* Ensure it's above other content */
+}
+
+/* Customer review Slider CSS */
+.swiper-pagination {
+  top: -10 !important;
+  bottom: -2 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #7A7A7E !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FFFFFF !important;
+}
+
+.review-text::before,
+.review-text::after {
+  font-family: 'Figtree';
+  background: linear-gradient(to right, #E54D60, #A342FF);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2em;
+  /* Adjust the size */
+}
+
+.review-text::before {
+  content: '“';
+  margin-right: 0.1em;
+}
+
+.review-text::after {
+  content: '”';
+  margin-left: 0.1em;
+}
+
+@media (max-width: 768px) {
+
+  .review-text::before,
+  .review-text::after {
+    font-size: 1.5em;
+  }
+}
+
+
+
+/* Hushh Button CSS  */
+
+@media screen and (max-width: 1024px) {
+  .frameCard1 {
+    display: none;
+  }
+
+  .hushhbuttonFrame2 {
+    display: none;
+  }
+
+}
+
+/* CSS for FAQ Accordian Tabs  */
+
+.gradientText {
+  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.gradientUnderline {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+}
+
+
+/* Hushh Wallet Page CSS */
+.walletDivider {
+  background: linear-gradient(to right, #7A7A7E, #FFFFFF);
+  content: '';
+  display: block;
+  height: 1px;
+}
+
+
+/* Top Loader CSS */
+@media (max-width: 767px) { 
+  .spinner {
+      display: none !important;
+  }
+}

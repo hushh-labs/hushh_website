@@ -24,6 +24,12 @@ const BrandContainer = styled.div`
   gap: 8rem; /* Adjust the gap as needed */
   padding: 10px; /* Adjust the padding as needed */
   margin-top: 2rem;
+
+  @media screen and (max-width: 768px) {
+    gap:4rem;
+    padding:5px;
+    margin-top: 1rem;
+  }
 `;
 
 export function BrandSlider() {

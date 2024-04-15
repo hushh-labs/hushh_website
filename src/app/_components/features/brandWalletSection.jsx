@@ -17,55 +17,60 @@ import RefreshIcon from "../svg/icons/refreshIcon";
 import WalletIcon from "../svg/icons/walletIcon";
 import { useRouter } from "next/navigation";
 
-import extendedTheme from "@/app/theme";
-
+import extendedTheme from "../../theme";
 const BrandWalletSection = () => {
   const router = useRouter();
-
 
   return (
     <VStack mt={{ md: "8rem", base: "5rem" }}>
       <Heading
         className="gradient"
         fontSize={{ md: "3.75rem", base: "1.5rem" }}
+        mx={"0.5rem"}
+        textAlign={"center"}
       >
         Build your own brand wallet
       </Heading>
       <Text
         textAlign={"center"}
         fontSize={{ md: "1rem" }}
-        pl={{ md: "30rem" }}
-        pr={{ md: "30rem" }}
+        px={{ md: "30rem", base: "3rem" }}
         color={extendedTheme.colors.secondary}
-        lineHeight={"36px"}
+        lineHeight={{ md: "36px", base: "22px" }}
         mb={"1rem"}
       >
-        "Experience elegance and durability with our brand wallet - a statement
-        of luxury and utility."
+        Take control of your digital identity with our innovative "Build Your Own Brand Wallet" gen AI feature.
       </Text>
       <Grid
-        templateColumns={{ md: "1fr 2fr 1fr", base: "1fr" }}
+        templateColumns={{ md: "1fr 2fr 1fr", base: "repeat(1, 1fr)" }}
         gap={{ md: "4rem", base: "1rem" }}
         mt={{ md: "2rem", base: "1rem" }}
-        px={{ md: "10rem" }}
+        px={{ md: "10rem", base: "1rem" }}
       >
         {/* Left column */}
-        <VStack w={"20rem"} display={{ md: "flex", base: "none" }} gap="2rem">
+        <VStack
+          w={{ md: "20rem", base: "10rem" }}
+          display={{ md: "flex", base: "none" }}
+          gap="2rem"
+        >
           <HStack
             align={"left"}
-            flexDirection="column"
+            flexDirection={"column"}
             bg="#1C1C1C"
-            px="2rem"
-            py="3rem"
+            px={{ md: "2rem", base: "1rem" }}
+            py={{ md: "3rem", base: "1rem" }}
             gap={"1rem"}
             borderRadius={"2.5rem"}
           >
             <SendReceiveIcon />
-            <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
-              Send & Receive
+            <Heading
+              fontSize={{ md: "1.25rem", base: "1rem" }}
+              color={extendedTheme.colors._white}
+            >
+              HUSHH Bot
             </Heading>
             <Text color={extendedTheme.colors._white}>
-            Utilize our platform's robust capabilities for effortless data sharing and secure transactions. 
+            Your personal AI, learning from you. Get things done, find answers, and live smarter
             </Text>
           </HStack>
           <HStack
@@ -78,37 +83,101 @@ const BrandWalletSection = () => {
             borderRadius={"2.5rem"}
           >
             <WalletIcon />
-            <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
-              100% Secure Wallet
+            <Heading
+              fontSize={{ md: "1.25rem", base: "1rem" }}
+              color={extendedTheme.colors._white}
+            >
+              100% SECURE WALLET
             </Heading>
             <Text color={extendedTheme.colors._white}>
-            Safeguard your valuable data with our 100% secure wallet. We implement advanced encryption and security measures
+              Rest assured knowing that your digital assets are in safe hands with Hushh Bot, your 100% secure wallet solution.
             </Text>
           </HStack>
         </VStack>
+
+        {/* Responsive column for mobile */}
+        <HStack
+          spacing="1rem"
+          w={"full"}
+          display={{ base: "flex", md: "none" }}
+          justifyContent="center"
+        >
+          <VStack
+            align={"left"}
+            bg="#1C1C1C"
+            px="0.5rem"
+            py="0.5rem"
+            gap={"0.5rem"}
+            borderRadius={"1rem"}
+          >
+            <SendReceiveIcon width={20} height={20} />
+            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+              HUSHH BOT
+            </Heading>
+            <Text
+              fontSize={"0.75rem"}
+              color={extendedTheme.colors._white}
+              textAlign="center"
+            >
+              Your all-in-one digital assistant designed to simplify your life, streamline tasks, and enhance productivity..
+            </Text>
+          </VStack>
+          <VStack
+            align={"left"}
+            bg="#1C1C1C"
+            px="0.5rem"
+            py="0.5rem"
+            gap={"0.5rem"}
+            borderRadius={"1rem"}
+          >
+            <WalletIcon width={20} height={20} /> {/* Adjust icon size */}
+            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+            100% SECURE WALLET
+            </Heading>
+            <Text
+              fontSize={"0.75rem"}
+              color={extendedTheme.colors._white}
+              textAlign="center"
+            >
+              Rest assured knowing that your digital assets are in safe hands with Hushh Bot, your 100% secure wallet solution.
+            </Text>
+          </VStack>
+        </HStack>
 
         {/* Center column */}
         <Box
           borderRadius={"2.5rem"}
           w={"full"}
-          gridColumn={{ md: "2", base: "1 / span 1" }}
+          gridColumnStart={{ base: 1, md: 2 }} // Ensure it's placed in the second column or full width on mobile
+          gridRowStart={{ base: 2, md: 1 }}
+          // gridColumn={{ md: "2", base: "2" }}
           className="gradient-bg"
+          // display={{base:'none', md:'flex'}}
         >
-          <VStack align={"left"} px={"2rem"} pt={"2rem"} gap={"1.6rem"}>
+          <VStack align={"left"} px={"2rem"} pt={"2rem"} gap={"1.6rem"} position={'relative'}>
             <Heading fontSize={"20px"} color={extendedTheme.colors._white}>
               iOS & ANDROID APP
             </Heading>
             <Text color={extendedTheme.colors._white}>
-              Download our apps for android as well as for iOS to experience the new gen AI features of our products.
+            Experience the convenience of managing your digital life with Hushh, available on both iOS and Android.
             </Text>
-            <Box align={"center"} mt={"1.40rem"}>
-              <NextImage src={BrandWalletMobile} />
+            <Box display={{md:'block', base:'none'}} align={"center"} mt={"1.40rem"}>
+              <NextImage src={BrandWalletMobile} alt="brandWalletdesktop" style={{position:'absolute', top:'110.7%'}} />
+            </Box>
+            <Box align={"center"} display={{md:'none', base:'block'}} mt={"1.40rem"}>
+               <NextImage src={BrandWalletMobile} alt="brandWalletmobile" />
             </Box>
           </VStack>
         </Box>
 
         {/* Right column */}
-        <VStack w={"20rem"} display={{ md: "flex", base: "none" }} gap="2rem">
+        <VStack
+          w={"20rem"}
+          display={{ md: "flex", base: "none" }}
+          gap="2rem"
+          gridColumnStart={{ base: 1, md: 3 }} // Start from the first column on mobile, third on desktop
+          gridRowStart={{ base: 3, md: 1 }}
+        >
           <HStack
             align={"left"}
             flexDirection="column"
@@ -119,11 +188,14 @@ const BrandWalletSection = () => {
             borderRadius={"2.5rem"}
           >
             <ChartIcon />
-            <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
-              Seamless Integration
+            <Heading
+              fontSize={{ md: "1.25rem", base: "1rem" }}
+              color={extendedTheme.colors._white}
+            >
+              SHARE AND BENEFIT
             </Heading>
             <Text color={extendedTheme.colors._white}>
-            We offer robust APIs and developer tools for effortless integration with trusted brands.
+               Share your data, earn points, and unlock rewards like discounts, gift cards, and cashback offers from our partner brands!
             </Text>
           </HStack>
           <HStack
@@ -136,14 +208,66 @@ const BrandWalletSection = () => {
             borderRadius={"2.5rem"}
           >
             <RefreshIcon />
-            <Heading fontSize="1.25rem" color={extendedTheme.colors._white}>
-            Optimized Data Sharing 
+            <Heading
+              fontSize={{ md: "1.25rem", base: "1rem" }}
+              color={extendedTheme.colors._white}
+            >
+              RECEIPT RADAR
             </Heading>
             <Text color={extendedTheme.colors._white}>
-            Effortlessly share and manage your data with our optimized data sharing solutions &  enabling you to control and monitor data access
+               With automatic scanning, smart categorization, and customizable options, managing expenses becomes a breeze.
             </Text>
           </HStack>
         </VStack>
+        
+        <HStack
+          spacing="1rem"
+          w={"full"}
+          display={{ base: "flex", md: "none" }}
+          justifyContent="center"
+        >
+          <VStack
+            align={"left"}
+            bg="#1C1C1C"
+            px="0.5rem"
+            py="0.5rem"
+            gap={"0.5rem"}
+            borderRadius={"1rem"}
+          >
+            <ChartIcon width={20} height={20} /> {/* Adjust icon size */}
+            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+            Seamless Integration
+            </Heading>{" "}
+            <Text
+              fontSize={"0.75rem"}
+              color={extendedTheme.colors._white}
+              textAlign="center"
+            >
+              We offer robust APIs and developer tools for effortless integration with trusted brands.
+            </Text>
+          </VStack>
+          <VStack
+            align={"left"}
+            bg="#1C1C1C"
+            px="0.5rem"
+            py="0.5rem"
+            gap={"0.5rem"}
+            borderRadius={"1rem"}
+          >
+            <RefreshIcon width={20} height={20} />
+            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+            Optimized Data Sharing
+            </Heading>
+            <Text
+              fontSize={"0.75rem"}
+              color={extendedTheme.colors._white}
+              textAlign="center"
+            >
+              Effortlessly share and manage your data with our solutions to control and monitor data access
+            </Text>
+          </VStack>
+        </HStack>
+
       </Grid>
       <Box
         mt={"4rem"}
@@ -160,9 +284,11 @@ const BrandWalletSection = () => {
             "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
           color: "white",
         }}
-        cursor={'pointer'}
+        cursor={"pointer"}
         onClick={() =>
-          router.push("https://sites.google.com/hush1one.com/drops/products/test-builds")
+          router.push(
+            "https://sites.google.com/hush1one.com/drops/products/test-builds"
+          )
         }
       >
         DOWNLOAD APP
