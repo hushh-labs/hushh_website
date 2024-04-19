@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://www.hush1one.com/pricingPlans</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/products/conciergeApp</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/legal/termsofuse</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/products/browserCompanion</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/products/hushhWalletApp</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/products/vibeSearch</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/legal/privacypolicy</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/products/hushhValetChat</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/products/hushhButton</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/products/hushhForStudents</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.hush1one.com/about</loc><lastmod>2024-04-13T15:23:24.309Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url>
+    <loc>https://www.hush1one.com/products/hushhButton</loc>
+    <lastmod>2024-04-12T06:14:09.775Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <video:video>
+        <video:thumbnail_loc>https://res.cloudinary.com/dr5alaq5u/image/upload/Screenshot_2024-03-14_160021_hapzpw.jpg</video:thumbnail_loc>
+        <video:title>Hushh Button - Developer Walkthrough</video:title>
+        <video:description>This is a walkthrough of the Hushh Button for developers.</video:description>
+        <video:content_loc>https://res.cloudinary.com/dr5alaq5u/video/upload/v1710411292/Hushh_button_-_developer_walkthrough_uwwiy0.mp4</video:content_loc>
+        <video:player_loc allow_embed="yes">https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710411292%2FHushh_button_-_developer_walkthrough_uwwiy0.mp4&amp;cloud_name=dr5alaq5u&amp;player[showJumpControls]=true&amp;player[pictureInPictureToggle]=false&amp;source[poster]=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fimage%2Fupload%2FScreenshot_2024-03-14_160021_hapzpw.jpg</video:player_loc>
+        <video:duration>600</video:duration>
+        <video:publication_date>2024-04-12T06:14:09.775Z</video:publication_date>
+    </video:video>
+</url>
+<url>
+    <loc>https://www.hush1one.com/products/vibeSearch</loc>
+    <lastmod>2024-04-12T06:14:09.775Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <video:video>
+        <video:thumbnail_loc>https://res.cloudinary.com/dr5alaq5u/image/upload/Screenshot_2024-03-14_160021_hapzpw.jpg</video:thumbnail_loc>
+        <video:title>Vibe Search Walkthrough</video:title>
+        <video:description>This is a walkthrough of the Vibe Search feature.</video:description>
+        <video:content_loc>https://res.cloudinary.com/dr5alaq5u/video/upload/v1710776445/vibeSearchDemo_s1bdkh.mp4</video:content_loc>
+        <video:player_loc allow_embed="yes">https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710776445%2FvibeSearchDemo_s1bdkh.mp4&amp;cloud_name=dr5alaq5u&amp;player[showJumpControls]=true</video:player_loc>
+        <video:duration>420</video:duration>
+        <video:publication_date>2024-04-12T06:14:09.775Z</video:publication_date>
+    </video:video>
+</url>
+<url>
+    <loc>https://www.hush1one.com/products/hushhValetChat</loc>
+    <lastmod>2024-04-12T06:14:09.775Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <video:video>
+        <video:thumbnail_loc>https://res.cloudinary.com/dr5alaq5u/image/upload/Screenshot_2024-03-14_160021_hapzpw.jpg</video:thumbnail_loc>
+        <video:title>Hushh Valet Chat Walkthrough</video:title>
+        <video:description>This is a walkthrough of the Hushh Valet Chat feature.</video:description>
+        <video:content_loc>https://res.cloudinary.com/dr5alaq5u/video/upload/v1710763036/Valet_Chat_Hushh_Research_and_Labs_pfjt3j.mp4</video:content_loc>
+        <video:player_loc allow_embed="yes">https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710763036%2FValet_Chat_Hushh_Research_and_Labs_pfjt3j.mp4&amp;cloud_name=dr5alaq5u&amp;player[showJumpControls]=true</video:player_loc>
+        <video:duration>600</video:duration>
+        <video:publication_date>2024-04-12T06:14:09.775Z</video:publication_date>
+    </video:video>
+</url>
+<url>
+    <loc>https://www.hush1one.com/products/browserCompanion</loc>
+    <lastmod>2024-04-12T06:14:09.775Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <video:video>
+        <video:thumbnail_loc>https://res.cloudinary.com/dr5alaq5u/image/upload/Screenshot_2024-03-14_160021_hapzpw.jpg</video:thumbnail_loc>
+        <video:title>Browser Companion (Chrome Extension) Walkthrough</video:title>
+        <video:description>This is a walkthrough of the Browser Companion Chrome Extension.</video:description>
+        <video:content_loc>https://res.cloudinary.com/dr5alaq5u/video/upload/v1710411292/Hushh_button_-_developer_walkthrough_uwwiy0.mp4</video:content_loc>
+        <video:player_loc allow_embed="yes">https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710411292%2FHushh_button_-_developer_walkthrough_uwwiy0.mp4&amp;cloud_name=dr5alaq5u&amp;player[showJumpControls]=true&amp;player[pictureInPictureToggle]=false&amp;source[poster]=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fimage%2Fupload%2FScreenshot_2024-03-14_160021_hapzpw.jpg</video:player_loc>
+        <video:duration>600</video:duration>
+        <video:publication_date>2024-04-12T06:14:09.775Z</video:publication_date>
+    </video:video>
+</url>
+</urlset>

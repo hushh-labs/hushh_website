@@ -29,6 +29,11 @@ const theme = {
       end: SECONDARY_COLOR,
     },
   },
+  fonts: {
+    body: "Figtree", 
+    heading: "Figtree", // Heading font
+    text:"Figtree",
+  },
   styles: {
     global: {
       '*': {
