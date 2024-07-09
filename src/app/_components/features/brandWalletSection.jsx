@@ -1,12 +1,4 @@
-import {
-  Box,
-  Grid,
-  HStack,
-  Heading,
-  Text,
-  VStack,
-  Button,
-} from "@chakra-ui/react";
+import { Box, Grid, HStack, Text, VStack, Button } from "@chakra-ui/react";
 
 import BrandWalletMobile from "../../../../public/Images/BrandWalletMobile.png";
 import NextImage from "next/image";
@@ -23,14 +15,14 @@ const BrandWalletSection = () => {
 
   return (
     <VStack mt={{ md: "8rem", base: "5rem" }}>
-      <Heading
+      <Text
         className="gradient"
         fontSize={{ md: "3.75rem", base: "1.5rem" }}
         mx={"0.5rem"}
         textAlign={"center"}
       >
         Build your own brand wallet
-      </Heading>
+      </Text>
       <Text
         textAlign={"center"}
         fontSize={{ md: "1rem" }}
@@ -39,7 +31,8 @@ const BrandWalletSection = () => {
         lineHeight={{ md: "36px", base: "22px" }}
         mb={"1rem"}
       >
-        Take control of your digital identity with our innovative "Build Your Own Brand Wallet" gen AI feature.
+        Take control of your digital identity with our innovative "Build Your
+        Own Brand Wallet" gen AI feature.
       </Text>
       <Grid
         templateColumns={{ md: "1fr 2fr 1fr", base: "repeat(1, 1fr)" }}
@@ -63,14 +56,15 @@ const BrandWalletSection = () => {
             borderRadius={"2.5rem"}
           >
             <SendReceiveIcon />
-            <Heading
+            <Text
               fontSize={{ md: "1.25rem", base: "1rem" }}
               color={extendedTheme.colors._white}
             >
               HUSHH Bot
-            </Heading>
+            </Text>
             <Text color={extendedTheme.colors._white}>
-            Your personal AI, learning from you. Get things done, find answers, and live smarter
+              Your personal AI, learning from you. Get things done, find
+              answers, and live smarter
             </Text>
           </HStack>
           <HStack
@@ -83,14 +77,15 @@ const BrandWalletSection = () => {
             borderRadius={"2.5rem"}
           >
             <WalletIcon />
-            <Heading
+            <Text
               fontSize={{ md: "1.25rem", base: "1rem" }}
               color={extendedTheme.colors._white}
             >
               100% SECURE WALLET
-            </Heading>
+            </Text>
             <Text color={extendedTheme.colors._white}>
-              Rest assured knowing that your digital assets are in safe hands with Hushh Bot, your 100% secure wallet solution.
+              Rest assured knowing that your digital assets are in safe hands
+              with Hushh Bot, your 100% secure wallet solution.
             </Text>
           </HStack>
         </VStack>
@@ -111,15 +106,16 @@ const BrandWalletSection = () => {
             borderRadius={"1rem"}
           >
             <SendReceiveIcon width={20} height={20} />
-            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+            <Text fontSize={"0.875rem"} color={extendedTheme.colors._white}>
               HUSHH BOT
-            </Heading>
+            </Text>
             <Text
               fontSize={"0.75rem"}
               color={extendedTheme.colors._white}
               textAlign="center"
             >
-              Your all-in-one digital assistant designed to simplify your life, streamline tasks, and enhance productivity..
+              Your all-in-one digital assistant designed to simplify your life,
+              streamline tasks, and enhance productivity..
             </Text>
           </VStack>
           <VStack
@@ -131,15 +127,16 @@ const BrandWalletSection = () => {
             borderRadius={"1rem"}
           >
             <WalletIcon width={20} height={20} /> {/* Adjust icon size */}
-            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
-            100% SECURE WALLET
-            </Heading>
+            <Text fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+              100% SECURE WALLET
+            </Text>
             <Text
               fontSize={"0.75rem"}
               color={extendedTheme.colors._white}
               textAlign="center"
             >
-              Rest assured knowing that your digital assets are in safe hands with Hushh Bot, your 100% secure wallet solution.
+              Rest assured knowing that your digital assets are in safe hands
+              with Hushh Bot, your 100% secure wallet solution.
             </Text>
           </VStack>
         </HStack>
@@ -154,18 +151,37 @@ const BrandWalletSection = () => {
           className="gradient-bg"
           // display={{base:'none', md:'flex'}}
         >
-          <VStack align={"left"} px={"2rem"} pt={"2rem"} gap={"1.6rem"} position={'relative'}>
-            <Heading fontSize={"20px"} color={extendedTheme.colors._white}>
+          <VStack
+            align={"left"}
+            px={"2rem"}
+            pt={"2rem"}
+            gap={"1.6rem"}
+            position={"relative"}
+          >
+            <Text fontSize={"20px"} color={extendedTheme.colors._white}>
               iOS & ANDROID APP
-            </Heading>
-            <Text color={extendedTheme.colors._white}>
-            Experience the convenience of managing your digital life with Hushh, available on both iOS and Android.
             </Text>
-            <Box display={{md:'block', base:'none'}} align={"center"} mt={"1.40rem"}>
-              <NextImage src={BrandWalletMobile} alt="brandWalletdesktop" style={{position:'absolute', top:'110.7%'}} />
+            <Text color={extendedTheme.colors._white}>
+              Experience the convenience of managing your digital life with
+              Hushh, available on both iOS and Android.
+            </Text>
+            <Box
+              display={{ md: "block", base: "none" }}
+              align={"center"}
+              mt={"1.40rem"}
+            >
+              <NextImage
+                src={BrandWalletMobile}
+                alt="brandWalletdesktop"
+                style={{ position: "absolute", top: "110.7%" }}
+              />
             </Box>
-            <Box align={"center"} display={{md:'none', base:'block'}} mt={"1.40rem"}>
-               <NextImage src={BrandWalletMobile} alt="brandWalletmobile" />
+            <Box
+              align={"center"}
+              display={{ md: "none", base: "block" }}
+              mt={"1.40rem"}
+            >
+              <NextImage src={BrandWalletMobile} alt="brandWalletmobile" />
             </Box>
           </VStack>
         </Box>
@@ -188,14 +204,15 @@ const BrandWalletSection = () => {
             borderRadius={"2.5rem"}
           >
             <ChartIcon />
-            <Heading
+            <Text
               fontSize={{ md: "1.25rem", base: "1rem" }}
               color={extendedTheme.colors._white}
             >
               SHARE AND BENEFIT
-            </Heading>
+            </Text>
             <Text color={extendedTheme.colors._white}>
-               Share your data, earn points, and unlock rewards like discounts, gift cards, and cashback offers from our partner brands!
+              Share your data, earn points, and unlock rewards like discounts,
+              gift cards, and cashback offers from Brands we want to work with
             </Text>
           </HStack>
           <HStack
@@ -208,18 +225,19 @@ const BrandWalletSection = () => {
             borderRadius={"2.5rem"}
           >
             <RefreshIcon />
-            <Heading
+            <Text
               fontSize={{ md: "1.25rem", base: "1rem" }}
               color={extendedTheme.colors._white}
             >
               RECEIPT RADAR
-            </Heading>
+            </Text>
             <Text color={extendedTheme.colors._white}>
-               With automatic scanning, smart categorization, and customizable options, managing expenses becomes a breeze.
+              With automatic scanning, smart categorization, and customizable
+              options, managing expenses becomes a breeze.
             </Text>
           </HStack>
         </VStack>
-        
+
         <HStack
           spacing="1rem"
           w={"full"}
@@ -235,15 +253,16 @@ const BrandWalletSection = () => {
             borderRadius={"1rem"}
           >
             <ChartIcon width={20} height={20} /> {/* Adjust icon size */}
-            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
-            Seamless Integration
-            </Heading>{" "}
+            <Text fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+              Seamless Integration
+            </Text>{" "}
             <Text
               fontSize={"0.75rem"}
               color={extendedTheme.colors._white}
               textAlign="center"
             >
-              We offer robust APIs and developer tools for effortless integration with trusted brands.
+              We offer robust APIs and developer tools for effortless
+              integration with trusted brands.
             </Text>
           </VStack>
           <VStack
@@ -255,19 +274,19 @@ const BrandWalletSection = () => {
             borderRadius={"1rem"}
           >
             <RefreshIcon width={20} height={20} />
-            <Heading fontSize={"0.875rem"} color={extendedTheme.colors._white}>
-            Optimized Data Sharing
-            </Heading>
+            <Text fontSize={"0.875rem"} color={extendedTheme.colors._white}>
+              Optimized Data Sharing
+            </Text>
             <Text
               fontSize={"0.75rem"}
               color={extendedTheme.colors._white}
               textAlign="center"
             >
-              Effortlessly share and manage your data with our solutions to control and monitor data access
+              Effortlessly share and manage your data with our solutions to
+              control and monitor data access
             </Text>
           </VStack>
         </HStack>
-
       </Grid>
       <Box
         mt={"4rem"}
@@ -287,7 +306,7 @@ const BrandWalletSection = () => {
         cursor={"pointer"}
         onClick={() =>
           router.push(
-            "https://sites.google.com/hush1one.com/drops/products/test-builds"
+            "https://sites.google.com/hush1one.com/drops/products/test-builds",
           )
         }
       >

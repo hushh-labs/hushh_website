@@ -1,6 +1,5 @@
 "use client";
 import {
-  Heading,
   VStack,
   Text,
   Box,
@@ -23,14 +22,13 @@ import { useState } from "react";
 import { advisorsData } from "../advisorsBioData/advisorsData";
 import locationIcon from "../svg/icons/locationIcon.svg";
 import jobIcon from "../svg/icons/jobIcon.svg";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 
 const TeamSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedAdvisor, setSelectedAdvisor] = useState(null);
 
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 769 })
-
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 769 });
 
   const openModal = (advisor) => {
     setSelectedAdvisor(advisor);
@@ -49,18 +47,17 @@ const TeamSection = () => {
         <div className="">
           <VStack>
             <div className="pb-2.5">
-              <Heading
-                as={"h2"}
+              <Text
                 className="color-gradient"
                 fontWeight={600}
                 letterSpacing={"0.25rem"}
                 fontSize={"1rem"}
               >
                 MEET THE FOUNDERS
-              </Heading>
+              </Text>
             </div>
             <div className="md:pb-10 pb-4">
-              <Heading
+              <Text
                 className="gradient"
                 fontWeight={"400"}
                 fontSize={{ base: "2.5rem", md: "3.75rem" }}
@@ -68,7 +65,7 @@ const TeamSection = () => {
                 textAlign={{ base: "center" }}
               >
                 Our Team Leader
-              </Heading>
+              </Text>
             </div>
             <div className="font-medium text-fontColor4 leading-9 md:w-[30rem] text-center">
               <p>
@@ -148,25 +145,24 @@ const TeamSection = () => {
         <div className="mt-24 md:mt-0">
           <VStack mt={{ base: "2rem", md: "8rem" }}>
             <div className="pb-2.5">
-              <Heading
-                as={"h2"}
+              <Text
                 className="color-gradient"
                 fontWeight={600}
                 letterSpacing={"0.25rem"}
                 fontSize={"1rem"}
               >
                 THE TEAM
-              </Heading>
+              </Text>
             </div>
             <div className="md:pb-10 pb-4">
-              <Heading
+              <Text
                 className="gradient"
                 fontWeight={"400"}
                 fontSize={{ base: "2.5rem", md: "3.75rem" }}
                 lineHeight={"63.3px"}
               >
                 Our Team
-              </Heading>
+              </Text>
             </div>
             <div className="font-medium text-fontColor4 leading-9 md:w-[30rem] text-center">
               <p>
@@ -778,25 +774,24 @@ const TeamSection = () => {
         <div className="mt-24 md:mt-0">
           <VStack mt={{ base: "2rem", md: "8rem" }}>
             <div className="pb-2.5">
-              <Heading
-                as={"h2"}
+              <Text
                 className="color-gradient"
                 fontWeight={600}
                 letterSpacing={"0.25rem"}
                 fontSize={"1rem"}
               >
                 MEET OUR ADVISORS
-              </Heading>
+              </Text>
             </div>
             <div className="md:pb-10 pb-4">
-              <Heading
+              <Text
                 className="gradient"
                 fontWeight={"400"}
                 fontSize={{ base: "2.5rem", md: "3.75rem" }}
                 lineHeight={"63.3px"}
               >
                 Wisdom in Action
-              </Heading>
+              </Text>
             </div>
             <div className="font-medium text-fontColor4 leading-9 md:w-[30rem] text-center">
               <p>
@@ -824,33 +819,48 @@ const TeamSection = () => {
                     <Text
                       color={"#E5E5E5"}
                       fontWeight={"700"}
-                      fontSize={{ md:"1.3rem", base:'1rem'}}
-                      mt={{base:'1rem'}}
+                      fontSize={{ md: "1.3rem", base: "1rem" }}
+                      mt={{ base: "1rem" }}
                     >
                       {advisor.name}
                     </Text>
-                    <Text color={"#ABABAB"} fontSize={{base:'0.75rem', md:'1rem'}}>{advisor.position}</Text>
+                    <Text
+                      color={"#ABABAB"}
+                      fontSize={{ base: "0.75rem", md: "1rem" }}
+                    >
+                      {advisor.position}
+                    </Text>
                   </div>
-                  <Box mt={{md:'0', base:'1rem'}} display='flex' flexDirection='row' gap='1rem' alignItems={'center'}>
+                  <Box
+                    mt={{ md: "0", base: "1rem" }}
+                    display="flex"
+                    flexDirection="row"
+                    gap="1rem"
+                    alignItems={"center"}
+                  >
                     <Link href={advisor.linkedin}>
                       {!isTabletOrMobile && (
-                       <Image
-                        alt="sureshLinkedIn"
-                        src={linkedln}
-                        width={{ base: 12, md: 24 }}
-                        height={24}
-                      />
+                        <Image
+                          alt="sureshLinkedIn"
+                          src={linkedln}
+                          width={{ base: 12, md: 24 }}
+                          height={24}
+                        />
                       )}
                       {isTabletOrMobile && (
-                      <Image
-                        alt="sureshLinkedIn"
-                        src={linkedln}
-                        width={12}
-                        height={12}
-                      />
+                        <Image
+                          alt="sureshLinkedIn"
+                          src={linkedln}
+                          width={12}
+                          height={12}
+                        />
                       )}
                     </Link>
-                    <Button h={{ md:'1.75rem', base:'1rem'}}  fontSize={{ md:'0.75rem', base:'0.5rem'}} onClick={() => openModal(advisor)}>
+                    <Button
+                      h={{ md: "1.75rem", base: "1rem" }}
+                      fontSize={{ md: "0.75rem", base: "0.5rem" }}
+                      onClick={() => openModal(advisor)}
+                    >
                       Know More
                     </Button>
                   </Box>
@@ -866,7 +876,7 @@ const TeamSection = () => {
         <ModalContent
           minW={{ md: "30rem", base: "10rem" }}
           borderRadius={"2rem"}
-          p={{ md:"1rem",base:'0'}}
+          p={{ md: "1rem", base: "0" }}
         >
           {selectedAdvisor && (
             <>
@@ -877,84 +887,112 @@ const TeamSection = () => {
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
-                  {!isTabletOrMobile && (<Image
-                    alignContent={"center"}
-                    src={selectedAdvisor.imageSrc}
-                    alt={selectedAdvisor.name}
-                    style={{
-                      width: "200px",
-                      display: "flex",
-                      alignContent: "center",
-                      height: "200px",
-                    }}
-                  />
+                  {!isTabletOrMobile && (
+                    <Image
+                      alignContent={"center"}
+                      src={selectedAdvisor.imageSrc}
+                      alt={selectedAdvisor.name}
+                      style={{
+                        width: "200px",
+                        display: "flex",
+                        alignContent: "center",
+                        height: "200px",
+                      }}
+                    />
                   )}
-                  {isTabletOrMobile && (<Image
-                    alignContent={"center"}
-                    src={selectedAdvisor.imageSrc}
-                    alt={selectedAdvisor.name}
-                    style={{
-                      width: "100px",
-                      display: "flex",
-                      alignContent: "center",
-                      height: "100px",
-                    }}
-                  />
+                  {isTabletOrMobile && (
+                    <Image
+                      alignContent={"center"}
+                      src={selectedAdvisor.imageSrc}
+                      alt={selectedAdvisor.name}
+                      style={{
+                        width: "100px",
+                        display: "flex",
+                        alignContent: "center",
+                        height: "100px",
+                      }}
+                    />
                   )}
                 </Box>
-                <Heading
+                <Text
                   display={"flex"}
                   gap={"1rem"}
-                  my={{ md: "0.75rem",base:'0.5rem' }}
-                  fontSize={{ md:"2rem", base:'1rem'}}
+                  my={{ md: "0.75rem", base: "0.5rem" }}
+                  fontSize={{ md: "2rem", base: "1rem" }}
                 >
                   {selectedAdvisor.name}
                   <Link href={selectedAdvisor.linkedin} target="_blank">
                     {!isTabletOrMobile && (
-                    <Image
-                      alt="linkedin"
-                      src={LinkedinIcon}
-                      width={{ base: 12, md: 24 }}
-                      height={24}
-                      style={{ marginTop: "0.5rem" }}
-                    />
+                      <Image
+                        alt="linkedin"
+                        src={LinkedinIcon}
+                        width={{ base: 12, md: 24 }}
+                        height={24}
+                        style={{ marginTop: "0.5rem" }}
+                      />
                     )}
                     {isTabletOrMobile && (
-                    <Image
-                      alt="linkedin"
-                      src={LinkedinIcon}
-                      width={15}
-                      height={15}
-                      style={{ marginTop: "0.2rem" }}
-                    />
+                      <Image
+                        alt="linkedin"
+                        src={LinkedinIcon}
+                        width={15}
+                        height={15}
+                        style={{ marginTop: "0.2rem" }}
+                      />
                     )}
                   </Link>
-                </Heading>
-                <Box display={'flex'} gap={'0.5rem'} fontSize={{ md:"1rem", base:'0.75rem'}}>
-                <Text mb={{ md: "0.75rem", base:'0.5rem' }}  fontSize={{ md:"1rem", base:'0.75rem'}}>
-                  🤫 {" "}
-                  <b>Role at Hushh: </b>
+                </Text>
+                <Box
+                  display={"flex"}
+                  gap={"0.5rem"}
+                  fontSize={{ md: "1rem", base: "0.75rem" }}
+                >
+                  <Text
+                    mb={{ md: "0.75rem", base: "0.5rem" }}
+                    fontSize={{ md: "1rem", base: "0.75rem" }}
+                  >
+                    🤫 <b>Role at Hushh: </b>
                   </Text>
                   {selectedAdvisor.position}
                 </Box>
-                <Box display={'flex'} gap={'0.5rem'} fontSize={{ md:"1rem", base:'0.75rem'}}>
-                <Image
+                <Box
+                  display={"flex"}
+                  gap={"0.5rem"}
+                  fontSize={{ md: "1rem", base: "0.75rem" }}
+                >
+                  <Image
                     src={jobIcon}
                     alt="jobIcon"
-                    style={{ alignSelf:'flex-start', alignItems:'flex-start'}}
+                    style={{
+                      alignSelf: "flex-start",
+                      alignItems: "flex-start",
+                    }}
                   />
-                <Text
-                  mb={{ md: "0.75rem", base:'0.5rem' }}
-                  gap={"0.5rem"}
-                  display={'flex'}
-                  flexDirection={'row'}
-                > 
-                  <b>Working:</b>
+                  <Text
+                    mb={{ md: "0.75rem", base: "0.5rem" }}
+                    gap={"0.5rem"}
+                    display={"flex"}
+                    flexDirection={"row"}
+                  >
+                    <b>Working:</b>
                   </Text>
                   {selectedAdvisor.currentWork}
                 </Box>
-                <Text gap={"0.5rem"} fontSize={{ md:"1rem", base:'0.75rem'}} display={"flex"}>
-                  <Image src={locationIcon} alt="locationIcon" boxSize={6} style={{display:'flex', alignSelf:'flex-start', marginRight:'0.25rem'}}/>
+                <Text
+                  gap={"0.5rem"}
+                  fontSize={{ md: "1rem", base: "0.75rem" }}
+                  display={"flex"}
+                >
+                  <Image
+                    src={locationIcon}
+                    alt="locationIcon"
+                    boxSize={6}
+                    style={{
+                      display: "flex",
+                      alignSelf: "flex-start",
+                      marginRight: "0.25rem",
+                    }}
+                  />
 
                   <b>Locality: </b>
                   {selectedAdvisor.currentLocation}

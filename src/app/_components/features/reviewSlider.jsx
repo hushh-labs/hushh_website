@@ -22,7 +22,6 @@ import { useMediaQuery } from "@chakra-ui/react";
 // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const ReviewSlider = () => {
-
   const customerReviews = [
     {
       name: "Emily Smith",
@@ -84,18 +83,33 @@ const ReviewSlider = () => {
 
   return (
     <>
-      <Heading
+      <Text
         textAlign={"center"}
         mt={{ base: "3rem", md: "7rem" }}
         fontSize={{ base: "2rem", md: "3.75rem" }}
         fontWeight={"700"}
         className="gradient"
-        visibility={'visible'}
+        visibility={"visible"}
       >
         What our users say?
-      </Heading>
-      <Text textAlign={"center"} fontWeight={'500'} fontSize={{ base: "1rem", md: "1.75rem" }} className="default-gradient">Coming Soon!!</Text>
-      <Text textAlign={"center"} fontWeight={'400'} fontSize={{ base: "0.75rem", md: "1.15rem" }} className="gradient"  >"We're building amazing products and can't wait to share it with you! Here are some testimonials of what we're aiming to achieve"</Text>
+      </Text>
+      <Text
+        textAlign={"center"}
+        fontWeight={"500"}
+        fontSize={{ base: "1rem", md: "1.75rem" }}
+        className="default-gradient"
+      >
+        Coming Soon!!
+      </Text>
+      <Text
+        textAlign={"center"}
+        fontWeight={"400"}
+        fontSize={{ base: "0.75rem", md: "1.15rem" }}
+        className="gradient"
+      >
+        "We're building amazing products and can't wait to share it with you!
+        Here are some testimonials of what we're aiming to achieve"
+      </Text>
       <Swiper
         breakpoints={{
           640: {
@@ -118,7 +132,7 @@ const ReviewSlider = () => {
           clickable: true,
           loop: true,
         }}
-        slidesOffsetBefore={isDesktop ? -230:  0 }
+        slidesOffsetBefore={isDesktop ? -230 : 0}
         centeredSlides={isDesktop}
         style={{ visibility: isLoaded ? "visible" : "hidden" }}
       >
@@ -131,13 +145,13 @@ const ReviewSlider = () => {
                   hoveredIndex === index
                     ? "white"
                     : isActive
-                    ? "white"
-                    : "#3C3C3C"
+                      ? "white"
+                      : "#3C3C3C"
                 }
                 borderRadius={"40px"}
                 mt={{ base: "2rem", md: "3rem" }}
                 display={"flex"}
-                mx={{ base:'1rem',md:'0'}}
+                mx={{ base: "1rem", md: "0" }}
                 gap={{ md: "0.5rem", base: "0.5rem" }}
                 p={{ md: "2rem", base: "1.5rem" }}
                 flexDirection={"column"}
@@ -160,7 +174,7 @@ const ReviewSlider = () => {
                   opacity={hoveredIndex !== index && !isActive ? 1 : 0}
                   transition="opacity 0.3s ease"
                 ></Box>
-                
+
                 <Text
                   className="review-text"
                   color="black"
@@ -172,7 +186,7 @@ const ReviewSlider = () => {
                     ? customer.review.substring(0, maxContentLength) + "..."
                     : customer.review}
                 </Text>
-                
+
                 <HStack display={"flex"} flexDirection={"row"}>
                   <Image
                     width={60}
