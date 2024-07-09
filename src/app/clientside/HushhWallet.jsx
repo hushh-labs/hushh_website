@@ -2,7 +2,6 @@
 import {
   Box,
   Button,
-  Container,
   Divider,
   Grid,
   HStack,
@@ -12,7 +11,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import extendedTheme from "../theme";
 import { animateScroll as scroll } from "react-scroll";
 import Image from "next/image";
 import LouiWalletBg from "../_components/svg/louiVuittonWallet.svg";
@@ -48,6 +46,7 @@ import BrandWalletMobile from "../../../public/Images/BrandWalletMobile.png";
 import WalletFaq from "../_components/features/faq/walletAppFaq";
 import ContactForm from "../_components/features/contactForm";
 import WhiteShadow from "../_components/svg/whiteShadow.svg";
+import { AndroidIcon } from "../_components/svg/icons/androidIcon";
 
 const BrandContainer = styled.div`
   display: flex;
@@ -61,21 +60,8 @@ const BrandContainer = styled.div`
 `;
 
 const ClientHushhWallet = () => {
-    const scrollTo = () => {
-        scroll.scrollTo(850);
-      };
-    
-      const scrollInMobile = () => {
-        scroll.scrollTo(450);
-      };
-    
-      const learnMoreScroll = () => {
-        scroll.scrollTo(1500);
-      };
-    
-      const router = useRouter();
-    
-    
+  const router = useRouter();
+
   return (
     <>
       <Box
@@ -87,7 +73,7 @@ const ClientHushhWallet = () => {
         <Box
           alignItems={"center"}
           w={"100%"}
-          id={'1'}
+          id={"1"}
           display={"flex"}
           flexDirection={"column"}
           mt={{ base: "3rem" }}
@@ -100,10 +86,10 @@ const ClientHushhWallet = () => {
             lineHeight={{ md: "87.46px", base: "43px" }}
             textAlign={"center"}
             fontSize={{ md: "5.4rem", base: "2rem" }}
-            pt={{ md: "8rem", base: "3rem" }}
+            pt={{ md: "4rem", base: "3rem" }}
             color={"#FFFFFF"}
             mb={{ base: "0.5rem" }}
-            as={'h1'}
+            as={"h1"}
           >
             World's first AI Powered Data Wallet
           </Heading>
@@ -115,34 +101,59 @@ const ClientHushhWallet = () => {
             fontWeight={"400"}
             fontSize={{ md: "1.25erm", base: "1rem" }}
             color={"white"}
-            as={'h2'}
           >
             Higher perk adoption, instant expense management, simple benefits
             access and much more
           </Text>
+
+          <Box w={"max-content"} display={'flex'} bg={'transparent'} flexDirection={{md:'row',base:'column'}} gap={{md:'5rem',base:'2rem'}}>
           <Button
+            leftIcon={<AppleIcon/>}
+            //  zIndex={'100'}
             borderRadius={"3.3rem"}
-            w={"fit-content"}
+            border={'1px solid'}
+            
             p={"1rem 2rem"}
+            bg={'black'}
+            color={'white'}
             _hover={{
-              border:'none',
+              border: "none",
               color: "white",
               bg: "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
             }}
-            onClick={scrollTo}
-            zIndex={"6"}
+            onClick={() => window.open(" https://bit.ly/hushh-app-ios", "_blank")}                
           >
-            Explore
+            Donwload For App Store
           </Button>
+          <Button
+           leftIcon={<AndroidIcon/>}
+          //  zIndex={'100'}
+           border={'1px solid'}
+           borderRadius={"3.3rem"}
+            
+            p={"1rem 2rem"}
+            bg={'black'}
+            color={'white'}
+            _hover={{
+              border: "none",
+              color: "white",
+              bg: "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+            }}
+            onClick={() => window.open("https://drive.google.com/file/d/1euEWKlZz6kRMwl96HSoi8dNUchXNunnl/view", "_blank")}                
+          >
+            Download For Android
+          </Button>
+          </Box>
+
           <Box
-            zIndex={"3"}
+            // zIndex={"3"}
             position={"absolute"}
             mt={{ md: "5rem", base: "17rem" }}
           >
             <Image src={BoxBgWallet} alt="BoxBgWallet" />
           </Box>
           <Box
-            zIndex={"5"}
+            // zIndex={"5"}
             position={"absolute"}
             display={{ md: "block", base: "none" }}
             mt={{ md: "5rem", base: "17rem" }}
@@ -164,7 +175,7 @@ const ClientHushhWallet = () => {
           letterSpacing={"0.255rem"}
           mb={{ md: "2rem", base: "1rem" }}
         >
-          OUR PARTNERS
+          Brands we want to work with
         </Text>
         <Divider
           border={"2px solid"}
@@ -220,7 +231,7 @@ const ClientHushhWallet = () => {
           lineHeight={{ md: "91.78px", base: "50px" }}
           fontSize={{ md: "5.4rem", base: "2.7rem" }}
         >
-          <Heading
+          <Text
             fontWeight={"400"}
             fontSize={"5.43rem"}
             fontFamily={"Bebas Neue"}
@@ -229,14 +240,14 @@ const ClientHushhWallet = () => {
             textAlign={{ base: "center" }}
           >
             YOUR PERSONAL DATA,
-          </Heading>
+          </Text>
           <Image src={HushhLogoS} alt="HushhLogoS" style={{ zIndex: "3" }} />
           <Image
             src={WhiteShadow}
             alt="whiteShadow"
             style={{ position: "absolute", zIndex: "-100" }}
           />
-          <Heading
+          <Text
             fontWeight={"400"}
             fontSize={"5.43rem"}
             fontFamily={"Bebas Neue"}
@@ -245,7 +256,7 @@ const ClientHushhWallet = () => {
             textAlign={{ base: "center" }}
           >
             YOUR OWN BUSINESS
-          </Heading>
+          </Text>
         </HStack>
         <Text
           px={{ md: "10rem", base: "1rem" }}
@@ -283,7 +294,7 @@ const ClientHushhWallet = () => {
           lineHeight={{ md: "91.78px", base: "50px" }}
           fontSize={{ md: "5.4rem", base: "2.7rem" }}
         >
-          <Heading
+          <Text
             fontWeight={"400"}
             fontSize={"2.75rem"}
             fontFamily={"Bebas Neue"}
@@ -291,14 +302,14 @@ const ClientHushhWallet = () => {
             textAlign={{ base: "center" }}
           >
             YOUR PERSONAL DATA,
-          </Heading>
+          </Text>
           <Image src={HushhLogoS} style={{ height: "9rem" }} alt="HushhLogoS" />
           <Image
             src={WhiteShadow}
             alt="whiteShadow"
             style={{ position: "absolute", zIndex: "-100", height: "25rem" }}
           />
-          <Heading
+          <Text
             fontWeight={"400"}
             fontSize={"2.75rem"}
             fontFamily={"Bebas Neue"}
@@ -307,7 +318,7 @@ const ClientHushhWallet = () => {
             px={"1rem"}
           >
             YOUR OWN BUSINESS
-          </Heading>
+          </Text>
         </HStack>
         <Text
           px={{ md: "10rem", base: "1rem" }}
@@ -341,7 +352,7 @@ const ClientHushhWallet = () => {
           textAlign={"left"}
           alignItems={"flex-start"}
         >
-          <Heading
+          <Text
             className="color-gradient"
             fontWeight={"600"}
             fontSize={{ md: "1rem", base: "0.75rem" }}
@@ -349,7 +360,7 @@ const ClientHushhWallet = () => {
             letterSpacing={"0.255rem"}
           >
             GLOBAL SCALE
-          </Heading>
+          </Text>
           <Text
             color={"white"}
             fontWeight={"700"}
@@ -380,7 +391,7 @@ const ClientHushhWallet = () => {
               border={"1px solid #FFFFFF"}
               borderRadius={"0.75rem"}
             >
-              <Heading
+              <Text
                 fontWeight={"700"}
                 fontSize={{ md: "1.5rem", base: "1rem" }}
                 lineHeight={{ md: "33.6px" }}
@@ -388,7 +399,7 @@ const ClientHushhWallet = () => {
                 marginBottom={{ base: "0.75rem", md: "1rem" }}
               >
                 Phone Data
-              </Heading>
+              </Text>
               <Text
                 fontWeight={"400"}
                 fontSize={{ md: "0.875rem", base: "0.5rem" }}
@@ -407,7 +418,7 @@ const ClientHushhWallet = () => {
               border={"1px solid #FFFFFF"}
               borderRadius={"0.75rem"}
             >
-              <Heading
+              <Text
                 fontWeight={"700"}
                 fontSize={{ md: "1.5rem", base: "1rem" }}
                 lineHeight={{ md: "33.6px" }}
@@ -415,7 +426,7 @@ const ClientHushhWallet = () => {
                 marginBottom={{ base: "0.75rem", md: "1rem" }}
               >
                 Data Companies
-              </Heading>
+              </Text>
               <Text
                 fontWeight={"400"}
                 fontSize={{ md: "0.875rem", base: "0.5rem" }}
@@ -434,7 +445,7 @@ const ClientHushhWallet = () => {
               border={"1px solid #FFFFFF"}
               borderRadius={"0.75rem"}
             >
-              <Heading
+              <Text
                 fontWeight={"700"}
                 fontSize={{ md: "1.5rem", base: "1rem" }}
                 lineHeight={{ md: "33.6px" }}
@@ -442,7 +453,7 @@ const ClientHushhWallet = () => {
                 marginBottom={{ base: "0.75rem", md: "1rem" }}
               >
                 Shopping Brands
-              </Heading>
+              </Text>
               <Text
                 fontWeight={"400"}
                 fontSize={{ md: "0.875rem", base: "0.5rem" }}
@@ -541,16 +552,17 @@ const ClientHushhWallet = () => {
         mt={{ md: "-18rem", base: "1.5ren" }}
         textAlign={{ md: "left", base: "center" }}
       >
-        <Heading
+        <Text
           px={{ md: "5rem", base: "1rem" }}
           mr={{ md: "40%", base: 0 }}
           fontWeight={"400"}
           className="gradient"
           fontSize={{ md: "3.75rem", base: "1.75rem" }}
           lineHeight={{ md: "63.3px", base: "43px" }}
+          as={"h2"}
         >
           Personalized Experiences, Rewarded Interactions
-        </Heading>
+        </Text>
         <Text
           px={{ md: "5rem", base: "1.25rem" }}
           mr={{ md: "40%", base: 0 }}
@@ -622,7 +634,7 @@ const ClientHushhWallet = () => {
             h={"70%"}
             right={0}
           >
-            <Heading
+            <Text
               mb={{ md: "1rem", base: "0.5rem" }}
               color={"#0D0D25"}
               fontSize={{ md: "3.75rem", base: "1.25rem" }}
@@ -631,7 +643,7 @@ const ClientHushhWallet = () => {
               mr={"40%"}
             >
               Enter a world made for you
-            </Heading>
+            </Text>
             <Text
               mb={{ md: "2rem", base: "1rem" }}
               color={"#0D0D25"}
@@ -652,11 +664,14 @@ const ClientHushhWallet = () => {
                 leftIcon={<AppleIcon />}
                 border={"1px solid #FFFFFF"}
                 borderRadius={"80px"}
+                cursor={'pointer'}
                 _hover={{
-                    border:'none',
-                    background: 'linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)'
+                  border: "none",
+                  background:
+                    "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
                 }}
-              >
+                onClick={() => window.open(" https://bit.ly/hushh-app-ios", "_blank")}                
+                >
                 APP STORE
               </Button>
               <Button
@@ -665,18 +680,21 @@ const ClientHushhWallet = () => {
                 w={{ md: "12rem" }}
                 bg={"#000000"}
                 color={"white"}
+                cursor={'pointer'}
                 leftIcon={<PlayStoreIcon />}
                 border={"1px solid #FFFFFF"}
                 borderRadius={"80px"}
                 _hover={{
-                    border:'none',
-                    background: 'linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)'
+                  border: "none",
+                  background:
+                    "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
                 }}
-              >
+                onClick={() => window.open("https://drive.google.com/file/d/1euEWKlZz6kRMwl96HSoi8dNUchXNunnl/view", "_blank")}                
+                >
                 PLAY STORE
               </Button>
             </HStack>
-            <Box pos={"absolute"} right={"7%"} bottom={0} >
+            <Box pos={"absolute"} right={"7%"} bottom={0}>
               <Image src={BrandWalletMobile} alt="BrandWalletMobile" />
             </Box>
           </Box>
@@ -690,9 +708,9 @@ const ClientHushhWallet = () => {
         flexDirection={"column"}
         position={"relative"}
         px={"0.75rem"}
-        pt={'0.75rem'}
+        pt={"0.75rem"}
       >
-        <Heading
+        <Text
           mb={{ base: "0.5rem" }}
           color={"#0D0D25"}
           fontSize={{ base: "1.25rem" }}
@@ -700,7 +718,7 @@ const ClientHushhWallet = () => {
           fontWeight={"500"}
         >
           Enter a world made for you
-        </Heading>
+        </Text>
         <Text
           mb={{ md: "2rem", base: "1rem" }}
           color={"#0D0D25"}
@@ -720,10 +738,13 @@ const ClientHushhWallet = () => {
             leftIcon={<AppleIcon />}
             border={"1px solid #FFFFFF"}
             borderRadius={"80px"}
+            cursor={'pointer'}
             _hover={{
-                background: 'linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)',
-                border:'none',
+              background:
+                "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+              border: "none",
             }}
+            onClick={() => window.open(" https://bit.ly/hushh-app-ios", "_blank")}                
           >
             APP STORE
           </Button>
@@ -733,13 +754,16 @@ const ClientHushhWallet = () => {
             w={"12rem"}
             bg={"#000000"}
             color={"white"}
+            cursor={'pointer'}
             leftIcon={<PlayStoreIcon />}
             border={"1px solid #FFFFFF"}
             borderRadius={"80px"}
             _hover={{
-                background: 'linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)',
-                border:'none',
+              background:
+                "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+              border: "none",
             }}
+            onClick={() => window.open("https://drive.google.com/file/d/1euEWKlZz6kRMwl96HSoi8dNUchXNunnl/view", "_blank")}                
           >
             PLAY STORE
           </Button>
@@ -752,7 +776,12 @@ const ClientHushhWallet = () => {
         >
           <Image
             src={BrandWalletMobile}
-            style={{ position: "relative", height: "30%",bottom:'0', width: "40%" }}
+            style={{
+              position: "relative",
+              height: "30%",
+              bottom: "0",
+              width: "40%",
+            }}
             alt="BrandWalletMobile"
           />
         </Box>
@@ -761,7 +790,7 @@ const ClientHushhWallet = () => {
       <WalletFaq />
       <ContactForm />
     </>
-  )
-}
+  );
+};
 
-export default ClientHushhWallet
+export default ClientHushhWallet;

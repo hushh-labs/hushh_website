@@ -6,6 +6,7 @@
       "esnext"
     ],
     "allowJs": true,
+    "baseUrl": ".",
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
@@ -16,19 +17,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", ".contentlayer/generated"],
+  "exclude": ["node_modules"]
 }

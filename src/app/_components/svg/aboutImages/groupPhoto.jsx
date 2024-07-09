@@ -1,7 +1,5 @@
 import React from "react";
 
-const GroupPhoto = () => (
-  <></>
-);
+const GroupPhoto = () => <></>;
 
 export default GroupPhoto;

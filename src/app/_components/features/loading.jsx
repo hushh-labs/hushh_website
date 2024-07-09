@@ -1,4 +1,4 @@
-import { Box, Spinner, Flex, Text } from '@chakra-ui/react';
+import { Box, Spinner, Flex, Text } from "@chakra-ui/react";
 
 export default function Loading() {
   return (
@@ -11,7 +11,14 @@ export default function Loading() {
       color="white"
     >
       <Spinner size="xl" color="white" />
-      <Text mt="4" fontWeight={'400'} className='color-gradient' fontSize={{md:'4rem', base:'1rem'}}>Hushhing....</Text>
+      <Text
+        mt="4"
+        fontWeight={"400"}
+        className="color-gradient"
+        fontSize={{ md: "4rem", base: "1rem" }}
+      >
+        Hushhing....
+      </Text>
     </Flex>
   );
 }

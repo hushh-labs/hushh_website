@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Figtree' !important;
+  font-family: "Figtree" !important;
+  padding: 0 !important;
+  width: 100% !important;
 }
 
 /* Header CSS */
@@ -32,39 +34,57 @@ body {
 }
 
 .gradient {
-  background: linear-gradient(to right, #7A7A7E, #FFFFFF);
+  background: linear-gradient(to right, #7a7a7e, #ffffff);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .color-gradient {
-  background: linear-gradient(to right, #E54D60, #A342FF);
+  background: linear-gradient(to right, #e54d60, #a342ff);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .hushh-gradient {
-  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  background: linear-gradient(265.3deg, #e54d60 8.81%, #a342ff 94.26%);
   -webkit-background-clip: text;
   color: transparent;
-  border-color: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  border-color: linear-gradient(265.3deg, #e54d60 8.81%, #a342ff 94.26%);
+}
+
+.personalized-demo {
+  background: linear-gradient(265.12deg, #e54d60 4.12%, #a342ff 51.75%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.new-gradient {
+  background: linear-gradient(263.99deg, #e54d60 71.61%, #a342ff 99.22%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hackathon-gradient {
+  background: linear-gradient(256.5deg, #e0055f 6.97%, #2020ed 92.26%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .default-gradient {
-  background: linear-gradient(#E54D60 8.81%, #A342FF 94.26%);
+  background: linear-gradient(#e54d60 8.81%, #a342ff 94.26%);
   -webkit-background-clip: text;
   color: transparent;
-  border-color: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  border-color: linear-gradient(265.3deg, #e54d60 8.81%, #a342ff 94.26%);
 }
 
+/* Perfect Gradient Color for Background */
 .gradient-bg {
-  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  background: linear-gradient(265.3deg, #e54d60 8.81%, #a342ff 94.26%);
 }
 
 .new-gradient-bg {
-  background: linear-gradient(256.5deg, #E0055F 6.97%, #2020ED 92.26%);
+  background: linear-gradient(256.5deg, #e0055f 6.97%, #2020ed 92.26%);
 }
-
 
 .border-gradient {
   background: linear-gradient(to right, white 0%, purple 20%, white 100%);
@@ -77,7 +97,7 @@ body {
   bottom: 0;
   right: 0;
   width: 0.1rem;
-  background: linear-gradient(to bottom, #FBF7FF 0%, #3a3a3a 50%, #FBF7FF 100%);
+  background: linear-gradient(to bottom, #fbf7ff 0%, #3a3a3a 50%, #fbf7ff 100%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -96,7 +116,12 @@ body {
   }
 }
 
-
+.gradient-text {
+  background: linear-gradient(to right, #E54D60, #A342FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
 
 
 /* :root {
@@ -125,8 +150,7 @@ body {
 
 /* Our technology Section  - HOME PAGE */
 .heading2 {
-
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   line-height: 1.8rem;
 }
@@ -138,14 +162,11 @@ body {
   color: transparent;
 } */
 
-
 /* Divider Gradient Color */
 .divider {
   border: 2px solid;
-  color: linear-gradient(270deg, #262626 100%, #ADA785 100%);
-
+  color: linear-gradient(270deg, #262626 100%, #ada785 100%);
 }
-
 
 /* Slide Up text animation - home banner */
 .wrapper {
@@ -154,74 +175,68 @@ body {
   overflow: hidden;
   max-width: 100%;
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  height: 5.5rem; /* Adjust based on the largest font size */
 }
 
 .words {
   flex-shrink: 0;
   white-space: nowrap;
-  height: 5.6rem;
-
+  animation: spin_words 6s infinite linear;
 }
 
 .slideText {
   display: block;
   -webkit-background-clip: text;
   color: transparent;
-  animation: spin_words 6s infinite;
-  font-size: 5rem;
-
+  font-size: 5rem; /* Default font size */
+  line-height: 5.5rem; /* Keep this in sync with .wrapper height */
 }
 
 @keyframes spin_words {
-  0% {
-    transform: translateY(0);
-  }
-
+  0%,
   20% {
     transform: translateY(0);
   }
-
-  25% {
-    transform: translateY(-100%);
-  }
-
+  25%,
   45% {
     transform: translateY(-100%);
   }
-
-  50% {
-    transform: translateY(-200%);
-  }
-
+  50%,
   70% {
     transform: translateY(-200%);
   }
-
-  75% {
-    transform: translateY(-300%);
-  }
-
+  75%,
   95% {
     transform: translateY(-300%);
   }
-
   100% {
     transform: translateY(-400%);
   }
 }
 
+/* Responsiveness */
 @media screen and (max-width: 768px) {
   .slideText {
     font-size: 2rem;
-    /* Adjust font size for smaller screens */
+    line-height: 2.5rem;
   }
 
-  .words {
-    height: 2.6rem;
+  .wrapper {
+    width: 100%;
+    height: 2.5rem;
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .slideText {
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
 
+  .wrapper {
+    height: 3.5rem; 
+  }
+}
 
 /* Chatbot Popup Notification CSS */
 .popup {
@@ -246,17 +261,17 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: #7A7A7E !important;
+  background-color: #7a7a7e !important;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
 }
 
 .review-text::before,
 .review-text::after {
-  font-family: 'Figtree';
-  background: linear-gradient(to right, #E54D60, #A342FF);
+  font-family: "Figtree";
+  background: linear-gradient(to right, #e54d60, #a342ff);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 2em;
@@ -264,24 +279,21 @@ body {
 }
 
 .review-text::before {
-  content: '“';
+  content: "“";
   margin-right: 0.1em;
 }
 
 .review-text::after {
-  content: '”';
+  content: "”";
   margin-left: 0.1em;
 }
 
 @media (max-width: 768px) {
-
   .review-text::before,
   .review-text::after {
     font-size: 1.5em;
   }
 }
-
-
 
 /* Hushh Button CSS  */
 
@@ -293,38 +305,162 @@ body {
   .hushhbuttonFrame2 {
     display: none;
   }
-
 }
 
 /* CSS for FAQ Accordian Tabs  */
 
 .gradientText {
-  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  background: linear-gradient(265.3deg, #e54d60 8.81%, #a342ff 94.26%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
 }
 
 .gradientUnderline {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
-  background: linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%);
+  background: linear-gradient(265.3deg, #e54d60 8.81%, #a342ff 94.26%);
 }
-
 
 /* Hushh Wallet Page CSS */
 .walletDivider {
-  background: linear-gradient(to right, #7A7A7E, #FFFFFF);
-  content: '';
+  background: linear-gradient(to right, #7a7a7e, #ffffff);
+  content: "";
   display: block;
   height: 1px;
 }
 
-
 /* Top Loader CSS */
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   .spinner {
-      display: none !important;
+    display: none !important;
   }
+}
+
+/* Booking Demo Page CSS form */
+/* CSS */
+.PhoneInputCountrySelectArrow {
+  color: #ffffff;
+  margin-right: 0.15rem;
+}
+
+.formInput:active {
+  border-color: #ffffff; /* Set border color to white when input is focused */
+}
+
+.PhoneInputCountrySelectArrow:focus {
+  background-color: #ffffff;
+}
+
+.PhoneInputCountryFlag:focus {
+  outline: none;
+  border: none;
+}
+
+.PhoneInputInput {
+  background: #151515;
+  color: #ffffff;
+  border: 1px solid #242424 !important; /* Remove single quotes around the border value */
+  height: 2.5rem;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 0;
+  padding: 1rem;
+}
+
+.PhoneInputInput:focus {
+  border: 1px solid #ffffff !important; /* Adjust border color when focused */
+}
+
+.PhoneInputInternationalIconPhone {
+  color: #ffffff;
+}
+
+.PhoneInputInternationalIconGlobe {
+  color: #ffffff;
+}
+
+.PhoneInput {
+  border-color: #242424;
+  border-radius: 5px;
+}
+
+.PhoneInput {
+  /* This is done to stretch the contents of this component. */
+  display: flex;
+  align-items: center;
+}
+/* Pricing Plan Hover Effect CSS */
+.plan {
+  background-color: #131414;
+  color: white;
+}
+
+.plan:hover {
+  background-color: #146EF5;
+  color: #FFFFFF;
+  /* cursor: pointer; */
+}
+
+.plan:hover .planName {
+  background: #FFFFFF;
+  color: #080808;
+}
+
+.plan:hover .planAdvertisment {
+  color:#FFFFFF;
+}
+
+.plan:hover .planButton {
+  background: #FFFFFF;
+  color: #080808;
+}
+
+
+/* Blog page mdx CSS */
+.highlightMdx {
+  background-color: rgb(36, 41, 46);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+/* Develoepr API dovumentation CSS */
+.onBoarding {
+  font-family: "Inter" !important;
+}
+
+.documentTab {
+  color:'white';
+  background: #080808;
+}
+
+
+
+/* Developer API feedback form CSS */
+.feedbackForm {
+  text-align: center;
+  height: 40vmin;
+}
+
+.feedbackForm-link {
+  color: #fba461;
+}
+
+.phoneInput {
+  color: gray.400;
+  border: gray.700;
+  background: transparent;
+  margin-bottom: 4;
+  padding: 3;
+  width: 100%;
+  text-decoration-color: white;
+}
+
+/* 3-D Button Viva Connect */
+
+
+/* Hushh Outbound Services CSS */
+.serviceBox {
+  grid-column-start: 2;
+  grid-column-end: 4;
 }

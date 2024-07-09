@@ -1,5 +1,5 @@
-'use client'
-import React, { useState, useEffect } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 // import notification from '../../assets/audio/notification.wav';
 
 const PopupNotification = ({ message }) => {
@@ -15,40 +15,40 @@ const PopupNotification = ({ message }) => {
     return () => clearTimeout(timeout);
   }, []);
 
-//   const notificationSound = new Audio(notification);
-  
+  //   const notificationSound = new Audio(notification);
+
   function playNotificationSound() {
-     new Audio("assets/audio/notification.wav").play();
+    new Audio("assets/audio/notification.wav").play();
   }
 
   function useBotpressChatWithSoundAndNotification() {
     useEffect(() => {
-        playNotificationSound();
+      playNotificationSound();
 
       const delayedExecution = () => {
         playNotificationSound();
         // showPopupNotification();
       };
-  
-    //   // Set a timeout to delay the execution by 2 seconds (3000-4000 milliseconds)
-    //   const timeoutId = setTimeout(delayedExecution, Math.random() * 1000);
-  
-    //   // Clean up the timeout when the component unmounts
-    //   return () => clearTimeout(timeoutId);
-    }, []); 
-  }   
+
+      //   // Set a timeout to delay the execution by 2 seconds (3000-4000 milliseconds)
+      //   const timeoutId = setTimeout(delayedExecution, Math.random() * 1000);
+
+      //   // Clean up the timeout when the component unmounts
+      //   return () => clearTimeout(timeoutId);
+    }, []);
+  }
   useBotpressChatWithSoundAndNotification();
 
   if (!show) return null;
 
   return (
-  <>
-    <div className="popup" onLoad={useBotpressChatWithSoundAndNotification}>
-    {message}
-    </div>;
-  </>
-  )
+    <>
+      <div className="popup" onLoad={useBotpressChatWithSoundAndNotification}>
+        {message}
+      </div>
+      ;
+    </>
+  );
 };
-
 
 export default PopupNotification;

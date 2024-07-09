@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Marquee from "react-fast-marquee";
 
-// Brands 
+// Brands
 import Accor from "../svg/images/accor";
 import Microsoft from "../svg/images/microsoft";
 import Aws from "../svg/images/aws";
@@ -26,8 +26,8 @@ const BrandContainer = styled.div`
   margin-top: 2rem;
 
   @media screen and (max-width: 768px) {
-    gap:4rem;
-    padding:5px;
+    gap: 4rem;
+    padding: 5px;
     margin-top: 1rem;
   }
 `;
@@ -35,7 +35,10 @@ const BrandContainer = styled.div`
 export function BrandSlider() {
   return (
     <div className="brandSlider">
-      <Marquee pauseOnHover='true' style={{position:'relative', overflow:'hidden'}}>
+      <Marquee
+        pauseOnHover="true"
+        style={{ position: "relative", overflow: "hidden" }}
+      >
         <BrandContainer>
           <Accor key={1} width={50} height={50} />
           <Aws key={2} width={50} height={50} />

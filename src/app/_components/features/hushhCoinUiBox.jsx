@@ -19,7 +19,11 @@ const HushhCoinUiBox = () => {
         minW={"100%"}
         px={{ md: "10rem", base: "2rem" }}
       >
-        <Box maxWidth={{ base: "100%", md: "40%" }} display={{base:"none", md:'flex'}} mb={{base:'2rem'}}>
+        <Box
+          maxWidth={{ base: "100%", md: "40%" }}
+          display={{ base: "none", md: "flex" }}
+          mb={{ base: "2rem" }}
+        >
           <NextImage src={ReceiptRadar} alt="receiptRadar" />
         </Box>
         <VStack
@@ -36,16 +40,20 @@ const HushhCoinUiBox = () => {
           >
             INTRODUCING RECEIPT RADAR
           </Heading>{" "}
-          <Box maxWidth={{ base: "100%", md: "40%" }} display={{base:"flex", md:'none'}} mb={{base:'2rem'}}>
-          <NextImage src={ReceiptRadar} alt="receiptRadar" />
-        </Box>
-          <Heading
+          <Box
+            maxWidth={{ base: "100%", md: "40%" }}
+            display={{ base: "flex", md: "none" }}
+            mb={{ base: "2rem" }}
+          >
+            <NextImage src={ReceiptRadar} alt="receiptRadar" />
+          </Box>
+          <Text
             className="gradient"
             fontWeight="700"
             fontSize={{ md: "3.75rem", base: "1.25rem" }}
           >
             Effortless Receipt Management
-          </Heading>
+          </Text>
           <Text
             color={extendedTheme.colors.secondary}
             lineHeight={{ base: "18px", md: "36px" }}
@@ -56,36 +64,90 @@ const HushhCoinUiBox = () => {
             managing expenses becomes a breeze. Simplify your life and take
             control of your finances with Receipt Radar today!{" "}
           </Text>
-
           <VStack
             align="flex-start"
             spacing={4}
             w="100%"
             mt={{ base: "1rem", md: "2rem" }}
           >
-            <Box alignItems={'center'} textAlign={'left'} flexDirection={'row'} color={extendedTheme.colors._white} display="flex" gap={"1rem"}>
-              <Box><MarketIcon /></Box>
-              <VStack textAlign={'left'} alignItems={'flex-start'} lineHeight={'1rem'}>
-                 <Text fontWeight={'700'}>Automatic Scanning</Text>
-                 <Text fontWeight={'400'} fontSize={'0.75rem'}>Scan your email inbox for receipts and invoices automatically, saving time.</Text>
-              </VStack> 
-            </Box>
-
-            <Box ml={{base:'-0.5rem', md:'0'}} alignItems={'center'} textAlign={'left'} flexDirection={'row'} color={extendedTheme.colors._white} display="flex" gap={{ md:"1.55rem", base:'0.55rem'}}>
-              <Box ml={'-0.5rem'} display={{md:'block', base:'none'}}><BoltIcon /></Box>
-              <Box  display={{md:'none', base:'block'}}><BoltIcon /></Box>
-              <VStack textAlign={'left'} ml={{md:'-1rem'}} alignItems={'flex-start'} lineHeight={'1rem'}>
-                 <Text fontWeight={'700'}>Smart Categorization</Text>
-                 <Text fontWeight={'400'} fontSize={'0.75rem'}>Organize receipts into specific digital wallet cards based on rules or preferences.</Text>
+            <Box
+              alignItems={"center"}
+              textAlign={"left"}
+              flexDirection={"row"}
+              color={extendedTheme.colors._white}
+              display="flex"
+              gap={"1rem"}
+            >
+              <Box>
+                <MarketIcon />
+              </Box>
+              <VStack
+                textAlign={"left"}
+                alignItems={"flex-start"}
+                lineHeight={"1rem"}
+              >
+                <Text fontWeight={"700"}>Automatic Scanning</Text>
+                <Text fontWeight={"400"} fontSize={"0.75rem"}>
+                  Scan your email inbox for receipts and invoices automatically,
+                  saving time.
+                </Text>
               </VStack>
             </Box>
 
-            <Box alignItems={'center'} textAlign={'left'} flexDirection={'row'} color={extendedTheme.colors._white} display="flex" gap={"1.25rem"}>
-             <Box display={{md:'block',base:'none'}}> <TransparentLock /></Box>
-             <Box display={{md:'none',base:'block'}}> <TransparentLock /></Box>
-              <VStack textAlign={'left'} alignItems={'flex-start'} lineHeight={'1rem'}>
-                 <Text fontWeight={'700'}>Customization Options</Text>
-                 <Text fontWeight={'400'} fontSize={'0.75rem'}>Tailor the app to fit your needs and preferences seamlessly</Text>
+            <Box
+              ml={{ base: "-0.5rem", md: "0" }}
+              alignItems={"center"}
+              textAlign={"left"}
+              flexDirection={"row"}
+              color={extendedTheme.colors._white}
+              display="flex"
+              gap={{ md: "1.55rem", base: "0.55rem" }}
+            >
+              <Box ml={"-0.5rem"} display={{ md: "block", base: "none" }}>
+                <BoltIcon />
+              </Box>
+              <Box display={{ md: "none", base: "block" }}>
+                <BoltIcon />
+              </Box>
+              <VStack
+                textAlign={"left"}
+                ml={{ md: "-1rem" }}
+                alignItems={"flex-start"}
+                lineHeight={"1rem"}
+              >
+                <Text fontWeight={"700"}>Smart Categorization</Text>
+                <Text fontWeight={"400"} fontSize={"0.75rem"}>
+                  Organize receipts into specific digital wallet cards based on
+                  rules or preferences.
+                </Text>
+              </VStack>
+            </Box>
+
+            <Box
+              alignItems={"center"}
+              textAlign={"left"}
+              flexDirection={"row"}
+              color={extendedTheme.colors._white}
+              display="flex"
+              gap={"1.25rem"}
+            >
+              <Box display={{ md: "block", base: "none" }}>
+                {" "}
+                <TransparentLock />
+              </Box>
+              <Box display={{ md: "none", base: "block" }}>
+                {" "}
+                <TransparentLock />
+              </Box>
+              <VStack
+                textAlign={"left"}
+                alignItems={"flex-start"}
+                lineHeight={"1rem"}
+              >
+                <Text fontWeight={"700"}>Customization Options</Text>
+                <Text fontWeight={"400"} fontSize={"0.75rem"}>
+                  Tailor the app to fit your needs and preferences seamlessly
+                </Text>
               </VStack>
             </Box>
           </VStack>

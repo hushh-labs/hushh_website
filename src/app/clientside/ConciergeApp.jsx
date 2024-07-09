@@ -34,43 +34,40 @@ import BoltIcon from "../_components/svg/boltIcon";
 import { useState, useEffect } from "react";
 import MarketIcon from "../_components/svg/marketIcon";
 import ConciergeMobile from "../_components/svg/icons/conciergeMobileIcon.svg";
-import Loading from "../_components/features/loading";
+// import Loading from "../_components/features/loading";
 
 const handlePlayDemo = () => {
-    // Open the URL in a new tab
-    window.open('https://www.youtube.com/watch?v=J0Q_n6CWfO8', '_blank');
-  };
+  // Open the URL in a new tab
+  window.open("https://www.youtube.com/watch?v=J0Q_n6CWfO8", "_blank");
+};
 
 const ClientConciergeApp = () => {
-    const gradient = "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)";
-    const router = useRouter();
-    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      const timeout = setTimeout(() => {
-        setLoading(false);
-      }, 200); 
-  
-      return () => clearTimeout(timeout);
-    }, []);
-    
-    const scrollTo = () => {
-      scroll.scrollTo(850);
-    };
-  
-    const scrollInMobile = () => {
-      scroll.scrollTo(450);
-    };
-  
-    const learnMoreScroll = () => {
-      scroll.scrollTo(1500);
-    };
-  
+  const gradient = "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)";
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 200);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const scrollTo = () => {
+    scroll.scrollTo(850);
+  };
+
+  const scrollInMobile = () => {
+    scroll.scrollTo(450);
+  };
+
+  const learnMoreScroll = () => {
+    scroll.scrollTo(1500);
+  };
+
   return (
     <>
-    {loading ? (
-      <Loading />
-    ) : (
       <Box
         maxW={"100%"}
         minW={"100%"}
@@ -93,19 +90,19 @@ const ClientConciergeApp = () => {
             className="gradient"
             px={{ base: "0.5rem" }}
             mb={{ base: "0.5rem" }}
-            as={'h1'}
+            as={"h1"}
           >
             Concierge App
           </Heading>
-          <Text
+          <Heading
             className="color-gradient"
             fontWeight={"700"}
             fontSize={{ md: "2rem", base: "1rem" }}
             lineHeight={{ md: "57.6px", base: "28.3px" }}
-            as={'h2'}
+            as={"h2"}
           >
             Experience Luxury, Redefined
-          </Text>
+          </Heading>
           <Text
             px={{ md: "17.8rem" }}
             mb={{ base: "1rem", md: "4rem" }}
@@ -128,7 +125,7 @@ const ClientConciergeApp = () => {
             _hover={{
               background:
                 "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-              border:'none'
+              border: "none",
             }}
             onClick={learnMoreScroll}
           >
@@ -142,7 +139,7 @@ const ClientConciergeApp = () => {
           display={"flex"}
           flexDirection={{ base: "row", md: "row" }}
           justifyContent="flex-end"
-          mr={'3rem'}
+          mr={"3rem"}
         >
           <Button
             display={{ md: "flex", base: "none" }}
@@ -156,7 +153,7 @@ const ClientConciergeApp = () => {
             _hover={{
               background:
                 "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-              border:'none'
+              border: "none",
             }}
             padding={"15px 68px 15px 68px"}
             onClick={handlePlayDemo}
@@ -182,7 +179,7 @@ const ClientConciergeApp = () => {
             _hover={{
               background:
                 "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-              border:'none'
+              border: "none",
             }}
             padding={"15px 68px 15px 68px"}
             onClick={handlePlayDemo}
@@ -199,11 +196,10 @@ const ClientConciergeApp = () => {
           textAlign={"center"}
           gap={{ md: "2rem", base: "1rem" }}
         >
-          <Heading
-            as="h1"
+          <Text
             className="gradient"
             fontSize={{ md: "3.75rem", base: "1.5rem" }}
-            display={{ md:"flex", base:'none'}}
+            display={{ md: "flex", base: "none" }}
             fontWeight={400}
           >
             Here's how{" "}
@@ -211,16 +207,15 @@ const ClientConciergeApp = () => {
               Hushh elevates
             </Text>{" "}
             your experience
-          </Heading>
-          <Heading
-            as="h1"
+          </Text>
+          <Text
             className="gradient"
             fontSize={{ md: "3.75rem", base: "1.5rem" }}
-            display={{ md:"none", base:'flex'}}
+            display={{ md: "none", base: "flex" }}
             fontWeight={400}
           >
             Here's how Hushh elevates your experience
-          </Heading>
+          </Text>
           <Text
             color={extendedTheme.colors.secondary}
             fontWeight={"500"}
@@ -237,7 +232,7 @@ const ClientConciergeApp = () => {
         <Container
           display={"flex"}
           pt={{ md: "2rem" }}
-          px={{ md: "10rem", base:'1rem' }}
+          px={{ md: "10rem", base: "1rem" }}
           justifyContent={"center"}
           minW={{ md: "100%", base: "100%" }}
         >
@@ -248,7 +243,7 @@ const ClientConciergeApp = () => {
           >
             <ServiceCard
               icon={<TrustedAIIcon />}
-              alignItems={''}
+              alignItems={""}
               onClick={null}
               title="Effortless Service​"
               textAlign={"left"}
@@ -256,7 +251,7 @@ const ClientConciergeApp = () => {
             />
             <ServiceCard
               icon={<TechIntegrationIcon />}
-              alignItems={''}
+              alignItems={""}
               onClick={null}
               title="Personalized Recommendations​​​"
               textAlign={"left"}
@@ -264,7 +259,7 @@ const ClientConciergeApp = () => {
             />
             <ServiceCard
               icon={<ControlOver />}
-              alignItems={''}
+              alignItems={""}
               onClick={null}
               title="Real-Time Responses​"
               textAlign={"left"}
@@ -274,7 +269,7 @@ const ClientConciergeApp = () => {
               icon={<RedifiningIcon />}
               title="Discretion and Privacy​​​"
               onClick={null}
-              alignItems={''}
+              alignItems={""}
               textAlign={"left"}
               description="Your identity and preferences remain confidential. Requests are shared anonymously with relevant service providers.​​"
             />
@@ -282,7 +277,7 @@ const ClientConciergeApp = () => {
               icon={<TransparentSecureIcon />}
               title="Exclusive Opportunities​"
               onClick={null}
-              alignItems={''}
+              alignItems={""}
               textAlign={"left"}
               description="Access exclusive deals and hidden gem recommendations you won't find anywhere else"
             />
@@ -293,27 +288,27 @@ const ClientConciergeApp = () => {
           mt={{ base: "2rem", md: "9rem" }}
           px={{ md: "9rem", base: "1rem" }}
         >
-          <Heading
+          <Text
             className="gradient"
             fontWeight={"700"}
             lineHeight={{ md: "75px", base: "28px" }}
             fontSize={{ md: "3.75rem", base: "1.25rem" }}
-            mb={{base:'2rem', md:'4rem'}}
-            display={{md:'flex', base:'none'}}
+            mb={{ base: "2rem", md: "4rem" }}
+            display={{ md: "flex", base: "none" }}
           >
             Hushh caters to a wide range <br></br> of needs, including
-          </Heading>
-          <Heading
+          </Text>
+          <Text
             className="gradient"
             fontWeight={"700"}
             lineHeight={{ md: "75px", base: "28px" }}
             fontSize={{ md: "3.75rem", base: "1.25rem" }}
-            mb={{base:'2rem', md:'4rem'}}
-            display={{md:'none', base:'flex'}}
-            textAlign={'center'}
+            mb={{ base: "2rem", md: "4rem" }}
+            display={{ md: "none", base: "flex" }}
+            textAlign={"center"}
           >
             Hushh caters to a wide range of needs, including
-          </Heading>
+          </Text>
           <Grid
             templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }}
             gap={{ md: 10, base: 4 }}
@@ -327,25 +322,25 @@ const ClientConciergeApp = () => {
               bg={"white"}
               borderRadius={"1.75rem"}
             >
-              <Heading
+              <Text
                 fontWeight={"700"}
-                fontSize={{ md: "1.75rem",base:'1rem' }}
-                lineHeight={{ md:"38.53px"}}
-                marginBottom={{base:'0.75rem', md:'2rem'}}
+                fontSize={{ md: "1.75rem", base: "1rem" }}
+                lineHeight={{ md: "38.53px" }}
+                marginBottom={{ base: "0.75rem", md: "2rem" }}
               >
                 Travel
-              </Heading>
+              </Text>
               <Text
                 fontWeight={"400"}
                 fontSize={{ md: "1rem", base: "0.5rem" }}
-                lineHeight={{ md:"22.41px"}}
-                marginBottom={{base:'1.25rem', md:'3rem'}}
+                lineHeight={{ md: "22.41px" }}
+                marginBottom={{ base: "1.25rem", md: "3rem" }}
               >
                 Bespoke itineraries, private jet charters, exclusive tours
               </Text>
               <Image src={RightArrowBlack} alt="RightArrowBlack" />
               <Box>
-                     <Image src={PaperPlane} alt="PaperPlane"/>
+                <Image src={PaperPlane} alt="PaperPlane" />
               </Box>
             </Box>
             <Box
@@ -354,21 +349,21 @@ const ClientConciergeApp = () => {
               borderRadius={"1.75rem"}
               background="linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)"
             >
-              <Heading
+              <Text
                 fontWeight={"700"}
-                fontSize={{ md: "1.75rem",base:'1rem' }}
-                lineHeight={{ md:"38.53px"}}
-                marginBottom={{base:'0.75rem', md:'2rem'}}
-                color={'white'}
+                fontSize={{ md: "1.75rem", base: "1rem" }}
+                lineHeight={{ md: "38.53px" }}
+                marginBottom={{ base: "0.75rem", md: "2rem" }}
+                color={"white"}
               >
                 Events
-              </Heading>
+              </Text>
               <Text
                 fontWeight={"400"}
                 fontSize={{ md: "1rem", base: "0.5rem" }}
-                lineHeight={{ md:"22.41px"}}
-                marginBottom={{base:'1.25rem', md:'3rem'}}
-                color={'white'}
+                lineHeight={{ md: "22.41px" }}
+                marginBottom={{ base: "1.25rem", md: "3rem" }}
+                color={"white"}
               >
                 VIP access to high-profile events, private viewings, red carpet
                 experiences
@@ -383,21 +378,22 @@ const ClientConciergeApp = () => {
               bg={"white"}
               borderRadius={"1.75rem"}
             >
-              <Heading
+              <Text
                 fontWeight={"700"}
-                fontSize={{ md: "1.75rem",base:'1rem' }}
-                lineHeight={{ md:"38.53px"}}
-                marginBottom={{base:'0.75rem', md:'2rem'}}
+                fontSize={{ md: "1.75rem", base: "1rem" }}
+                lineHeight={{ md: "38.53px" }}
+                marginBottom={{ base: "0.75rem", md: "2rem" }}
               >
                 Lifestyle
-              </Heading>
+              </Text>
               <Text
                 fontWeight={"400"}
                 fontSize={{ md: "1rem", base: "0.5rem" }}
-                lineHeight={{ md:"22.41px"}}
-                marginBottom={{base:'1.25rem', md:'3rem'}}
+                lineHeight={{ md: "22.41px" }}
+                marginBottom={{ base: "1.25rem", md: "3rem" }}
               >
-                Personal shopping, home management, day-to-day errands, specialized requests
+                Personal shopping, home management, day-to-day errands,
+                specialized requests
               </Text>
               <Image src={RightArrowBlack} alt="RightArrowBlack" />
               <Image src={ShoppingHand} alt="shoppingHand" />
@@ -406,88 +402,138 @@ const ClientConciergeApp = () => {
         </Stack>
 
         <Container
-        mt={{ base: "4rem", md: "8rem" }}
-        display="flex"
-        alignItems="center"
-        justifyContent="space-between"
-        flexDirection={{ base: "column", md: "row" }}
-        minW={"100%"}
-        px={{ md: "10rem", base: "2rem" }}
-      >
-        <Box maxWidth={{ base: "100%", md: "40%" }} display={{base:"none", md:'flex'}} mb={{base:'2rem'}}>
-          <Image src={ConciergeMobile} alt="ConciergeMobile" />
-        </Box>
-        <VStack
-          alignItems={{ base: "center", md: "flex-start" }}
-          maxW={{ base: "100%", md: "50%" }}
-          textAlign={{ base: "center", md: "left" }}
+          mt={{ base: "4rem", md: "8rem" }}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+          flexDirection={{ base: "column", md: "row" }}
+          minW={"100%"}
+          px={{ md: "10rem", base: "2rem" }}
         >
-          <Heading
-            as={"h2"}
-            className="color-gradient"
-            fontWeight={600}
-            letterSpacing={"0.25rem"}
-            fontSize={"1rem"}
+          <Box
+            maxWidth={{ base: "100%", md: "40%" }}
+            display={{ base: "none", md: "flex" }}
+            mb={{ base: "2rem" }}
           >
-            Concierge App
-          </Heading>{" "}
-          <Box maxWidth={{ base: "100%", md: "40%" }} display={{base:"flex", md:'none'}} mb={{base:'2rem'}}>
-          <Image src={ConciergeMobile} alt="ConciergeMobile" />
-        </Box>
-          <Heading
-            className="gradient"
-            fontWeight="700"
-            fontSize={{ md: "3.75rem", base: "1.25rem" }}
-          >
-            The <br></br> Hushh Difference
-          </Heading>
-          <Text
-            color={extendedTheme.colors.secondary}
-            lineHeight={{ base: "18px", md: "36px" }}
-            mt={{ base: "1rem", md: "2rem" }}
-          >
-            Receipt Radar revolutionizes the way you handle receipts. With automatic scanning, smart categorization, and customizable options, managing expenses becomes a breeze. Simplify your life and take control of your finances with Receipt Radar today!{" "}
-          </Text>
-
+            <Image src={ConciergeMobile} alt="ConciergeMobile" />
+          </Box>
           <VStack
-            align="flex-start"
-            spacing={4}
-            w="100%"
-            mt={{ base: "1rem", md: "2rem" }}
+            alignItems={{ base: "center", md: "flex-start" }}
+            maxW={{ base: "100%", md: "50%" }}
+            textAlign={{ base: "center", md: "left" }}
           >
-            <Box alignItems={'center'} textAlign={'left'} flexDirection={'row'} color={extendedTheme.colors._white} display="flex" gap={"1rem"}>
-              <MarketIcon />
-              <VStack textAlign={'left'} alignItems={'flex-start'} lineHeight={'1rem'}>
-                 <Text fontWeight={'700'}>Flips the Script</Text>
-                 <Text fontWeight={'400'} fontSize={'0.75rem'}>Users seeking services become services seeking users, putting you in control.</Text>
-              </VStack>
+            <Text
+              className="color-gradient"
+              fontWeight={600}
+              letterSpacing={"0.25rem"}
+              fontSize={"1rem"}
+            >
+              Concierge App
+            </Text>{" "}
+            <Box
+              maxWidth={{ base: "100%", md: "40%" }}
+              display={{ base: "flex", md: "none" }}
+              mb={{ base: "2rem" }}
+            >
+              <Image src={ConciergeMobile} alt="ConciergeMobile" />
             </Box>
+            <Text
+              className="gradient"
+              fontWeight="700"
+              fontSize={{ md: "3.75rem", base: "1.25rem" }}
+            >
+              The <br></br> Hushh Difference
+            </Text>
+            <Text
+              color={extendedTheme.colors.secondary}
+              lineHeight={{ base: "18px", md: "36px" }}
+              mt={{ base: "1rem", md: "2rem" }}
+            >
+              Receipt Radar revolutionizes the way you handle receipts. With
+              automatic scanning, smart categorization, and customizable
+              options, managing expenses becomes a breeze. Simplify your life
+              and take control of your finances with Receipt Radar today!{" "}
+            </Text>
+            <VStack
+              align="flex-start"
+              spacing={4}
+              w="100%"
+              mt={{ base: "1rem", md: "2rem" }}
+            >
+              <Box
+                alignItems={"center"}
+                textAlign={"left"}
+                flexDirection={"row"}
+                color={extendedTheme.colors._white}
+                display="flex"
+                gap={"1rem"}
+              >
+                <MarketIcon />
+                <VStack
+                  textAlign={"left"}
+                  alignItems={"flex-start"}
+                  lineHeight={"1rem"}
+                >
+                  <Text fontWeight={"700"}>Flips the Script</Text>
+                  <Text fontWeight={"400"} fontSize={"0.75rem"}>
+                    Users seeking services become services seeking users,
+                    putting you in control.
+                  </Text>
+                </VStack>
+              </Box>
 
-            <Box  alignItems={'center'} textAlign={'left'} flexDirection={'row'} color={extendedTheme.colors._white} display="flex" gap={"1rem"}>
-              <BoltIcon />
-              <VStack textAlign={'left'} alignItems={'flex-start'} lineHeight={'1rem'}>
-                 <Text fontWeight={'700'}>Powered by AI</Text>
-                 <Text fontWeight={'400'} fontSize={'0.75rem'}> Leverages cutting-edge technology to understand your intent and deliver personalized recommendations</Text>
-              </VStack>
-            </Box>
+              <Box
+                alignItems={"center"}
+                textAlign={"left"}
+                flexDirection={"row"}
+                color={extendedTheme.colors._white}
+                display="flex"
+                gap={"1rem"}
+              >
+                <BoltIcon />
+                <VStack
+                  textAlign={"left"}
+                  alignItems={"flex-start"}
+                  lineHeight={"1rem"}
+                >
+                  <Text fontWeight={"700"}>Powered by AI</Text>
+                  <Text fontWeight={"400"} fontSize={"0.75rem"}>
+                     Leverages cutting-edge technology to understand your intent
+                    and deliver personalized recommendations
+                  </Text>
+                </VStack>
+              </Box>
 
-            <Box alignItems={'center'} textAlign={'left'} flexDirection={'row'} color={extendedTheme.colors._white} display="flex" gap={"1rem"}>
-              <TransparentLock />
-              <VStack ml={{ md:"0.75rem"}} textAlign={'left'} alignItems={'flex-start'} lineHeight={'1rem'}>
-                 <Text fontWeight={'700'}>Real-Time Matching</Text>
-                 <Text fontWeight={'400'} fontSize={'0.75rem'}>Connects you with the right service providers instantly</Text>
-              </VStack>
-            </Box>
+              <Box
+                alignItems={"center"}
+                textAlign={"left"}
+                flexDirection={"row"}
+                color={extendedTheme.colors._white}
+                display="flex"
+                gap={"1rem"}
+              >
+                <TransparentLock />
+                <VStack
+                  ml={{ md: "0.75rem" }}
+                  textAlign={"left"}
+                  alignItems={"flex-start"}
+                  lineHeight={"1rem"}
+                >
+                  <Text fontWeight={"700"}>Real-Time Matching</Text>
+                  <Text fontWeight={"400"} fontSize={"0.75rem"}>
+                    Connects you with the right service providers instantly
+                  </Text>
+                </VStack>
+              </Box>
+            </VStack>
           </VStack>
-        </VStack>
-      </Container>
+        </Container>
 
         <ConciergeFaq />
       </Box>
-    )}
       <ContactForm />
     </>
-  )
-}
+  );
+};
 
-export default ClientConciergeApp
+export default ClientConciergeApp;
