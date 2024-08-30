@@ -85,13 +85,13 @@ const faqData = {
       answer:
         "Unlike traditional service models where users seek services, Hushh flips the script by making services seek users. This puts users in control of their luxury experience, empowering them to access the services they desire on their terms. Powered by AI, Hushh delivers real-time matching with the right service providers, ensuring a seamless and rewarding experience for users.",
     },
+    {
+      question: "How does Hushh prioritize user privacy and data control?",
+      answer:
+        "Hushh prioritizes user privacy and data control by enabling users to hushh their data away into a secure private on-device cloud. Users can control their preferences and choices with trusted AI assistants, ensuring that their data remains secure and only accessible to authorized parties. Additionally, Hushh empowers users to monetize their data while prioritizing their privacy preferences",
+    },
   ],
   "Pricing Plan": [
-    {
-      question: "Free Plan",
-      answer:
-        "Access to basic features like data organization and management tools. Limited API access for integration with CRM systems or apps. Limited transaction volume and user consent APIs. Suitable for individual agents or small businesses on a budget.",
-    },
     {
       question: "Pro",
       answer:
@@ -125,6 +125,12 @@ const faqData = {
         "Hushh Wallet App is designed to empower users by putting them in control of their digital identity and personal data. It allows users to aggregate and manage data from various sources, including phone data, data companies, and shopping brands. Users can personalize their experiences, get rewarded for sharing data, and sell data to trusted brands and agencies.",
     },
     {
+      question:
+        "What sets Browser Companion apart from other tracking tools?",
+      answer:
+        "Hushh Browser Companion stands out from other tracking tools by prioritizing user privacy and data control. Unlike third-party trackers that exploit user data for targeted advertising, Hushh gives users complete control over their data and enables them to track their own browsing activity for their own benefit.",
+    },
+    {
       question: "How does the Hushh Button benefit both customers and brands?",
       answer:
         "The Hushh Button facilitates seamless personalization for both customers and brands. For customers, it syncs preferences, past purchases, and sizing information with brands, offering a personalized shopping experience. For brands, it provides access to valuable data from Hushh users who opt-in, allowing for personalized product recommendations and marketing campaigns.",
@@ -144,6 +150,10 @@ const faqData = {
       question: "Contact Number",
       answer: "call +14252969050",
     },
+    {
+      question:"Headquarters",
+      answer:"Kirkland, WA"
+    }
   ],
 };
 

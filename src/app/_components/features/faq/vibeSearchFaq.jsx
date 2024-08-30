@@ -54,11 +54,7 @@ const faqData = {
       answer:
         "VIBE Search allows users to provide preferences such as sizing, color choices, and images for more tailored search results. These prompts are used for personalized searches, ensuring users find products that resonate with their unique style and preferences.",
     },
-    {
-      question: "What are the benefits of signing in to VIBE Search?",
-      answer:
-        "By signing in, users can connect their Hushh Wallet App to VIBE Search, enabling access to personalized results based on their stored VIBE data. They can also create wishlists, send data to the Hushh Wallet App for monetization, and enjoy enhanced features for a more customized shopping experience.",
-    },
+    
     {
       question: "How does VIBE Search ensure user privacy and data security?",
       answer:
@@ -77,11 +73,6 @@ const faqData = {
     },
   ],
   "Pricing Plan": [
-    {
-      question: "Free Plan",
-      answer:
-        "Access to basic features like data organization and management tools. Limited API access for integration with CRM systems or apps. Limited transaction volume and user consent APIs. Suitable for individual agents or small businesses on a budget.",
-    },
     {
       question: "Pro",
       answer:
@@ -103,6 +94,11 @@ const faqData = {
       question: "What are the primary services offered by Hushh?",
       answer:
         "Hushh offers a range of services including Hushh Browser Companion for tracking and managing online activity, Hushh Wallet App for controlling personal data and monetization, Hushh Button for seamless personalization, Hushh Developer APIs for secure data integration, Valet Chat for financial management, Hushh Concierge App for luxury experiences, and Hushh Jobs for recruitment innovation.",
+    },
+    {
+      question: "What are the benefits of signing in to VIBE Search?",
+      answer:
+        "By signing in, users can connect their Hushh Wallet App to VIBE Search, enabling access to personalized results based on their stored VIBE data. They can also create wishlists, send data to the Hushh Wallet App for monetization, and enjoy enhanced features for a more customized shopping experience.",
     },
     {
       question: "How does Hushh Browser Companion protect user privacy?",
@@ -134,6 +130,10 @@ const faqData = {
       question: "Contact Number",
       answer: "call +14252969050",
     },
+    {
+      question:"Headquarters",
+      answer:"Kirkland, WA"
+    }
   ],
 };
 

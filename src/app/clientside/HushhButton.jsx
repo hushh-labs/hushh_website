@@ -32,6 +32,41 @@ import BgAnimation from "../../../public/Gif/bgAnimation.gif";
 import DataRetrievalMade from "../../../public/Gif/dataRetrievalMade.gif";
 import Slogo from "../../../public/Gif/slogo.gif";
 import VibeSearchGif from "../../../public/Gif/vibeSearchGIf.gif";
+import { CldVideoPlayer, getCldOgImageUrl } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
+import { Metadata } from "next";
+
+const url = getCldOgImageUrl({
+  src: "Hushh_button_-_developer_walkthrough_uwwiy0",
+});
+
+const ogImageUrl = getCldOgImageUrl({
+  src: "Hushh_button_-_developer_walkthrough_uwwiy0",
+  format: "jpg",
+});
+
+const twitterImageUrl = getCldOgImageUrl({
+  src: "Hushh_button_-_developer_walkthrough_uwwiy0",
+  format: "webp",
+});
+
+export const metadata = {
+  title: "Hushh Button Developer Walkthrough Video",
+  description: "A guide to hushh button features",
+  openGraph: {
+    images: [
+      {
+        width: 1200,
+        height: 627,
+        url: ogImageUrl,
+        src: "Hushh_button_-_developer_walkthrough_uwwiy0",
+      },
+    ],
+  },
+  // twitter: {
+  //   images: [twitterImageUrl],
+  // },
+};
 
 const ClientHushhButton = () => {
   const router = useRouter();
@@ -128,8 +163,8 @@ const ClientHushhButton = () => {
             your preferences/choices/needs/likes and your favourite brands with
             GenAI
           </Text>
-        <Box display={'flex'} gap={{md:'4rem',base:'1rem'}}>
-        {/* <Button
+          <Box display={"flex"} gap={{ md: "4rem", base: "1rem" }}>
+            {/* <Button
             border={"1px solid #606060"}
             borderRadius={"2px"}
             w={{ md: "16.25rem", base: "auto" }}
@@ -153,30 +188,29 @@ const ClientHushhButton = () => {
           >
             LEARN MORE
           </Button> */}
-          <Button
-            as="a" 
-            href="https://www.npmjs.com/package/hushh-button" 
-            target="_blank"
-            rel="noopener noreferrer"
-            border={"1px solid #606060"}
-            borderRadius={"2px"}
-            fontWeight={'400'}
-            w={{ md: "16.25rem", base: "auto" }}
-            h={{ md: "3.75rem", base: "2.5rem" }}
-            color={extendedTheme.colors._white}
-            fontSize={{base:'0.75rem', md:'1rem'}}
-            lineHeight={{ md: "28px", base: "14px" }}
-            background= "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)"         
-            letterSpacing={{ md: "0.5rem", base: "0.1rem" }}
-            _hover={{
-              background:'white',
-              color:'black'
-            }}
-          >
-            HUSHH SDK  
-          </Button>
-        </Box>  
-         
+            <Button
+              as="a"
+              href="https://www.npmjs.com/package/hushh-button-sdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              border={"1px solid #606060"}
+              borderRadius={"2px"}
+              fontWeight={"400"}
+              w={{ md: "16.25rem", base: "auto" }}
+              h={{ md: "3.75rem", base: "2.5rem" }}
+              color={extendedTheme.colors._white}
+              fontSize={{ base: "0.75rem", md: "1rem" }}
+              lineHeight={{ md: "28px", base: "14px" }}
+              background="linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)"
+              letterSpacing={{ md: "0.5rem", base: "0.1rem" }}
+              _hover={{
+                background: "white",
+                color: "black",
+              }}
+            >
+              HUSHH SDK
+            </Button>
+          </Box>
         </Box>
         <HStack
           mt={"2rem"}
@@ -271,6 +305,7 @@ const ClientHushhButton = () => {
             w={"100%"}
             h={"100%"}
             mb={"2rem"}
+            p={{ md: "0rem", base: "2rem" }}
           >
             <Image
               alt="directionLine"
@@ -283,21 +318,14 @@ const ClientHushhButton = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710411292%2FHushh_button_-_developer_walkthrough_uwwiy0.mp4&cloud_name=dr5alaq5u&player[showJumpControls]=true&player[pictureInPictureToggle]=false&source[poster]=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fimage%2Fupload%2FScreenshot_2024-03-14_160021_hapzpw.jpg"
-              width="4  40"
+            <CldVideoPlayer
+              alt="Hushh Button Guide"
+              title="Hushh button developer walkthrough"
+              controls="true"
+              width="440"
               height="250"
-              title="Hushh Button Walkthrough"
-              style={{
-                height: "auto",
-                width: "80%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>
+              src="Hushh_button_-_developer_walkthrough_uwwiy0"
+            />
           </Box>
           <Box
             mt={"3rem"}
@@ -334,21 +362,13 @@ const ClientHushhButton = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710411292%2FHushh_button_-_developer_walkthrough_uwwiy0.mp4&cloud_name=dr5alaq5u&player[showJumpControls]=true&player[pictureInPictureToggle]=false&source[poster]=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fimage%2Fupload%2FScreenshot_2024-03-14_160021_hapzpw.jpg"
-              width="4  40"
-              height="250"
-              title="Hushh Button Walkthrough"
-              style={{
-                height: "auto",
-                width: "60%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>
+            <CldVideoPlayer
+              alt="Hushh Button Guide"
+              title="Hushh button developer walkthrough"
+              width="1620"
+              height="1080"
+              src="Hushh_button_-_developer_walkthrough_uwwiy0"
+            />
             <Image
               className="frameCard1"
               alt="HushhButtonframeCard4"
@@ -436,7 +456,7 @@ const ClientHushhButton = () => {
               }}
               onClick={() =>
                 router.push(
-                  "https://sites.google.com/hush1one.com/drops/products/hushh-button",
+                  "https://www.npmjs.com/package/hushh-button-sdk"
                 )
               }
             >
@@ -531,7 +551,7 @@ const ClientHushhButton = () => {
               }}
               onClick={() =>
                 router.push(
-                  "https://sites.google.com/hush1one.com/drops/products/hushh-button",
+                  "https://www.npmjs.com/package/hushh-button-sdk"
                 )
               }
             >
@@ -603,7 +623,7 @@ const ClientHushhButton = () => {
               }}
               onClick={() =>
                 router.push(
-                  "https://sites.google.com/hush1one.com/drops/products/hushh-button",
+                  "https://www.npmjs.com/package/hushh-button-sdk"
                 )
               }
             >
@@ -697,7 +717,7 @@ const ClientHushhButton = () => {
               }}
               onClick={() =>
                 router.push(
-                  "https://sites.google.com/hush1one.com/drops/products/hushh-button",
+                  "https://www.npmjs.com/package/hushh-button-sdk"
                 )
               }
             >

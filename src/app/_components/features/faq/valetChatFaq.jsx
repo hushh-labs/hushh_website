@@ -70,18 +70,9 @@ const faqData = {
       answer:
         "Valet Chat offers users a range of benefits including time-saving receipt management, a clearer understanding of spending habits, personalized financial insights, peace of mind through informed decision-making, and the ability to effortlessly track and optimize expenses for better financial health.",
     },
-    {
-      question: "How can users get started with Valet Chat?",
-      answer:
-        "Users can get started with Valet Chat by signing up for an account and connecting their Gmail account or manually uploading receipts. Once set up, they can start receiving automated insights, accessing personalized recommendations, and enjoying the convenience of conversational AI assistance for all their financial queries.",
-    },
+    
   ],
   "Pricing Plan": [
-    {
-      question: "Free Plan",
-      answer:
-        "Access to basic features like data organization and management tools. Limited API access for integration with CRM systems or apps. Limited transaction volume and user consent APIs. Suitable for individual agents or small businesses on a budget.",
-    },
     {
       question: "Pro",
       answer:
@@ -110,6 +101,11 @@ const faqData = {
         "Hushh Browser Companion protects user privacy by allowing users to track their own browsing activity without sharing data with third-party trackers. It gives users complete control over what data to collect and ensures transparency in data sharing practices.",
     },
     {
+      question: "How can users get started with Valet Chat?",
+      answer:
+        "Users can get started with Valet Chat by signing up for an account and connecting their Gmail account or manually uploading receipts. Once set up, they can start receiving automated insights, accessing personalized recommendations, and enjoying the convenience of conversational AI assistance for all their financial queries.",
+    },
+    {
       question: "What is the purpose of Hushh Wallet App?",
       answer:
         "Hushh Wallet App is designed to empower users by putting them in control of their digital identity and personal data. It allows users to aggregate and manage data from various sources, including phone data, data companies, and shopping brands. Users can personalize their experiences, get rewarded for sharing data, and sell data to trusted brands and agencies.",
@@ -134,6 +130,10 @@ const faqData = {
       question: "Contact Number",
       answer: "call +14252969050",
     },
+    {
+      question:"Headquarters",
+      answer:"Kirkland, WA"
+    }
   ],
 };
 

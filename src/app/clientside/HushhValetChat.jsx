@@ -24,6 +24,41 @@ import ContactForm from "../_components/features/contactForm";
 import BgAnimation from "../../../public/Gif/bgAnimation.gif";
 import { useState, useEffect } from "react";
 import ValetChatGif from "../../../public/Gif/valeTChatBg.gif";
+import { CldVideoPlayer, getCldOgImageUrl } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
+import { Metadata } from "next";
+
+const url = getCldOgImageUrl({
+  src: "Valet_Chat_Hushh_Research_and_Labs_pfjt3j",
+});
+
+const ogImageUrl = getCldOgImageUrl({
+  src: "Valet_Chat_Hushh_Research_and_Labs_pfjt3j",
+  format: "jpg",
+});
+
+const twitterImageUrl = getCldOgImageUrl({
+  src: "Valet_Chat_Hushh_Research_and_Labs_pfjt3j",
+  format: "webp",
+});
+
+export const metadata = {
+  title: "Hushh Valet Chat Walkthrough Video",
+  description: "A guide to hushh Valet Chat features",
+  openGraph: {
+    images: [
+      {
+        width: 1200,
+        height: 627,
+        url: ogImageUrl,
+        src: "Valet_Chat_Hushh_Research_and_Labs_pfjt3j",
+      },
+    ],
+  },
+  // twitter: {
+  //   images: [twitterImageUrl],
+  // },
+};
 
 const ClientHushhValetChat = () => {
   const gradient = "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)";
@@ -245,21 +280,14 @@ const ClientHushhValetChat = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710763036%2FValet_Chat_Hushh_Research_and_Labs_pfjt3j.mp4&cloud_name=dr5alaq5u&player[showJumpControls]=true"
-              width="4  40"
+            <CldVideoPlayer
+              alt="Hushh Valet Chat Guide"
+              title="Hushh Valet Chat walkthrough"
+              controls="true"
+              width="440"
               height="250"
-              title="Hushh Valet Chat Walkthrough"
-              style={{
-                height: "auto",
-                width: "80%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>
+              src="Valet_Chat_Hushh_Research_and_Labs_pfjt3j"
+            />
           </Box>
           <Box
             mt={"3rem"}
@@ -296,21 +324,13 @@ const ClientHushhValetChat = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710763036%2FValet_Chat_Hushh_Research_and_Labs_pfjt3j.mp4&cloud_name=dr5alaq5u&player[showJumpControls]=true"
-              width="4  40"
-              height="250"
-              title="Hushh Valet Chat Walkthrough"
-              style={{
-                height: "auto",
-                width: "60%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>
+            <CldVideoPlayer
+              alt="Hushh Valet Guide"
+              title="Hushh Valet Chat walkthrough"
+              width="1620"
+              height="1080"
+              src="Valet_Chat_Hushh_Research_and_Labs_pfjt3j"
+            />
             <Image
               className="frameCard1"
               alt="HushhButtonframeCard4"

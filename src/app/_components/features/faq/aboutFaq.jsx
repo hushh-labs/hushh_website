@@ -73,11 +73,6 @@ const faqData = {
   ],
   "Pricing Plan": [
     {
-      question: "Free Plan",
-      answer:
-        "Access to basic features like data organization and management tools. Limited API access for integration with CRM systems or apps. Limited transaction volume and user consent APIs. Suitable for individual agents or small businesses on a budget.",
-    },
-    {
       question: "Pro",
       answer:
         "More advanced features including comprehensive data organization and management tools. Expanded API access for seamless integration with CRM systems or apps. Increased transaction volume and user consent APIs. Priority support and assistance. Suitable for growing agents or businesses requiring more robust data management and integration capabilities.",
@@ -119,6 +114,12 @@ const faqData = {
       answer:
         "Hushh Developer APIs enable secure, trusted, and incentivized data integration for businesses and organizations. They empower developers to seamlessly integrate customers’ data into CRM systems and applications, ensuring compliance with privacy laws and regulations. With Hushh APIs, developers can create personalized services aligned with user preferences and consent.",
     },
+    {
+      question:
+        "What sets Hushh Browser Companion apart from other tracking tools?",
+      answer:
+        "Hushh Browser Companion stands out from other tracking tools by prioritizing user privacy and data control. Unlike third-party trackers that exploit user data for targeted advertising, Hushh gives users complete control over their data and enables them to track their own browsing activity for their own benefit.",
+    },
   ],
   Contact: [
     {
@@ -129,6 +130,10 @@ const faqData = {
       question: "Contact Number",
       answer: "call +14252969050",
     },
+    {
+      question:"Headquarters",
+      answer:"Kirkland, WA"
+    }
   ],
 };
 

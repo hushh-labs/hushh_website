@@ -91,7 +91,7 @@ export default function About() {
                         bgClip={"text"}
                         fontSize={"6xl"}
                       >
-                        36
+                        20
                       </Text>
                       <div className=" text-fontColor4">
                         <p>(Q4)</p>

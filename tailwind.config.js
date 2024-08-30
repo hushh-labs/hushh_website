@@ -29,9 +29,11 @@ module.exports = {
             'th': {
               'backgroundColor': '#f8f8f8',
               'borderWidth': '1px',
+              'color':'white'
             },
             'td': {
               'borderWidth': '1px',
+              'color':'white'
             },
             ul: {
               // 'list-style-type': 'disc',
@@ -89,6 +91,5 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/container-queries'),
     `gatsby-plugin-mdx`,
-
   ]
 };

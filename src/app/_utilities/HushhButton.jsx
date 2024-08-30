@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import { HushhButton } from 'hushh-button'
+import { HushhButton } from 'hushh-button-sdk';
 import { usePathname, useRouter } from 'next/navigation'
 
 

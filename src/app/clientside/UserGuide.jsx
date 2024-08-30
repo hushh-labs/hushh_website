@@ -190,26 +190,22 @@ const UserGuide = () => {
           {selectedComponent && (
             <Box
               onClick={handleBackClick}
-              leftIcon={<ArrowBackIcon />}
               mt={{ md: "4rem", base: "3rem" }}
               p={{ md: "0.25rem", base: "0.15rem" }}
               align={"center"}
-              border={"1px solid #606060"}
-              borderRadius={"5px"}
-              w={{ md: "13rem", base: "8rem" }}
+              w={{ md: "8rem", base: "4rem" }}
               fontWeight={"400"}
+              ml={{md:'-40px',base:'-30px'}}
               fontSize={{ md: "1.15rem", base: "0.75rem" }}
               className="color-gradient"
               lineHeight={{ md: "32.4px", base: "20px" }}
               letterSpacing={{ md: "0.5rem", base: "0.25rem" }}
               _hover={{
-                background:
-                  "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-                color: "white",
+                color: "transparent",
               }}
               cursor={"pointer"}
             >
-              <ArrowBackIcon stroke={"white"} /> GO BACK
+              <ArrowBackIcon stroke={"white"} boxSize={'2rem'} w={'100%'} /> 
             </Box>
           )}
           {selectedComponent}

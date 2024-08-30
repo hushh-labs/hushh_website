@@ -18,6 +18,7 @@ import Laredoute from "../svg/images/la-redoute";
 import Lvtetia from "../svg/images/LVTETIA";
 import Nordstrom from "../svg/images/Nordstrom";
 import Tumi from "../svg/images/tumi";
+import Reliance from "../svg/images/reliance";
 
 const BrandContainer = styled.div`
   display: flex;
@@ -41,8 +42,8 @@ export function BrandSlider() {
       >
         <BrandContainer>
           <Accor key={1} width={50} height={50} />
-          <Aws key={2} width={50} height={50} />
-          <Brand1 key={3} width={50} height={50} />
+          <Reliance key={2} width={50} height={50}/>
+          <Aws key={3} width={50} height={50} />
           <Brand2 key={4} width={50} height={50} />
           <Chalhoub key={5} width={50} height={50} />
           <Citadium key={6} width={50} height={50} />
@@ -54,6 +55,7 @@ export function BrandSlider() {
           <Lvtetia key={12} width={50} height={50} />
           <Microsoft key={13} width={50} height={50} />
           <Nordstrom key={14} width={50} height={50} />
+          <Brand1 key={15} width={50} height={50} />
           {/* <Tumi key={15} width={50} height={50} /> */}
         </BrandContainer>
       </Marquee>

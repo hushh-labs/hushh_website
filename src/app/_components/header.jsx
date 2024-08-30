@@ -137,7 +137,7 @@ export default function Header() {
     <>
   {shouldShowHeader &&
     <div className={`w-full z-1000`} style={{ background: headerBackground }}>
-      <div className=" flex items-center justify-between w-full px-6 py-2 z-1000 md:px-32 md:py-5">
+      <div className=" flex items-center justify-between w-full px-3 py-2 z-1000 md:px-16 md:py-5">
         <div className="">
           <Link href="/">
             <HushhHeaderLogo />
@@ -153,8 +153,8 @@ export default function Header() {
             </Container>
           </div>
         ) : (
-          <div className="w-max">
-            <div className="text-white flex justify-between gap-12 px-7 md:gap-10">
+          <div className="w-full px-3">
+            <div className="text-white flex gap-12 px-7 md:gap-10 text-md">
               {/* <Link
                 href="/"
                 className={`link ${pathname === '/' ? 'gradient-text' : ''}`}
@@ -180,18 +180,18 @@ export default function Header() {
                 <ChevronArrowIcon className="group-hover:rotate-0 rotate-180 transition-all duration-300" />
               </Link>
               <Link
-                href="https://hushh-labs.github.io/hushh-labs-blog/"
+                href="/hushhBlogs"
                 onMouseEnter={() => setProductsSubmenu(false)}
               >
-                LABS
+                BLOGS
               </Link>
-              <Link
+              {/* <Link
                 href="/pricingPlans"
                 onMouseEnter={() => setProductsSubmenu(false)}
                 className={`link ${pathname === '/pricingPlans' ? 'gradient-text' : ''}`}
               >
                 PRICING
-              </Link>
+              </Link> */}
               <Link
                 href="/outbound-services"
                 onMouseEnter={() => setProductsSubmenu(false)}
@@ -223,8 +223,23 @@ export default function Header() {
                 <p className="text-xs text-fontColor2 font-semibold">
                   HUSHH PRODUCTS
                 </p>
-                <div className="flex gap-2">
+                <div className="flex gap-2 z-1000">
                   <div className="flex-1 flex flex-col gap-2">
+                  <Link
+                      href={"/products/hushhWalletApp"}
+                      onClick={() => setProductsSubmenu(false)}
+                      className="flex gap-4 items-start hover:text-white hover:bg-black px-5 py-2.5 rounded-xl"
+                    >
+                      <div className="">
+                        <HushhWalletIcon className="w-6 h-6" />
+                      </div>
+                      <div className="">
+                        <h1 className="font-semibold">Hushh Wallet App</h1>
+                        <p className="text-sm font-medium text-fontColor3">
+                        Your personal data vault. Organize, control,<br/> and monetize your information
+                        </p>
+                      </div>
+                    </Link>
                     <Link
                       href={"/products/hushhButton"}
                       onClick={() => setProductsSubmenu(false)}
@@ -236,7 +251,7 @@ export default function Header() {
                       <div className="">
                         <h1 className="font-semibold">Hushh Button</h1>
                         <p className="text-sm font-medium text-fontColor3">
-                          Share data for personalized <br /> recommendations.
+                        Seamlessly share your preferences with  <br /> brands for personalized experiences
                         </p>
                       </div>
                     </Link>
@@ -253,7 +268,7 @@ export default function Header() {
                           Hushh Browser Companion
                         </h1>
                         <p className="text-sm font-medium text-fontColor3">
-                          Enhanced recommendations &<br /> impactful marketing.
+                        Track and manage your online browsing data <br/>, building a complete digital profile
                         </p>
                       </div>
                     </Link>
@@ -268,7 +283,7 @@ export default function Header() {
                       <div className="">
                         <h1 className="font-semibold">Developer API</h1>
                         <p className="text-sm font-medium text-fontColor3">
-                           Secure, trusted & incentivized way of <br/> relaying valuable personal information.
+                        Tools for businesses to integrate <br/> Hushh data into their applications
                         </p>
                       </div>
                     </Link>
@@ -283,12 +298,15 @@ export default function Header() {
                       <div className="">
                         <h1 className="font-semibold">Hushh Concierge App</h1>
                         <p className="text-sm font-medium text-fontColor3">
-                          Speak your wish, get luxury <br /> redefined: Hushh
-                          Concierge
+                        Elevate your lifestyle with personalized <br /> recommendations and services  
                         </p>
                       </div>
                     </Link>
-                    <Link
+                    
+                  </div>
+
+                  <div className="flex-1 flex flex-col gap-2 w-full">
+                  <Link
                       href={"/products/vibeSearch"}
                       onClick={() => setProductsSubmenu(false)}
                       className="flex gap-4 hover:text-white hover:bg-black px-5 py-2.5 rounded-xl"
@@ -299,29 +317,12 @@ export default function Header() {
                       <div className="">
                         <h1 className="font-semibold">VIBE Search App</h1>
                         <p className="text-sm font-medium text-fontColor3">
-                          Find perfect items to express your <br />{" "}
-                          individuality in just one click.
+                        Discover products you love with <br />{" "}
+                        image-based search and AI recommendations
                         </p>
                       </div>
                     </Link>
-                  </div>
-
-                  <div className="flex-1 flex flex-col gap-2 w-full">
-                    <Link
-                      href={"/products/hushhWalletApp"}
-                      onClick={() => setProductsSubmenu(false)}
-                      className="flex gap-4 items-start hover:text-white hover:bg-black px-5 py-2.5 rounded-xl"
-                    >
-                      <div className="">
-                        <HushhWalletIcon className="w-6 h-6" />
-                      </div>
-                      <div className="">
-                        <h1 className="font-semibold">Hushh Wallet App</h1>
-                        <p className="text-sm font-medium text-fontColor3">
-                          Customer User Flow + Client Advisor User Flow
-                        </p>
-                      </div>
-                    </Link>
+                
                     <Link
                       href={"/products/hushhValetChat"}
                       onClick={() => setProductsSubmenu(false)}
@@ -333,7 +334,7 @@ export default function Header() {
                       <div className="">
                         <h1 className="font-semibold">Valet Chat</h1>
                         <p className="text-sm font-medium text-fontColor3">
-                          Valet Chat: Ditch receipts, unlock <br /> insights.
+                        Your AI-powered financial assistant <br /> for effortless expense management 
                         </p>
                       </div>
                     </Link>
@@ -355,8 +356,7 @@ export default function Header() {
                         </h1>
                         
                         <p className="text-sm font-medium text-fontColor3">
-                          List products on Vibe Search with <br /> management
-                          and analytics.
+                        Integrate image-based product <br /> search into your app or website 
                         </p>
                       </div>
                     </Link>
@@ -376,7 +376,7 @@ export default function Header() {
                           <Badge className="gradient-bg p-1" ml={4} borderRadius={'0.6rem'} fontSize={'0.6rem'} color={'white'}>Coming Soon !</Badge>
                         </h1>
                         <p className="text-sm font-medium text-fontColor3">
-                          News and updates
+                        A platform for brands to showcase their <br/> products and reach new customers
                         </p>
                       </div>
                     </Link>
@@ -391,7 +391,7 @@ export default function Header() {
           { isDesktop && (
             <div className="login">
               <SearchBar />
-              <Button
+              {/* <Button
                 border={"1px solid #606060"}
                 borderRadius={"5px"}
                 w={"10.75rem"}
@@ -409,7 +409,7 @@ export default function Header() {
                 onClick={handleLoginClick}
               >
                 LOGIN
-              </Button>
+              </Button> */}
             </div>
           )}
         </div> 
@@ -579,13 +579,13 @@ export default function Header() {
                   </div>
                 )}
               </div>
-              <Link
+              {/* <Link
                 href="/pricingPlans"
                 className="py-2 w-1/2 border border-myBorder bg-black border-t-0"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </Link>
+              </Link> */}
               <Link
                 href="/UserGuide"
                 onClick={() => setIsMenuOpen(false)}
@@ -594,11 +594,11 @@ export default function Header() {
                 GUIDE
               </Link>
               <Link
-                href="https://hushh-labs.github.io/hushh-labs-blog/"
+                href="/hushhBlogs"
                 className="py-2 w-1/2 border border-myBorder bg-black border-t-0"
                 onClick={() => setIsMenuOpen(false)}
               >
-                LABS
+                Blogs
               </Link>
               <Link
                 href="/contact-us"
@@ -620,14 +620,14 @@ export default function Header() {
               >
                 CONTACT US
               </ScrollLink> */}
-              <Link
+              {/* <Link
                 href="/"
                 className="py-2 w-1/2 border border-myBorder border-t-0 bg-black rounded-b"
-                // onClick={() => setIsMenuOpen(false) }
+                onClick={() => setIsMenuOpen(false) }
                 onClick={handleLoginClick}
               >
                 LOGIN
-              </Link>
+              </Link> */}
             </div>
           </div>
         ) : (

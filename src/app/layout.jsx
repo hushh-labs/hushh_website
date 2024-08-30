@@ -20,8 +20,8 @@ export const metadata = {
     template: "%s",
   },
   description: {
-    template: "%s",
     default: "Your Data Your Business",
+    template: "%s",
   },
   keywords: {
     template: "%s",
@@ -31,19 +31,21 @@ export const metadata = {
 
  metadataBase: new URL(siteMetadata.siteUrl),
   title: {
-    template: `%s | ${siteMetadata.title}`,
+    template: `%s`,
     default: siteMetadata.title, // a default is required when creating a template
   },
   description: siteMetadata.description,
+  // Most Important to fix this out
   openGraph: {
-    title: siteMetadata.title,
-    description: siteMetadata.description,
+    title: siteMetadata?.title,
+    description: siteMetadata?.description,
     url: siteMetadata.siteUrl,
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
     locale: "en_US",
     type: "website",
   },
+
   robots: {
     index: true,
     follow: true,
@@ -148,11 +150,11 @@ export default function RootLayout({ children }) {
           type="text/javascript"
           src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
         ></script>
-        <div className="relative">
+        <div className="relative z-50">
           <HushhButtonFromLib />
         </div>
         <ResponsiveSizeProvider>
-          <header className="h-[90px] w-full realtive z-50">
+          <header className="h-[90px] w-full absolute z-50">
             <HeaderComponent />
           </header>
           {" "}

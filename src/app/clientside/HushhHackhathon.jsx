@@ -41,7 +41,7 @@ const items = [
   { title: "EDGE / CLOUD COMPUTING", icon: EdgeIcon },
 ];
 const HushhHackhathon = () => {
-  const targetDate = "2024-07-09T23:59:59";
+  const targetDate = "2024-07-10T22:00:00";
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {};
@@ -133,6 +133,7 @@ const HushhHackhathon = () => {
               letterSpacing={"0.29rem"}
               border={"1px solid #606060"}
               fontWeight={"400"}
+              bg={'transparent'}
               lineHeight={{ md: "28.8px", base: "15px" }}
               color={"white"}
               _hover={{
@@ -481,7 +482,7 @@ const HushhHackhathon = () => {
             }}
             onClick={() =>
               window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLScFQNDtSQ9ZuiBbeE4YVLQcuVv6zaPtNpHNm9wKENJX6vJ4QA/viewform?usp=sf_link",
+                "https://forms.gle/vB1jY93nFXaPKN339",
                 '_blank'
               )
             }

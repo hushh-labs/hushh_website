@@ -117,9 +117,9 @@ const TechnologySection = () => {
                   align={"center"}
                   border={"1px solid #606060"}
                   borderRadius={"5px"}
-                  w={{ md: "18rem", base: "12rem" }}
+                  w={{ md: "23rem", base: "12rem" }}
                   fontWeight={"400"}
-                  fontSize={{ md: "1.15rem", base: "0.75rem" }}
+                  fontSize={{ md: "1rem", base: "0.75rem" }}
                   className="color-gradient"
                   lineHeight={{ md: "32.4px", base: "20px" }}
                   letterSpacing={{ md: "0.5rem", base: "0.25rem" }}
@@ -129,9 +129,9 @@ const TechnologySection = () => {
                     color: "white",
                   }}
                   cursor={"pointer"}
-                  onClick={()=> router.push('/UserGuide')}
+                  onClick={()=> router.push('/hushh-community')}
                 >
-                  View User Guide
+                  Join Hushh Community
                 </Box>
       </Box>
     </>

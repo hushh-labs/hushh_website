@@ -154,7 +154,7 @@ const TeamSection = () => {
                 THE TEAM
               </Text>
             </div>
-            <div className="md:pb-10 pb-4">
+            <div className="md:pb-4 pb-2">
               <Text
                 className="gradient"
                 fontWeight={"400"}
@@ -164,7 +164,7 @@ const TeamSection = () => {
                 Our Team
               </Text>
             </div>
-            <div className="font-medium text-fontColor4 leading-9 md:w-[30rem] text-center">
+            <div className="font-medium text-fontColor4 leading-9 md:w-[35rem] text-center">
               <p>
                 The Hushh team: Disrupting the status quo, one line of code at a
                 time
@@ -207,37 +207,7 @@ const TeamSection = () => {
               </div>
             </VStack>
 
-            <VStack mb={{ md: "3rem", base: "1.5rem" }}>
-              <Image
-                alt="vivek"
-                src={teamImages.SubashManoharan}
-                width={260}
-                height={276}
-              />
-              <div className="-translate-y-16 flex flex-col text-center items-center gap-8">
-                <div className="flex flex-col gap-4">
-                  <Text
-                    color={"#E5E5E5"}
-                    lineHeight={"26.4px"}
-                    fontWeight={"700"}
-                    fontSize={"1.3rem"}
-                  >
-                    Subash Manoharan
-                  </Text>
-                  <Text lineHeight={"18.75px"} color={"#ABABAB"}>
-                    TT Software Engineer - Front End
-                  </Text>
-                </div>
-                <Link href={"https://www.linkedin.com/in/subash-manoharan/"}>
-                  <Image
-                    alt="subashLinkedIn"
-                    src={linkedln}
-                    width={{ base: 12, md: 24 }}
-                    height={24}
-                  />
-                </Link>
-              </div>
-            </VStack>
+         
 
             <VStack mb={{ md: "3rem", base: "1.5rem" }}>
               <Image
@@ -257,7 +227,7 @@ const TeamSection = () => {
                     Keerthi Sree Marrapu
                   </Text>
                   <Text lineHeight={"18.75px"} color={"#ABABAB"}>
-                    Product Manager - AI/ML
+                    Product Engineer
                   </Text>
                 </div>
                 <Link href={"https://www.linkedin.com/in/mksree/"}>
@@ -305,37 +275,7 @@ const TeamSection = () => {
               </div>
             </VStack>
 
-            <VStack mb={{ md: "3rem", base: "1.5rem" }}>
-              <Image
-                alt="vivek"
-                src={teamImages.SatyamArora}
-                width={260}
-                height={276}
-              />
-              <div className="-translate-y-16 flex flex-col text-center items-center gap-8">
-                <div className="flex flex-col gap-4">
-                  <Text
-                    color={"#E5E5E5"}
-                    lineHeight={"26.4px"}
-                    fontWeight={"700"}
-                    fontSize={"1.3rem"}
-                  >
-                    Satyam Arora
-                  </Text>
-                  <Text lineHeight={"18.75px"} color={"#ABABAB"}>
-                    Software Engineer - Full Stack
-                  </Text>
-                </div>
-                <Link href={"https://www.linkedin.com/in/satyam-arora01/"}>
-                  <Image
-                    alt="keerthiLinkedIn"
-                    src={linkedln}
-                    width={{ base: 12, md: 24 }}
-                    height={24}
-                  />
-                </Link>
-              </div>
-            </VStack>
+       
 
             <VStack mb={{ md: "3rem", base: "1.5rem" }}>
               <Image
@@ -397,70 +337,6 @@ const TeamSection = () => {
                 >
                   <Image
                     alt="vasundharaLinkedIn"
-                    src={linkedln}
-                    width={{ base: 12, md: 24 }}
-                    height={24}
-                  />
-                </Link>
-              </div>
-            </VStack>
-
-            <VStack mb={{ md: "3rem", base: "1.5rem" }}>
-              <Image
-                alt="vivek"
-                src={teamImages.DeveshParagiri}
-                width={260}
-                height={276}
-              />
-              <div className="-translate-y-16 flex flex-col text-center items-center gap-8">
-                <div className="flex flex-col gap-4">
-                  <Text
-                    color={"#E5E5E5"}
-                    lineHeight={"26.4px"}
-                    fontWeight={"700"}
-                    fontSize={"1.3rem"}
-                  >
-                    Devesh Paragiri
-                  </Text>
-                  <Text lineHeight={"18.75px"} color={"#ABABAB"}>
-                    Software Engineer - API + Product Evangelist
-                  </Text>
-                </div>
-                <Link href={"https://www.linkedin.com/in/devesh-paragiri/"}>
-                  <Image
-                    alt="deveshLinkedIn"
-                    src={linkedln}
-                    width={{ base: 12, md: 24 }}
-                    height={24}
-                  />
-                </Link>
-              </div>
-            </VStack>
-
-            <VStack mb={{ md: "3rem", base: "1.5rem" }}>
-              <Image
-                alt="vivek"
-                src={teamImages.SusannaLiu}
-                width={260}
-                height={276}
-              />
-              <div className="-translate-y-16 flex flex-col text-center items-center gap-8">
-                <div className="flex flex-col gap-4">
-                  <Text
-                    color={"#E5E5E5"}
-                    lineHeight={"26.4px"}
-                    fontWeight={"700"}
-                    fontSize={"1.3rem"}
-                  >
-                    Susanna Liu
-                  </Text>
-                  <Text lineHeight={"18.75px"} color={"#ABABAB"}>
-                    UX Designer
-                  </Text>
-                </div>
-                <Link href={"https://www.linkedin.com/in/susanna-liu/"}>
-                  <Image
-                    alt="susannaLinkedIn"
                     src={linkedln}
                     width={{ base: 12, md: 24 }}
                     height={24}

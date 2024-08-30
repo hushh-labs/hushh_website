@@ -25,6 +25,42 @@ import ContactForm from "../_components/features/contactForm";
 import Head from "next/head";
 import BgAnimation from "../../../public/Gif/bgAnimation.gif";
 import VibeSearchGif from "../../../public/Gif/vibeSearchGIf.gif";
+// vibeSearchDemo_s1bdkh
+import { CldVideoPlayer, getCldOgImageUrl } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
+import { Metadata } from "next";
+
+const url = getCldOgImageUrl({
+  src: "vibeSearchDemo_s1bdkh",
+});
+
+const ogImageUrl = getCldOgImageUrl({
+  src: "vibeSearchDemo_s1bdkh",
+  format: "jpg",
+});
+
+const twitterImageUrl = getCldOgImageUrl({
+  src: "vibeSearchDemo_s1bdkh",
+  format: "webp",
+});
+
+export const metadata = {
+  title: "Hushh Button Developer Walkthrough Video",
+  description: "A guide to hushh button features",
+  openGraph: {
+    images: [
+      {
+        width: 1200,
+        height: 627,
+        url: ogImageUrl,
+        src: "vibeSearchDemo_s1bdkh",
+      },
+    ],
+  },
+  // twitter: {
+  //   images: [twitterImageUrl],
+  // },
+};
 
 const ClientVibeSearch = () => {
   const gradient = "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)";
@@ -138,7 +174,9 @@ const ClientVibeSearch = () => {
                 "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
               border: "none",
             }}
-            onClick={() => window.open("https://vibesearch-vercel.vercel.app/", "_blank")}                
+            onClick={() =>
+              window.open("https://vibesearch-vercel.vercel.app/", "_blank")
+            }
           >
             Try Vibe Search
           </Button>
@@ -247,21 +285,14 @@ const ClientVibeSearch = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710776445%2FvibeSearchDemo_s1bdkh.mp4&cloud_name=dr5alaq5u&player[showJumpControls]=true"
-              width="4  40"
-              title="Vibe Search Walkthrough"
+            <CldVideoPlayer
+              alt="Vibe Search Guide"
+              title="Hushh Vibe Search walkthrough"
+              controls="true"
+              width="440"
               height="250"
-              style={{
-                height: "auto",
-                width: "80%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>
+              src="vibeSearchDemo_s1bdkh"
+            />
           </Box>
           <Box
             mt={"3rem"}
@@ -298,21 +329,13 @@ const ClientVibeSearch = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=https%3A%2F%2Fres.cloudinary.com%2Fdr5alaq5u%2Fvideo%2Fupload%2Fv1710776445%2FvibeSearchDemo_s1bdkh.mp4&cloud_name=dr5alaq5u&player[showJumpControls]=true"
-              width="4  40"
-              height="250"
-              title="Vibe Search Walkthrough"
-              style={{
-                height: "auto",
-                width: "60%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>
+            <CldVideoPlayer
+              alt="Vibe Search Guide"
+              title="Hushh Vibe Search walkthrough"
+              width="1620"
+              height="1080"
+              src="vibeSearchDemo_s1bdkh"
+            />
             <Image
               className="frameCard1"
               alt="HushhButtonframeCard4"
@@ -414,7 +437,9 @@ const ClientVibeSearch = () => {
                 bg: "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
                 border: "none",
               }}
-              onClick={() => window.open("https://vibesearch-vercel.vercel.app/", "_blank")}                
+              onClick={() =>
+                window.open("https://vibesearch-vercel.vercel.app/", "_blank")
+              }
             >
               Checkout Vibe Search
             </Button>
@@ -512,7 +537,12 @@ const ClientVibeSearch = () => {
                   "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
                 border: "none",
               }}
-              onClick={() => window.open("https://testflight.apple.com/join/CDYPEfJ5", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://testflight.apple.com/join/CDYPEfJ5",
+                  "_blank"
+                )
+              }
             >
               REQUEST ACCESS
             </Button>
@@ -581,7 +611,12 @@ const ClientVibeSearch = () => {
                   "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
                 border: "none",
               }}
-              onClick={() => window.open("https://testflight.apple.com/join/CDYPEfJ5", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://testflight.apple.com/join/CDYPEfJ5",
+                  "_blank"
+                )
+              }
             >
               Download App
             </Button>

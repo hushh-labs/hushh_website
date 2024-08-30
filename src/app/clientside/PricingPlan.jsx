@@ -905,10 +905,13 @@ const ClientPricingPlan = () => {
                               color: "black",
                               bg: "white",
                             }}
+                            onClick={() =>
+                              window.open("/contact-us", "_blank")
+                            }
                           >
                             {plan.price === "Free"
-                              ? "Start For Free"
-                              : "Add Site Plan"}
+                              ? "Contact Us"
+                              : "Coming Soon!"}
                           </Button>
                         </Box>
                       </Box>
@@ -937,12 +940,12 @@ const ClientPricingPlan = () => {
             All prices are in USD and charged per site with applicable taxes
             added at checkout
           </Text>
-          <Button
+          {/* <Button
             fontSize={{ md: "1rem", base: "0.8rem" }}
             rightIcon={<ChevronDownIcon />}
           >
             View all plan features
-          </Button>
+          </Button> */}
         </Box>
       </Box>
 

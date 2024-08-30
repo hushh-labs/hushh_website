@@ -24,6 +24,41 @@ import ContactForm from "../_components/features/contactForm";
 import BgAnimation from "../../../public/Gif/bgAnimation.gif";
 import BrowserGif from "../../../public/Gif/browserGifBg.gif";
 import TypingGIF from "../../../public/Gif/typing.gif";
+import { CldVideoPlayer, getCldOgImageUrl } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
+import { Metadata } from "next";
+
+const url = getCldOgImageUrl({
+  src: "hushh_browser_companion_j2rfyq",
+});
+
+const ogImageUrl = getCldOgImageUrl({
+  src: "hushh_browser_companion_j2rfyq",
+  format: "jpg",
+});
+
+const twitterImageUrl = getCldOgImageUrl({
+  src: "hushh_browser_companion_j2rfyq",
+  format: "webp",
+});
+
+export const metadata = {
+  title: "Hushh Browser Companion",
+  description: "A guide to hushh browser companion features",
+  openGraph: {
+    images: [
+      {
+        width: 1200,
+        height: 627,
+        url: ogImageUrl,
+        src: "hushh_browser_companion_j2rfyq",
+      },
+    ],
+  },
+  // twitter: {
+  //   images: [twitterImageUrl],
+  // },
+};
 
 const ClientBrowserCompanion = () => {
   const gradient = "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)";
@@ -119,70 +154,68 @@ const ClientBrowserCompanion = () => {
             back in your hands
           </Text>
           <Box
-  mt={{ md: '4rem', base: '2rem' }}
-  display={{ base:'flex',md:'flex'}}
-  flexDirection={{ md: 'row', base: 'row' }}
-  justifyContent={'space-between'}
-  wrap={'wrap'}
-  gap={{ md: '4rem', base: '1.5rem' }}
->
-  <Button
-    border={"1px solid #606060"}
-    borderRadius={"4rem"}
-    p={{ md: '1rem', base: '0.5rem' }}
-    w={{ md: "100%", base: "10rem" }}
-    h={{ md: "3.75rem", base: "2.5rem" }}
-    color={extendedTheme.colors._white}
-    lineHeight={{ md: "28px", base: "14px" }}
-    fontSize={{ base: '0.75rem', md: '1.25rem' }}
-    background={"transparent"}
-    letterSpacing={{ md: "0.3rem", base: "0rem" }}
-    _hover={{
-      background:
-        "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-      border: "none",
-    }}
-    onClick={() =>
-      window.open(
-        "https://chromewebstore.google.com/detail/hushh-browser-companion/glmkckchoggnebfiklpbiajpmjoagjgj?hl=en&authuser=0n",
-        '_blank'
-      )
-    }
-    flex={{ md: '1', base: 'none' }}
-  >
-    Add to your browser
-  </Button>
-  <Button
-    display={{ md: "none", base: "block" }}
-    border={"1px solid #606060"}
-    borderRadius={"4rem"}
-    w={{ md: "15rem", base: "10rem" }}
-    color={extendedTheme.colors._white}
-    lineHeight={"28px"}
-    fontSize={'0.75rem'}
-    background={"transparent"}
-    letterSpacing={"0rem"}
-    onClick={scrollTo}
-    _hover={{
-      background:
-        "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-      border: "none",
-    }}
-    p={{ md: '1rem', base: '0.5rem' }}
-    h={{ md: "3.75rem", base: "2.5rem" }}
-    flex={{ md: '1', base: 'none' }}
-  >
-    PLAY DEMO
-  </Button>
-</Box>
-
-          
+            mt={{ md: "4rem", base: "2rem" }}
+            display={{ base: "flex", md: "flex" }}
+            flexDirection={{ md: "row", base: "row" }}
+            justifyContent={"space-between"}
+            wrap={"wrap"}
+            gap={{ md: "4rem", base: "1.5rem" }}
+          >
+            <Button
+              border={"1px solid #606060"}
+              borderRadius={"4rem"}
+              p={{ md: "1rem", base: "0.5rem" }}
+              w={{ md: "100%", base: "10rem" }}
+              h={{ md: "3.75rem", base: "2.5rem" }}
+              color={extendedTheme.colors._white}
+              lineHeight={{ md: "28px", base: "14px" }}
+              fontSize={{ base: "0.75rem", md: "1.25rem" }}
+              background={"transparent"}
+              letterSpacing={{ md: "0.3rem", base: "0rem" }}
+              _hover={{
+                background:
+                  "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                border: "none",
+              }}
+              onClick={() =>
+                window.open(
+                  "https://chromewebstore.google.com/detail/glmkckchoggnebfiklpbiajpmjoagjgj?hl=en&authuser=0",
+                  "_blank"
+                )
+              }
+              flex={{ md: "1", base: "none" }}
+            >
+              Add to your browser
+            </Button>
+            <Button
+              display={{ md: "none", base: "block" }}
+              border={"1px solid #606060"}
+              borderRadius={"4rem"}
+              w={{ md: "15rem", base: "10rem" }}
+              color={extendedTheme.colors._white}
+              lineHeight={"28px"}
+              fontSize={"0.75rem"}
+              background={"transparent"}
+              letterSpacing={"0rem"}
+              onClick={scrollTo}
+              _hover={{
+                background:
+                  "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                border: "none",
+              }}
+              p={{ md: "1rem", base: "0.5rem" }}
+              h={{ md: "3.75rem", base: "2.5rem" }}
+              flex={{ md: "1", base: "none" }}
+            >
+              PLAY DEMO
+            </Button>
+          </Box>
         </Box>
         <HStack
           mt={"2rem"}
           gap={"3rem"}
           px={"4rem"}
-          display={{ md:"flex",base:'none'}}
+          display={{ md: "flex", base: "none" }}
           flexDirection={{ base: "none", md: "row" }}
           justifyContent="flex-end"
           mr={"3rem"}
@@ -250,7 +283,7 @@ const ClientBrowserCompanion = () => {
             color={"#0D0D25"}
             fontWeight={"700"}
             fontSize={{ md: "3.5rem", base: "1.5rem" }}
-            lineHeight={{base:'30px',md:'70px'}}
+            lineHeight={{ base: "30px", md: "70px" }}
           >
             Introducing Hushh Browser Companion, a product that helps you keep
             track of your digital footprint with Gen AI
@@ -284,21 +317,14 @@ const ClientBrowserCompanion = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=hushh_browser_companion_j2rfyq&cloud_name=dr5alaq5u&player[controls]=true&player[fluid]=true&source[info][title]=Hushh%20Browser%20Companion&source[info][subtitle]=A%20product%20that%20helps%20you%20keep%20track%20of%20your%20digital%20footprint%20with%20Gen%20AI"
-              width="4  40"
+            <CldVideoPlayer
+              alt="Hushh Broswer Companion Guide"
+              title="Hushh Browser Companion walkthrough"
+              controls="true"
+              width="440"
               height="250"
-              title="Browser Companion (Chrome Extension) Walkthrough"
-              style={{
-                height: "auto",
-                width: "80%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-            ></iframe>
+              src="hushh_browser_companion_j2rfyq"
+            />
           </Box>
           <Box
             mt={"3rem"}
@@ -335,21 +361,13 @@ const ClientBrowserCompanion = () => {
               }}
               src={DirectionLine}
             />
-            <iframe
-              src="https://player.cloudinary.com/embed/?public_id=hushh_browser_companion_j2rfyq&cloud_name=dr5alaq5u&player[controls]=true&player[fluid]=true&source[info][title]=Hushh%20Browser%20Companion&source[info][subtitle]=A%20product%20that%20helps%20you%20keep%20track%20of%20your%20digital%20footprint%20with%20Gen%20AI"
-              width="4  40"
-              height="250"
-              title="Browser Companion (Chrome Extension) Walkthrough"
-              style={{
-                height: "auto",
-                width: "60%",
-                aspectRatio: "640 / 360",
-                borderRadius: "1rem",
-              }}
-              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              allowfullscreen
-              frameborder="0"
-            ></iframe>
+            <CldVideoPlayer
+              alt="Hushh Broswer Companion Guide"
+              title="Hushh Browser Companion walkthrough"
+              width="1620"
+              height="1080"
+              src="hushh_browser_companion_j2rfyq"
+            />
             <Image
               className="frameCard1"
               alt="HushhButtonframeCard4"
@@ -453,8 +471,8 @@ const ClientBrowserCompanion = () => {
               }}
               onClick={() =>
                 window.open(
-                  "https://chromewebstore.google.com/detail/hushh-browser-companion/glmkckchoggnebfiklpbiajpmjoagjgj?hl=en&authuser=0n",
-                  '_blank'
+                  "https://chromewebstore.google.com/detail/glmkckchoggnebfiklpbiajpmjoagjgj?hl=en&authuser=0",
+                  "_blank"
                 )
               }
             >
@@ -572,8 +590,8 @@ const ClientBrowserCompanion = () => {
               }}
               onClick={() =>
                 window.open(
-                  "https://chromewebstore.google.com/detail/hushh-browser-companion/glmkckchoggnebfiklpbiajpmjoagjgj?hl=en&authuser=0n",
-                  '_blank'
+                  "https://chromewebstore.google.com/detail/glmkckchoggnebfiklpbiajpmjoagjgj?hl=en&authuser=0",
+                  "_blank"
                 )
               }
             >

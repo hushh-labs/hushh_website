@@ -68,23 +68,9 @@ const faqData = {
       answer:
         "Hushh for students benefits businesses by providing access to valuable student data for targeted initiatives. It also ensures a seamless and secure data exchange process, fostering trust and transparency.",
     },
-    {
-      question: "What sets hushh for students apart from other platforms?",
-      answer:
-        "Hushh for students stands out by prioritizing user privacy, data control, and transparency. Unlike other platforms, it empowers students to realize the value of their data and rewards them for their participation.",
-    },
-    {
-      question: "What are the success metrics for hushh for students?",
-      answer:
-        "Key metrics include the number of successful data transactions per month, increase in student engagement, reduction in friction points during transactions, and percentage increase in user downloads.",
-    },
+   
   ],
   "Pricing Plan": [
-    {
-      question: "Free Plan",
-      answer:
-        "Access to basic features like data organization and management tools. Limited API access for integration with CRM systems or apps. Limited transaction volume and user consent APIs. Suitable for individual agents or small businesses on a budget.",
-    },
     {
       question: "Pro",
       answer:
@@ -106,6 +92,11 @@ const faqData = {
       question: "What are the primary services offered by Hushh?",
       answer:
         "Hushh offers a range of services including Hushh Browser Companion for tracking and managing online activity, Hushh Wallet App for controlling personal data and monetization, Hushh Button for seamless personalization, Hushh Developer APIs for secure data integration, Valet Chat for financial management, Hushh Concierge App for luxury experiences, and Hushh Jobs for recruitment innovation.",
+    },
+    {
+      question: "How does hushh for students benefit businesses?",
+      answer:
+        "Hushh for students benefits businesses by providing access to valuable student data for targeted initiatives. It also ensures a seamless and secure data exchange process, fostering trust and transparency.",
     },
     {
       question: "How does Hushh Browser Companion protect user privacy?",
@@ -137,6 +128,10 @@ const faqData = {
       question: "Contact Number",
       answer: "call +14252969050",
     },
+    {
+      question:"Headquarters",
+      answer:"Kirkland, WA"
+    }
   ],
 };
 

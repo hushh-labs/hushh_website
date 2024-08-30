@@ -58,7 +58,7 @@ const FooterComponent = () => {
               </p>
               <div className="flex flex-col text-lg gap-5 leading-5">
                 <Link href="/demoBookingPage">Free Demo</Link>
-                <Link href="/pricingPlans">Pricing</Link>
+                {/* <Link href="/pricingPlans">Pricing</Link> */}
                 <Link href="https://hushh-labs.github.io/hushh-labs-blog/">
                   Blog
                 </Link>
@@ -160,7 +160,7 @@ const FooterComponent = () => {
                   <Link href="https://www.linkedin.com/company/hushh-ai/jobs/">
                     Careers
                   </Link>
-                  <Link href="/pricingPlans">Pricing</Link>
+                  {/* <Link href="/pricingPlans">Pricing</Link> */}
                   <Link href="#" onClick={scrollInMobile}>
                     Contact Us
                   </Link>

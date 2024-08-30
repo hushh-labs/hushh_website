@@ -5,11 +5,20 @@ import {
   Button,
   Container,
   Divider,
+  Flex,
   Grid,
   HStack,
   Heading,
   Text,
   VStack,
+  useDisclosure,
+  useTheme,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
 import { BrandSlider } from "../_components/features/brandSlider";
 import BrandWalletSection from "../_components/features/brandWalletSection";
@@ -47,11 +56,35 @@ import CircleHomeBg from "../_components/svg/circleHomeBg.svg";
 import RightCircleEclipse from "../_components/svg/rightCircleEclipse.svg";
 import ApiVibeSearch from "../_components/svg/apiVibeSearch";
 import { HushhBlogsHome } from "../_components/HushhBlogsHome";
+import AppleIcon from "../_components/svg/icons/appleIconLogo.svg";
+import PlayStoreIcon from "../_components/svg/icons/playStoreIcon.svg";
+import YoutubeBG from "../_components/svg/youtubeBgEllipse.svg";
+import ImageGrid from "../_components/features/dynamicImageGrid";
+import { QRCode } from "react-qrcode-logo";
+import { isMobile, isAndroid, isIOS } from 'react-device-detect';
 
 const ClientHome = () => {
   const router = useRouter();
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(true);
+  // const { isOpen, onToggle } = useDisclosure();
+  const theme = useTheme();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [hasHovered, setHasHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentQRLink, setCurrentQRLink] = useState("");
+
+  const handleMouseEnter = () => {
+    if (!hasHovered) {
+      onOpen();
+      setHasHovered(true);
+    }
+  };
+
+  const handleOpenModal = (link) => {
+    setCurrentQRLink(link);
+    setIsModalOpen(true);
+  };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -69,6 +102,16 @@ const ClientHome = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
+  const handleDownloadClick = () => {
+    if (isAndroid) {
+      window.location.href = "https://bit.ly/hushh-wallet-play-store";
+    } else if (isIOS) {
+      window.location.href = "https://bit.ly/hushh-app-ios";
+    } else {
+      handleOpenModal("https://bit.ly/hushh-wallet-play-store");
+    }
+  };
+
   return (
     <>
       <Head>
@@ -83,26 +126,43 @@ const ClientHome = () => {
           content="Data API Business, Data Autonomy, Data Equity, Consent-Driven Excellence, Technology For Everyone, Hushh Wallet App, Hushh Button, Vibe Search, Browser Companion, Concierge App, Valet Chat, Vibe Search API, Hushh For Students, Brand Wallet, Receipt Radar, Future of Digital Identity & Personalised Experiences, Gen AI, GenAI "
         />
       </Head>
-
+      <Modal isCentered isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Please Scan QR Code to Download App</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+            <QRCode value={currentQRLink} size={256} />
+            <Text fontSize={'1.75rem'} fontWeight={'bold'} className="hushh-gradient">Hushh Wallet App</Text>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
       <div className="relative">
+        {isMobile ?
         <Image
           src={PinkShadow}
           alt="PinkShadow"
-          // objectFit="cover"
-          // className="z-0 w-full"
           placeholder="blur"
-          //  priority
+          style={{width:'50%',height:'50%'}}
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANII="
+        /> :
+        <Image
+          src={PinkShadow}
+          alt="PinkShadow"
+          placeholder="blur"
+          style={{width:'80%',height:'80%'}}
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANII="
         />
-        <main className="bg-myBG  font-Figtree">
+        }
+        <main className="bg-transparent font-Figtree">
           <div className="absolute top-0 w-full">
-            {showPopup && (
+            {/* {showPopup && (
               <NotificationPopup message="Welcome! How can I help you today?" />
-            )}
+            )} */}
             <Box
               display={"flex"}
               flexDirection={"row"}
-              px={{ base: "0.5rem", md: "32px" }}
+              px={{ base: "0.2rem", md: "32px" }}
             >
               <VStack
                 align={"flex-start"}
@@ -114,6 +174,7 @@ const ClientHome = () => {
                 gap={"1.5rem"}
                 mt={{ md: "5rem", base: "1rem" }}
                 ml={{ base: "1rem", md: "5.5rem" }}
+
               >
                 <HStack>
                   <Heading
@@ -122,31 +183,28 @@ const ClientHome = () => {
                     fontWeight={"400"}
                     display={"flex"}
                     flexDirection={"column"}
+                    bg={'transparent'}
                     className="text-headText"
                   >
                     Intelligence as a service powered by your{" "}
-                    <div className="wrapper">
+                    <div className="wrapper" style={{background:'transparent !important'}}>
                       <div className="words">
                         <div className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
-                          Data
+                          Business
                         </div>
                         <div className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
-                          Social Media
+                          Way
                         </div>
                         <div className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
-                          Phone Data
-                        </div>
-                        <div className="slideText bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
-                          Shopping History
+                          Rewards
                         </div>
                       </div>
                     </div>
                   </Heading>
                 </HStack>
 
-                <Text color={"#656565"} fontSize={"18px"}>
-                  We're the Data API Business, helping you collect, manage, and
-                  monetize data
+                <Text color={"#656565"} fontSize={"18px"} >
+                Take control of your personal information and unlock exclusive rewards with Hushh Wallet
                 </Text>
                 <Box
                   mt={{ md: "2rem", base: "1rem" }}
@@ -154,53 +212,77 @@ const ClientHome = () => {
                   gap={{ md: "2rem", base: "1rem" }}
                   flexDirection={{ md: "row", base: "column" }}
                 >
-                  <Button
-                    border={"3px solid #606060"}
-                    borderRadius={"2px"}
-                    color={theme.colors._white}
-                    lineHeight={"28px"}
-                    background={"transparent"}
-                    px={"21px"}
-                    py={"15px"}
-                    fontSize={{ md: "1rem", base: "0.75rem" }}
-                    fontWeight={"400"}
-                    letterSpacing={{ md: "0.29rem", base: "0.1rem" }}
-                    _hover={{
-                      background:
-                        "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-                      border: "none",
-                    }}
-                    onClick={() =>
-                      window.open(
-                        "https://bit.ly/hushh-app-ios",
-                        "_blank"
-                      )
-                    }
-                    w={{ md: "16rem", base: "12rem" }}
-                  >
-                    DOWNLOAD THE APP
-                  </Button>
-                  <Button
-                    border={"3px solid #606060"}
-                    borderRadius={"2px"}
-                    color={theme.colors._white}
-                    lineHeight={"28px"}
-                    fontSize={{ md: "1rem", base: "0.75rem" }}
-                    px={"21px"}
-                    py={"15px"}
-                    background={"transparent"}
-                    fontWeight={"400"}
-                    letterSpacing={{ md: "0.29rem", base: "0.1rem" }}
-                    _hover={{
-                      background:
-                        "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
-                      border: "none",
-                    }}
-                    onClick={() => router.push("/demoBookingPage")}
-                    w={{ md: "16rem", base: "12rem" }}
-                  >
-                    SCHEDULE CALL
-                  </Button>
+                  {isMobile ? (
+                    <Button
+                      border="1px solid #606060"
+                      borderRadius="2px"
+                      color={theme.colors._white}
+                      lineHeight="28px"
+                      background="transparent"
+                      onClick={handleDownloadClick}
+                      px="21px"
+                      py="15px"
+                      fontSize={{ md: "1rem", base: "0.75rem" }}
+                      fontWeight="400"
+                      letterSpacing={{ md: "0.1rem", base: "0.1rem" }}
+                      _hover={{
+                        background:
+                          "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                        border: "none",
+                      }}
+                      w={{ md: "16rem", base: "14rem" }}
+                    >
+                      {/* <Image src={PlayStoreIcon} cursor="pointer" style={{width:'17px',height:'17px',marginRight:'7px'}}/> */}
+                      Download Hushh Wallet App
+                    </Button>
+                  ) : (
+                    <>
+                      <Button
+                        border="1px solid #606060"
+                        borderRadius="2px"
+                        color={theme.colors._white}
+                        lineHeight="28px"
+                        background="transparent"
+                        onClick={() => handleOpenModal("https://bit.ly/hushh-wallet-play-store")}                      
+                        px="21px"
+                        py="15px"
+                        fontSize={{ md: "1rem", base: "0.75rem" }}
+                        fontWeight="400"
+                        letterSpacing={{ md: "0.1rem", base: "0.1rem" }}
+                        _hover={{
+                          background:
+                            "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                          border: "none",
+                        }}
+                        w={{ md: "16rem", base: "12rem" }}
+                      >
+                        <Image src={PlayStoreIcon} cursor="pointer" style={{width:'17px',height:'17px',marginRight:'7px'}}/>
+                        Download on Google Play
+                    </Button>
+                    <Button
+                      border={"1px solid #606060"}
+                      borderRadius={"2px"}
+                      color={theme.colors._white}
+                      lineHeight={"28px"}
+                      fontSize={{ md: "1rem", base: "0.75rem" }}
+                      px={"21px"}
+                      py={"15px"}
+                      background={"transparent"}
+                      fontWeight={"400"}
+                      letterSpacing={{ md: "0.1rem", base: "0.1rem" }}
+                      _hover={{
+                        background:
+                          "linear-gradient(265.3deg, #E54D60 8.81%, #A342FF 94.26%)",
+                        border: "none",
+                      }}
+                      onClick={() => handleOpenModal("https://bit.ly/hushh-app-ios")}                   
+                      w={{ md: "16rem", base: "12rem" }}
+                    >
+                      <Image src={AppleIcon} cursor="pointer"  style={{width:'17px',height:'17px',marginRight:'7px'}}/>
+                      Get it on the App Store
+                    </Button>
+                  </>
+                )}
                 </Box>
               </VStack>
               <VStack
@@ -275,6 +357,107 @@ const ClientHome = () => {
             </HStack>
 
             <BrandSlider />
+
+            <VStack
+              w={"100%"}
+              zIndex={2}
+              mt={{ md: "14rem", base: "3rem" }}
+              mb={"6rem"}
+              display={{ md: "flex", base: "none" }}
+              alignItems={"center"}
+              justifyContent={"center"}
+              textAlign={"center"}
+              position={"relative"}
+            >
+              <Image
+                src={YoutubeBG}
+                style={{ position: "absolute", zIndex: "-1", width: "100%" }}
+                alt="YoutubeBG"
+                title="YoutubeBG"
+              />
+              <Text
+                zIndex={"5"}
+                color={"#FFFFFF"}
+                fontWeight={"500"}
+                lineHeight={"32px"}
+                fontSize={{ md: "1.25rem", base: "0.9rem" }}
+                letterSpacing={"0.05rem"}
+              >
+                HUSHH
+              </Text>
+              <Text
+                zIndex={"5"}
+                className="gradient"
+                fontWeight={"700"}
+                lineHeight={{ md: "90px", base: "45px" }}
+                fontSize={{ md: "4.625rem", base: "2rem" }}
+                letterSpacing={"0.05rem"}
+              >
+                Glimpse into our products
+              </Text>
+              <iframe
+                width="960"
+                height="561"
+                zIndex="6"
+                src="https://www.youtube.com/embed/DSG8ltkgbJE?si=An83buhkileq1NFA"
+                title="YouTube video player"
+                style={{ zIndex: "6" , borderRadius:'28.57px',marginTop:'4rem'}}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </VStack>
+
+            <VStack
+              w={"100%"}
+              zIndex={2}
+              mt={{ md: "14rem", base: "4rem" }}
+              mb={"3rem"}
+              display={{ md: "none", base: "flex" }}
+              alignItems={"center"}
+              justifyContent={"center"}
+              textAlign={"center"}
+              position={"relative"}
+            >
+              <Image
+                src={YoutubeBG}
+                style={{ position: "absolute", zIndex: "-1", width: "100%" }}
+                alt="YoutubeBG"
+                title="YoutubeBG"
+              />
+              <Text
+                zIndex={"5"}
+                color={"#FFFFFF"}
+                fontWeight={"500"}
+                lineHeight={"32px"}
+                fontSize={{ md: "1.25rem", base: "0.9rem" }}
+                letterSpacing={"0.05rem"}
+              >
+                HUSHH
+              </Text>
+              <Text
+                zIndex={"5"}
+                className="gradient"
+                fontWeight={"700"}
+                lineHeight={{ md: "90px", base: "45px" }}
+                fontSize={{ md: "4.625rem", base: "2rem" }}
+                letterSpacing={"0.05rem"}
+              >
+                Glimpse into our products
+              </Text>
+              <iframe
+                width="80%"
+                height="361"
+                zIndex="6"
+                src="https://www.youtube.com/embed/DSG8ltkgbJE?si=An83buhkileq1NFA"
+                title="YouTube video player"
+                style={{ zIndex: "6" , borderRadius:'28.57px',marginTop:'2rem'}}
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </VStack>
+
             {/* From below box there is an issue arising of full width on the mobile screens */}
             <Box
               display="flex"
@@ -370,7 +553,7 @@ const ClientHome = () => {
                 </Text>
 
                 <Box
-                  mx={{ base: "0", md: "0" }} //from here that full width issue was arising
+                   //from here that full width issue was arising
                   pt={{ md: "40px", base: "20px" }}
                   width={"100%"}
                   pr={{ base: "1.25rem" }}
@@ -379,6 +562,7 @@ const ClientHome = () => {
                   gap={{ md: "4rem" }}
                 >
                   <VStack
+                   mx={{ base: "2rem", md: "0" }}
                     maxW={{ md: "290px" }}
                     textAlign={"left"}
                     alignItems={"left"}
@@ -479,6 +663,7 @@ const ClientHome = () => {
                     Creating a fair and equitable environment for data sharing.
                   </Text>
                 </VStack>
+              <Box w={'100'} display={'flex'} alignItems={{ base:'center',md:'flex-start'}} justifyContent={{base:'center',md:'flex-start'}}> 
                 <Box
                   // leftIcon={<A />}
                   mt={{ md: "4rem", base: "3rem" }}
@@ -498,15 +683,22 @@ const ClientHome = () => {
                     color: "white",
                   }}
                   cursor={"pointer"}
-                  onClick={()=> router.push('/UserGuide')}
+                  onClick={() => router.push("/hushh-community")}
                 >
-                  View User Guide
+                  Join Hushh Community
                 </Box>
+                </Box> 
               </VStack>
             </Box>
 
             {/* <ReviewSlider /> */}
-
+            
+            <VStack my={{md:'10rem',base:'6rem'}} display={'flex'} textAlign={'center'} alignItems={'center'} justifyContent={'center'}>
+              <Text className="hushh-gradient" fontWeight={'600'} fontSize={{md:'1rem',base:'0.75rem'}} lineHeight={'16px'} letterSpacing={'0.255rem'}>HUSHH</Text>
+              <Text className="gradient" fontWeight={'600'} lineHeight={{md:'63.3px',base:'40px'}} fontSize={{md:'3.75rem',base:'2rem'}}>#VIVATECH 2024</Text>
+              <Text mx={{md:'20%',base:'5%'}} color={'#ABABAB'} fontWeight={'500'} fontSize={{md:'1rem',base:"0.75rem"}} lineHeight={{md:'30px',base:'24px'}}>VivaTech 2024 was a record-breaking Paris tech conference with 165,000+ attendees from 120+ countries. The event highlighted AI advancements, sustainable tech, and diversity in the industry. With global participation, VivaTech fostered business connections and showcased innovations shaping the future of technology</Text>
+            </VStack>
+            <ImageGrid/>
             {/* Product Showcase section below */}
             <HStack
               pt={{ md: "8rem", base: "5rem" }}
@@ -622,7 +814,7 @@ const ClientHome = () => {
                     description="AI finance assistant & insights (ditch receipts, manage finances)"
                     onClick={() => router.push("/products/hushhValetChat")}
                   />
-                   <ServiceCard
+                  <ServiceCard
                     icon={<VibeSearchApi />}
                     title="Developer API's​"
                     alignItems={"center"}
@@ -648,7 +840,7 @@ const ClientHome = () => {
                   />
                 </Grid>
               </Container>
-              <Button
+              {/* <Button
                 border={"3px solid #606060"}
                 borderRadius={"2px"}
                 w={{ md: "16rem", base: "10rem" }}
@@ -664,7 +856,7 @@ const ClientHome = () => {
                 onClick={() => router.push("/pricingPlans")}
               >
                 View Our Plans
-              </Button>
+              </Button> */}
             </HStack>
 
             <TechnologySection />
@@ -673,7 +865,7 @@ const ClientHome = () => {
 
             <HushhCoinUiBox />
 
-            <HushhBlogsHome/>
+            <HushhBlogsHome />
 
             <ContactForm />
           </div>

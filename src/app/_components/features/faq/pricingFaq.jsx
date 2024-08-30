@@ -81,6 +81,11 @@ const faqData = {
       answer:
         "Key metrics include the number of successful data transactions per month, increase in student engagement, reduction in friction points during transactions, and percentage increase in user downloads.",
     },
+    {
+      question: "What is the purpose of Hushh Wallet App?",
+      answer:
+        "Hushh Wallet App is designed to empower users by putting them in control of their digital identity and personal data. It allows users to aggregate and manage data from various sources, including phone data, data companies, and shopping brands. Users can personalize their experiences, get rewarded for sharing data, and sell data to trusted brands and agencies.",
+    },
   ],
   Services: [
     {
@@ -104,6 +109,11 @@ const faqData = {
         "The Hushh Button facilitates seamless personalization for both customers and brands. For customers, it syncs preferences, past purchases, and sizing information with brands, offering a personalized shopping experience. For brands, it provides access to valuable data from Hushh users who opt-in, allowing for personalized product recommendations and marketing campaigns.",
     },
     {
+      question: "What sets hushh for students apart from other platforms?",
+      answer:
+        "Hushh for students stands out by prioritizing user privacy, data control, and transparency. Unlike other platforms, it empowers students to realize the value of their data and rewards them for their participation.",
+    },
+    {
       question: "What role do Hushh Developer APIs play in data integration?",
       answer:
         "Hushh Developer APIs enable secure, trusted, and incentivized data integration for businesses and organizations. They empower developers to seamlessly integrate customers’ data into CRM systems and applications, ensuring compliance with privacy laws and regulations. With Hushh APIs, developers can create personalized services aligned with user preferences and consent.",
@@ -118,6 +128,10 @@ const faqData = {
       question: "Contact Number",
       answer: "call +14252969050",
     },
+    {
+      question:"Headquarters",
+      answer:"Kirkland, WA"
+    }
   ],
 };
 

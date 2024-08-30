@@ -184,7 +184,7 @@ const ClientDemoBooking = () => {
               as={"h1"}
               display={{ md: "block", base: "none" }}
             >
-              Explore hushh in <div className="new-gradient"> Action</div>
+              Explore Hushh in <div className="new-gradient"> Action</div>
             </Heading>
             <Text
               className="gradient"
@@ -193,7 +193,7 @@ const ClientDemoBooking = () => {
               lineHeight={{ md: "90.28px", base: "42px" }}
               display={{ md: "none", base: "block" }}
             >
-              Explore hushh in{" "}
+              Explore Hushh in{" "}
               <span className="bg-gradient-to-r from-purple-600 to-red-600 text-transparent bg-clip-text">
                 {" "}
                 Action

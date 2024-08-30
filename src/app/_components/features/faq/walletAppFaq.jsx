@@ -53,11 +53,11 @@ const faqData = {
       answer:
         "Users benefit from personalized experiences, meaningful connections with brands, monetization opportunities for their data, and enhanced control over their digital identity.",
     },
-    {
-      question: "Can users customize their data sharing preferences?",
-      answer:
-        "Yes, users can choose to share their data publicly, semi-publicly, or privately, allowing them to control who has access to their information and for what purpose.",
-    },
+    // {
+    //   question: "Can users customize their data sharing preferences?",
+    //   answer:
+    //     "Yes, users can choose to share their data publicly, semi-publicly, or privately, allowing them to control who has access to their information and for what purpose.",
+    // },
     {
       question: "How does Hushh Wallet handle data security?",
       answer:
@@ -73,18 +73,9 @@ const faqData = {
       answer:
         "Users can set minimum bids on their data, allowing them to monetize their information when brands request access. Hushh Wallet also rewards users with Hushh Coins for adding assets, which can be spent in the marketplace.",
     },
-    {
-      question: "What is the process for onboarding users onto Hushh Wallet?",
-      answer:
-        "After installing the app, users provide basic information such as email and phone number, answer preference questions, and add their data to begin using the platform. Alternative login methods like Google and Apple IDs are also available.",
-    },
+    
   ],
   "Pricing Plan": [
-    {
-      question: "Free Plan",
-      answer:
-        "Access to basic features like data organization and management tools. Limited API access for integration with CRM systems or apps. Limited transaction volume and user consent APIs. Suitable for individual agents or small businesses on a budget.",
-    },
     {
       question: "Pro",
       answer:
@@ -106,6 +97,11 @@ const faqData = {
       question: "What are the primary services offered by Hushh?",
       answer:
         "Hushh offers a range of services including Hushh Browser Companion for tracking and managing online activity, Hushh Wallet App for controlling personal data and monetization, Hushh Button for seamless personalization, Hushh Developer APIs for secure data integration, Valet Chat for financial management, Hushh Concierge App for luxury experiences, and Hushh Jobs for recruitment innovation.",
+    },
+    {
+      question: "What is the process for onboarding users onto Hushh Wallet?",
+      answer:
+        "After installing the app, users provide basic information such as email and phone number, answer preference questions, and add their data to begin using the platform. Alternative login methods like Google and Apple IDs are also available.",
     },
     {
       question: "How does Hushh Browser Companion protect user privacy?",
@@ -137,6 +133,10 @@ const faqData = {
       question: "Contact Number",
       answer: "call +14252969050",
     },
+    {
+      question:"Headquarters",
+      answer:"Kirkland, WA"
+    }
   ],
 };
 
